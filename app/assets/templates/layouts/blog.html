@@ -16,11 +16,106 @@
 <body id="main">
   ${require('../parts/header.html')}
   <main class="main">
+      <div class="page-top">
+          <div class="container">
+              <div class="breadcrumbs">
+                  <a href="javascript:void(0)">Home</a>
+                  <span>Blog</span>
+              </div>
+              <h1 class="page-title">Blog</h1>
+          </div>
+      </div>
       <div class="blog-main">
           <div class="container">
               <div class="row blog-main__wrapper">
                   <div class="col-lg-9">
                       <div class="row blog-main__items">
+                          <div class="col-xs-12 hidden-lg hidden-md visible-sm visible-xs">
+                              <div class="blog-mob__filters">
+                                  <div class="blog-mob__filters-main">
+                                      <span>Blog categories:</span>All categories
+                                      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M11.6438 16.3035L16.57 11.3774C16.7536 11.1937 16.9699 11.1019 17.2188 11.1019C17.4677 11.1019 17.6835 11.1937 17.8663 11.3774C18.05 11.561 18.1418 11.7773 18.1418 12.0262C18.1418 12.2751 18.05 12.4909 17.8663 12.6737L11.3845 19.1555C11.2009 19.3392 10.9846 19.431 10.7357 19.431C10.4868 19.431 10.2709 19.3392 10.0881 19.1555L3.60633 12.6737C3.42268 12.4901 3.33086 12.2738 3.33086 12.0249C3.33086 11.776 3.42268 11.5601 3.60634 11.3774C3.78999 11.1937 4.00626 11.1019 4.25516 11.1019C4.50407 11.1019 4.71991 11.1937 4.9027 11.3774L9.82887 16.3035L9.82887 4.7659C9.82887 4.52824 9.9207 4.31758 10.1044 4.13392C10.288 3.95027 10.4987 3.85845 10.7363 3.85845C10.974 3.85845 11.1847 3.95027 11.3683 4.13392C11.552 4.31758 11.6438 4.52824 11.6438 4.7659L11.6438 16.3035Z" fill="#1C3557"/>
+                                      </svg>
+                                  </div>
+                                  <div class="blog-mob__filters-list">
+                                      <ul>
+                                          <li>
+                                      <span>
+                                          <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M4.5 0L5.71541 3.28459L9 4.5L5.71541 5.71541L4.5 9L3.28459 5.71541L0 4.5L3.28459 3.28459L4.5 0Z" fill="#FEB634FF"></path>
+                                          </svg>
+                                          All categories
+                                      </span>
+                                          </li>
+                                          <li>
+                                              <a href="javascript:void(0)">
+                                                  <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                      <path d="M4.5 0L5.71541 3.28459L9 4.5L5.71541 5.71541L4.5 9L3.28459 5.71541L0 4.5L3.28459 3.28459L4.5 0Z" fill="#fff"></path>
+                                                  </svg>
+                                                  Novelties
+                                              </a>
+                                          </li>
+                                          <li>
+                                              <a href="javascript:void(0)">
+                                                  <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                      <path d="M4.5 0L5.71541 3.28459L9 4.5L5.71541 5.71541L4.5 9L3.28459 5.71541L0 4.5L3.28459 3.28459L4.5 0Z" fill="#fff"></path>
+                                                  </svg>
+                                                  Hot summer
+                                              </a>
+                                          </li>
+                                          <li>
+                                              <a href="javascript:void(0)">
+                                                  <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                      <path d="M4.5 0L5.71541 3.28459L9 4.5L5.71541 5.71541L4.5 9L3.28459 5.71541L0 4.5L3.28459 3.28459L4.5 0Z" fill="#fff"></path>
+                                                  </svg>
+                                                  Bright adventures
+                                              </a>
+                                          </li>
+                                          <li>
+                                              <a href="javascript:void(0)">
+                                                  <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                      <path d="M4.5 0L5.71541 3.28459L9 4.5L5.71541 5.71541L4.5 9L3.28459 5.71541L0 4.5L3.28459 3.28459L4.5 0Z" fill="#fff"></path>
+                                                  </svg>
+                                                  Swimming season
+                                              </a>
+                                          </li>
+                                          <li>
+                                              <a href="javascript:void(0)">
+                                                  <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                      <path d="M4.5 0L5.71541 3.28459L9 4.5L5.71541 5.71541L4.5 9L3.28459 5.71541L0 4.5L3.28459 3.28459L4.5 0Z" fill="#fff"></path>
+                                                  </svg>
+                                                  Winter news
+                                              </a>
+                                          </li>
+                                          <li>
+                                              <a href="javascript:void(0)">
+                                                  <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                      <path d="M4.5 0L5.71541 3.28459L9 4.5L5.71541 5.71541L4.5 9L3.28459 5.71541L0 4.5L3.28459 3.28459L4.5 0Z" fill="#fff"></path>
+                                                  </svg>
+                                                  Novelties
+                                              </a>
+                                          </li>
+                                          <li>
+                                              <a href="javascript:void(0)">
+                                                  <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                      <path d="M4.5 0L5.71541 3.28459L9 4.5L5.71541 5.71541L4.5 9L3.28459 5.71541L0 4.5L3.28459 3.28459L4.5 0Z" fill="#fff"></path>
+                                                  </svg>
+                                                  Hot summer
+                                              </a>
+                                          </li>
+                                          <li>
+                                              <a href="javascript:void(0)">
+                                                  <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                      <path d="M4.5 0L5.71541 3.28459L9 4.5L5.71541 5.71541L4.5 9L3.28459 5.71541L0 4.5L3.28459 3.28459L4.5 0Z" fill="#fff"></path>
+                                                  </svg>
+                                                  Bright adventures
+                                              </a>
+                                          </li>
+                                      </ul>
+                                  </div>
+                              </div>
+                          </div>
                           <div class="col-lg-12">
                               <a href="javascript:void(0)" class="blog-main__item">
                                   <div class="blog-main__items-pic">
@@ -141,6 +236,29 @@
                                   </div>
                               </a>
                           </div>
+                          <div class="col-xs-12">
+                              <div class="pagination">
+                                  <a href="javascript:void(0)" class="prev">
+                                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M3.62485 7.4095L6.75969 10.5443C6.87656 10.6612 6.93499 10.7988 6.93499 10.9572C6.93499 11.1156 6.87656 11.253 6.75969 11.3693C6.64282 11.4862 6.50519 11.5446 6.3468 11.5446C6.18841 11.5446 6.05105 11.4862 5.93473 11.3693L1.80994 7.24451C1.69307 7.12764 1.63464 6.99001 1.63464 6.83162C1.63464 6.67323 1.69307 6.53587 1.80994 6.41955L5.93473 2.29476C6.0516 2.17789 6.18923 2.11946 6.34762 2.11946C6.50602 2.11946 6.64337 2.17789 6.75969 2.29476C6.87656 2.41163 6.93499 2.54926 6.93499 2.70765C6.93499 2.86605 6.87656 3.0034 6.75969 3.11972L3.62485 6.25456L10.967 6.25456C11.1182 6.25456 11.2523 6.313 11.3691 6.42986C11.486 6.54673 11.5444 6.68079 11.5444 6.83203C11.5444 6.98327 11.486 7.11733 11.3691 7.2342C11.2523 7.35107 11.1182 7.4095 10.967 7.4095L3.62485 7.4095Z" fill="#1C3557"/>
+                                      </svg>
+                                  </a>
+                                  <ul>
+                                      <li class="current"><span>1</span></li>
+                                      <li><a href="javascript:void(0)">2</a></li>
+                                      <li><a href="javascript:void(0)">3</a></li>
+                                      <li><a href="javascript:void(0)">4</a></li>
+                                      <li><a href="javascript:void(0)">5</a></li>
+                                      <li><a href="javascript:void(0)">...</a></li>
+                                      <li><a href="javascript:void(0)">12</a></li>
+                                  </ul>
+                                  <a href="javascript:void(0)" class="next">
+                                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M10.3761 7.4095L7.24129 10.5443C7.12442 10.6612 7.06598 10.7988 7.06598 10.9572C7.06598 11.1156 7.12442 11.253 7.24129 11.3693C7.35816 11.4862 7.49579 11.5446 7.65418 11.5446C7.81257 11.5446 7.94992 11.4862 8.06624 11.3693L12.191 7.24451C12.3079 7.12764 12.3663 6.99001 12.3663 6.83162C12.3663 6.67323 12.3079 6.53587 12.191 6.41955L8.06624 2.29476C7.94937 2.17789 7.81174 2.11946 7.65335 2.11946C7.49496 2.11946 7.3576 2.17789 7.24129 2.29476C7.12442 2.41163 7.06598 2.54926 7.06598 2.70765C7.06598 2.86605 7.12442 3.0034 7.24129 3.11972L10.3761 6.25456L3.034 6.25456C2.88276 6.25456 2.7487 6.313 2.63183 6.42986C2.51496 6.54673 2.45653 6.68079 2.45653 6.83203C2.45653 6.98327 2.51496 7.11733 2.63183 7.2342C2.7487 7.35107 2.88276 7.4095 3.034 7.4095L10.3761 7.4095Z" fill="#1C3557"/>
+                                      </svg>
+                                  </a>
+                              </div>
+                          </div>
                       </div>
                   </div>
                   <div class="col-lg-3">
@@ -225,7 +343,7 @@
                           <div class="blog-sidebar__recent">
                               <span class="blog-sidebar__subtitle">Recent posts</span>
                               <div class="row blog-sidebar__recent-items">
-                                  <div class="col-lg-12">
+                                  <div class="col-lg-12 col-md-12 col-sm-6 col-xs-12">
                                       <a href="javascript:void(0)" class="blog-recent__item">
                                           <div class="blog-recent__item-pic">
                                               <img src="../../images/blog-item-01.jpg" alt="">
@@ -236,7 +354,7 @@
                                           </div>
                                       </a>
                                   </div>
-                                  <div class="col-lg-12">
+                                  <div class="col-lg-12 col-md-12 col-sm-6 col-xs-12">
                                       <a href="javascript:void(0)" class="blog-recent__item">
                                           <div class="blog-recent__item-pic">
                                               <img src="../../images/blog-item-02.jpg" alt="">

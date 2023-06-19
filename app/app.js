@@ -127,6 +127,20 @@ $(function() {
         }
     });
 
+    // blog tags filters
+
+    $('.blog-mob__filters-main').on('click', function () {
+        $(this).closest('.blog-mob__filters').toggleClass('active');
+    });
+
+    $(document).click(function () {
+        $('.blog-mob__filters').removeClass('active');
+    });
+
+    $(document).on('click', '.blog-mob__filters', function (e) {
+        e.stopPropagation();
+    });
+
   $('.popup-btn:not(.product-video, .catalog-filter__video-btn, .video-gallery__item)').magnificPopup({
     callbacks: {
       open: function() {
@@ -244,8 +258,8 @@ $(function() {
 
     // truncate text
 
-  $('.blog-item__descr').succinct({
-    size: 130
+  $('.blog-main__item-description').succinct({
+    size: 170
   });
 
   /*$('.reviews-item__text').succinct({

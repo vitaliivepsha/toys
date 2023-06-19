@@ -1,97 +1,105 @@
 .pagination {
   display: flex;
   align-items: center;
-  justify-content: center;
-
-  .pagination__list {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    margin: 0 30px;
-    gap: 2px;
-    @include bp(xs) {
-      margin: 0 20px;
-    }
-
-    li {
-      flex-shrink: 0;
-    }
+  justify-content: space-between;
+  margin: 0;
+  border-radius: 0;
+  padding-top: 30px;
+  border-top: 1px solid $main;
+  @include bp(xs) {
+    padding-top: 20px;
   }
-
-  span {
+  >.prev, >.next{
+    width: 33px;
+    height: 33px;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
     align-items: center;
-    width: 30px;
-    height: 30px;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
+    justify-content: center;
+    cursor: pointer;
+    text-align: center;
     border-radius: 50%;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 130%;
-    border: 1px solid transparent;
-    background-color: #fff;
-    cursor: default;
-    padding-top: 1px;
-  }
-
-  a {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    width: 30px;
-    height: 30px;
+    border: 1px solid $main;
     color: $main;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    border-radius: 50%;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 130%;
-    border: 1px solid transparent;
-    transition: all ease-in-out 0.2s;
-    padding-top: 1px;
-
-    &:hover {
-      color: $red;
-
+    text-decoration: none;
+    @include bp(xs) {
+      width: 25px;
+      height: 25px;
     }
-  }
-
-  .button {
-    background-color: #fff;
-
-    &.prev {
-      padding-right: 3px;
-    }
-
-    &.next {
-      padding-left: 1px;
-    }
-
-    &.disabled {
-      pointer-events: none;
-      background-color: $text-grey;
-      border: 1px solid $text-grey;
-      opacity: 0.5;
+    &:hover{
+      background-color: $main;
+      svg{
+        path{
+          fill: #fff;
+        }
+      }
     }
     svg{
       @include bp(xs) {
-        width: 8px;
-        height: 15px;
+        width: 10.61px;
+        height: 10.61px;
       }
     }
   }
-
-  .dots {
-    align-self: end;
-
-    & a svg {
-      margin-top: 10px;
+  >ul{
+    display: flex;
+    align-items: center;
+    margin: 0 30px;
+    @include bp(xs) {
+      margin: 0 15px;
+    }
+    li {
+      margin: 0 6px;
+      @include bp(xs) {
+        margin: 0 2px;
+      }
+      span {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 29px;
+        height: 29px;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 130%;
+        background-color: $yellow;
+        color: #fff;
+        cursor: default;
+        @include bp(xs) {
+          width: 25px;
+          height: 25px;
+          font-size: 12px;
+          line-height: 18px;
+        }
+      }
+      a {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 29px;
+        height: 29px;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 130%;
+        background-color: #fff;
+        color: $main;
+        @include bp(xs) {
+          width: 25px;
+          height: 25px;
+          font-size: 12px;
+          line-height: 18px;
+        }
+        &:hover {
+          background-color: $bg-grey;
+        }
+      }
     }
   }
 }

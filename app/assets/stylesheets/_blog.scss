@@ -1,15 +1,68 @@
 .blog-main{
   padding: 50px 0 95px;
+  @include bp(md) {
+    padding: 30px 0 75px;
+  }
+  @include bp(xs) {
+    padding: 15px 0 50px;
+  }
 }
 
 .blog-main__wrapper{
   display: flex;
+  @include bp(md) {
+    flex-direction: column;
+  }
+  .col-lg-9{
+    width: 75%;
+    max-width: calc(100% - 300px);
+    @include bp(md) {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+  .col-lg-3{
+    width: 25%;
+    min-width: 300px;
+    @include bp(md) {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
 }
 
 .blog-main__items{
+  display: flex;
+  flex-wrap: wrap;
+  @include bp(md) {
+    margin-bottom: 45px;
+  }
+  @include bp(xs) {
+    margin-bottom: 38px;
+  }
   .col-lg-12{
+    @include bp(sm) {
+      width: 50%;
+      margin-bottom: 30px;
+    }
+    @include bp(xs) {
+      width: 100%;
+      margin-bottom: 15px;
+    }
     +.col-lg-12{
       margin-top: 30px;
+      @include bp(sm) {
+        margin-top: 0;
+      }
+    }
+  }
+  .pagination {
+    margin-top: 90px;
+    @include bp(sm) {
+      margin-top: 30px;
+    }
+    @include bp(xs) {
+      margin-top: 15px;
     }
   }
 }
@@ -20,8 +73,13 @@
   background-color: $bg-grey;
   display: flex;
   width: 100%;
-  height: 300px;
+  min-height: 300px;
   text-decoration: none;
+  @include bp(sm) {
+    flex-direction: column;
+    min-height: unset;
+    height: 100%;
+  }
   &:hover{
     .blog-main__items-pic{
       img{
@@ -36,9 +94,22 @@
 
 .blog-main__items-pic{
   width: 470px;
-  height: 100%;
+  height: inherit;
   border-radius: 10px;
   overflow: hidden;
+  @include bp(lg) {
+    width: 350px;
+  }
+  @include bp(md) {
+    width: 400px;
+  }
+  @include bp(sm) {
+    width: 100%;
+    height: 30vw;
+  }
+  @include bp(xs) {
+    height: calc(68.8vw - 30px);
+  }
   img{
     width: 100%;
     height: 100%;
@@ -52,6 +123,21 @@
   padding: 35px 25px 20px 30px;
   display: flex;
   flex-direction: column;
+  @include bp(lg) {
+    width: calc(100% - 350px);
+  }
+  @include bp(md) {
+    width: calc(100% - 400px);
+  }
+  @include bp(sm) {
+    width: 100%;
+    height: calc(100% - 30vw);
+    padding: 20px;
+  }
+  @include bp(xs) {
+    height: auto;
+    padding: 15px 20px;
+  }
 }
 
 .blog-main__item-title{
@@ -62,6 +148,13 @@
   text-transform: uppercase;
   color: $main;
   transition: linear .2s;
+  @include bp(sm) {
+    font-size: 18px;
+  }
+  @include bp(xs) {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
 }
 
 .blog-main__item-category{
@@ -71,6 +164,10 @@
   line-height: 130%;
   text-transform: uppercase;
   color: rgba($main, .5);
+  @include bp(xs) {
+    font-size: 10px;
+    margin-bottom: 5px;
+  }
 }
 
 .blog-main__item-description{
@@ -79,16 +176,32 @@
   line-height: 130%;
   margin-bottom: 15px;
   color: $main;
+  @include bp(xs) {
+    font-size: 12px;
+  }
 }
 
 .blog-main__item-footer{
   display: flex;
   justify-content: space-between;
   color: $main;
+  @include bp(xs) {
+    align-items: flex-end;
+  }
   span{
     font-size: 12px;
     line-height: 18px;
     text-decoration: underline;
+    @include bp(xs) {
+      font-size: 11px;
+      line-height: 17px;
+    }
+  }
+  svg{
+    @include bp(xs) {
+      width: 8px;
+      height: 8px;
+    }
   }
 }
 
@@ -101,10 +214,17 @@
   padding: 17px 0 15px;
   border-top: 1px solid $main;
   border-bottom: 1px solid $main;
+  @include bp(xs) {
+    font-size: 12px;
+    padding: 10px 0;
+  }
 }
 
 .blog-sidebar__categories{
   padding-bottom: 40px;
+  @include bp(md) {
+    display: none;
+  }
   .blog-sidebar__subtitle{
     margin-bottom: 20px;
   }
@@ -157,14 +277,28 @@
 .blog-sidebar__recent{
   margin-bottom: 30px;
   border-bottom: 1px solid $main;
+  @include bp(xs) {
+    margin-bottom: 40px;
+  }
   .blog-sidebar__subtitle{
     margin-bottom: 25px;
+    @include bp(xs) {
+      margin-bottom: 20px;
+    }
   }
 }
 
 .blog-sidebar__recent-items{
   display: flex;
   flex-wrap: wrap;
+  .col-xs-12{
+    @include bp(sm) {
+      width: 50%;
+    }
+    @include bp(xs) {
+      width: 100%;
+    }
+  }
 }
 
 .blog-recent__item{
@@ -187,6 +321,12 @@
   border-radius: 10px;
   overflow: hidden;
   height: 160px;
+  @include bp(md) {
+    height: 30vw;
+  }
+  @include bp(xs) {
+    height: calc(59.4vw - 30px);
+  }
   img{
     width: 100%;
     height: 100%;
@@ -216,6 +356,9 @@
   line-height: 130%;
   text-transform: uppercase;
   color: rgba($main, .5);
+  @include bp(xs) {
+    font-size: 10px;
+  }
 }
 
 .blog-sidebar__subscribe{
@@ -226,6 +369,15 @@
   align-items: center;
   padding: 42px 20px 45px;
   text-align: center;
+  @include bp(md) {
+    padding: 42px 120px 45px;
+  }
+  @include bp(sm) {
+    padding: 42px 60px 45px;
+  }
+  @include bp(xs) {
+    padding: 42px 25px 50px;
+  }
   >svg{
     display: block;
     margin: 0 auto 11px;
@@ -233,6 +385,7 @@
     height: 23px;
   }
   .input-wrapper{
+    width: 100%;
     margin-bottom: 20px;
     &.focus, &.filled{
       .input{
@@ -293,6 +446,12 @@
   }
   .btn{
     width: 100%;
+    @include bp(md) {
+      width: 190px;
+    }
+    @include bp(xs) {
+      width: 100%;
+    }
     &:hover{
       background-color: $yellow;
       color: $main;
@@ -307,4 +466,101 @@
   text-align: center;
   color: #fff;
   margin-bottom: 11px;
+}
+
+.blog-mob__filters{
+  position: relative;
+  &.active{
+    .blog-mob__filters-list{
+      display: block;
+    }
+  }
+}
+
+.blog-mob__filters-main{
+  display: flex;
+  align-items: center;
+  border-top: 1px solid $main;
+  border-bottom: 1px solid $main;
+  padding: 10px 25px 10px 0;
+  font-size: 11px;
+  line-height: 130%;
+  color: $yellow;
+  text-transform: uppercase;
+  position: relative;
+  margin-bottom: 15px;
+  >span{
+    font-family: $title;
+    color: $main;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 130%;
+    margin-right: 15px;
+  }
+  >svg{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 15px;
+    min-width: 15px;
+    height: 15px;
+  }
+}
+
+.blog-mob__filters-list{
+  display: none;
+  position: absolute;
+  z-index: 2;
+  background-color: #fff;
+  top: 100%;
+  left: 0;
+  padding: 20px;
+  width: 100%;
+  border: 1px solid $main;
+  border-top-width: 0;
+  >ul{
+    font-size: 11px;
+    line-height: 130%;
+    text-transform: uppercase;
+    li{
+      margin-bottom: 12px;
+      &:last-child{
+        margin-bottom: 0;
+      }
+      span{
+        display: flex;
+        align-items: center;
+        color: $yellow;
+        svg{
+          width: 8px;
+          height: 8px;
+          margin-right: 14px;
+          path{
+            fill: $yellow;
+          }
+        }
+      }
+      a{
+        display: flex;
+        align-items: center;
+        color: rgba($main, .5);
+        &:hover{
+          svg{
+            path{
+              fill: $red;
+            }
+          }
+        }
+        svg{
+          width: 8px;
+          height: 8px;
+          margin-right: 14px;
+          path{
+            fill: rgba($main, .5);
+          }
+        }
+      }
+    }
+  }
 }
