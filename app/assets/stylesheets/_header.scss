@@ -404,7 +404,7 @@
   transition: linear 0.2s;
   @include bp(md) {
     font-size: 0;
-    margin-right: 24px;
+    margin-right: 17px;
   }
   &:hover{
     color: $red;
@@ -419,6 +419,13 @@
     min-width: 16px;
     position: relative;
     top: -1px;
+    @include bp(md) {
+      margin-left: 0;
+      top: auto;
+      width: 23px;
+      height: 23px;
+      min-width: 23px;
+    }
   }
 }
 
@@ -713,6 +720,7 @@
       top: -1px;
       @include bp(md) {
         margin-left: 0;
+        top: auto;
       }
     }
     &:hover {
@@ -734,6 +742,9 @@
   transition: .2s all;
   position: relative;
   font-style: normal;
+  @include bp(md) {
+    padding-right: 5px;
+  }
   > span {
     position: absolute;
     min-width: 21px;
@@ -750,6 +761,14 @@
     background-color: $yellow;
     top: -10px;
     right: -12px;
+    @include bp(md) {
+      min-width: 17px;
+      height: 17px;
+      line-height: 17px;
+      font-size: 11px;
+      top: -5px;
+      right: -4px;
+    }
   }
 }
 
