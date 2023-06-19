@@ -1,26 +1,30 @@
+.breadcrumbs-wrapper{
+  @include bp(xs) {
+    width: calc(100vw - 15px);
+    padding-right: 15px;
+    overflow: auto;
+  }
+}
+
 .breadcrumbs {
   font-weight: 400;
   font-size: 11px;
   line-height: 130%;
   color: rgba($text-grey2, 0.6);
   @include bp(xs) {
-
+    width: max-content;
   }
-
   a {
     color: rgba($text-grey2, 0.6);
     text-decoration: none;
     font-family: $default;
-
     &:hover, &:focus {
       color: #fff;
       text-decoration: none;
-
       &:before {
         color: rgba($text-grey2, 0.6);
       }
     }
-
     &:before {
       content: '/';
       display: inline-block;
@@ -32,16 +36,13 @@
       @include bp(xs) {
         margin: 0 8px 0 7px;
       }
-
     }
-
     &:first-child {
       &:before {
         display: none;
       }
     }
   }
-
   span {
     cursor: default;
     font-family: $default;
@@ -56,7 +57,6 @@
         margin: 0 8px 0 7px;
       }
     }
-
     &:first-child {
       &:before {
         color: rgba($text-grey2, 0.6);
