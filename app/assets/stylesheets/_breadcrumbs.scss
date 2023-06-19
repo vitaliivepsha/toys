@@ -1,26 +1,23 @@
 .breadcrumbs {
-  padding: 24px 0 31px 0;
-  font-style: normal;
   font-weight: 400;
-  font-size: 12px;
-  line-height: 12px;
-  color: $main;
+  font-size: 11px;
+  line-height: 130%;
+  color: rgba($text-grey2, 0.6);
   @include bp(xs) {
-    padding: 8px 0 14px 0;
-    font-size: 10px;
-    line-height: 14px;
+
   }
 
   a {
-    color: rgba($main, .5);
+    color: rgba($text-grey2, 0.6);
     text-decoration: none;
+    font-family: $default;
 
     &:hover, &:focus {
-      color: $accent;
+      color: #fff;
       text-decoration: none;
 
       &:before {
-        color: rgba($main, .5);
+        color: rgba($text-grey2, 0.6);
       }
     }
 
@@ -31,7 +28,7 @@
       margin: 0 4px 0 0;
       position: relative;
       transition: linear .2s;
-      color: rgba($main, .5);
+      color: rgba($text-grey2, 0.6);
       @include bp(xs) {
         margin: 0 8px 0 7px;
       }
@@ -47,14 +44,14 @@
 
   span {
     cursor: default;
-
+    font-family: $default;
     &:before {
       content: '/';
       display: inline-block;
       vertical-align: middle;
       margin: 0 4px 0 0;
       position: relative;
-      color: rgba($main, .5);
+      color: rgba($text-grey2, 0.6);
       @include bp(xs) {
         margin: 0 8px 0 7px;
       }
@@ -62,7 +59,7 @@
 
     &:first-child {
       &:before {
-        color: rgba($main, 0.5);
+        color: rgba($text-grey2, 0.6);
       }
     }
   }
