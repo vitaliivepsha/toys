@@ -1,81 +1,126 @@
 .nf{
-  padding-bottom: 138px;
+  padding-bottom: 113px;
   @include bp(sm) {
     padding-bottom: 90px;
   }
   @include bp(xs) {
-    padding-bottom: 54px;
+    padding-bottom: 50px;
+  }
+  .breadcrumbs-wrapper{
+    padding-top: 20px;
+    @include bp(xs) {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+  }
+  .breadcrumbs{
+    margin-bottom: 30px;
+    color: rgba($main, .5);
+    @include bp(xs) {
+      margin-bottom: 10px;
+    }
+    a {
+      color: rgba($main, .5);
+      &:hover, &:focus {
+        color: $main;
+        &:before {
+          color: rgba($main, .5);
+        }
+      }
+      &:before {
+        color: rgba($main, .5);
+      }
+    }
+    span {
+      &:before {
+        color: rgba($main, .5);
+      }
+      &:first-child {
+        &:before {
+          color: rgba($main, .5);
+        }
+      }
+    }
   }
 }
 
-.nf-page{
+.nf-pic{
+  width: 100%;
+  display: block;
+  border-radius: 10px;
   overflow: hidden;
-  .page-title{
-    margin-bottom: 47px;
-    @include bp(sm) {
-      margin-bottom: 30px;
-    }
-    @include bp(xs) {
-      margin-bottom: 17px;
-    }
+  height: 370px;
+  @include bp(xs) {
+    height: calc(100vw - 30px);
+  }
+  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.nf-title{
+  font-family: $title;
+  font-weight: 700;
+  font-size: 300px;
+  line-height: 259px;
+  text-align: center;
+  margin: -178px auto 0;
+  @include bp(xs) {
+    font-size: 140px;
+    line-height: 127px;
+    margin-top: -49px;
   }
 }
 
 .nf-txt{
-  max-width: 830px;
-  font-size: 21px;
-  line-height: 130%;
-  margin-bottom: 20px;
-  @include bp(sm) {
+  display: block;
+  margin-top: 25px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 45px;
+  @include bp(xs) {
     font-size: 18px;
+    line-height: 27px;
+    margin-top: 0;
   }
-  @include bp(xs) {
-    font-size: 14px;
-    margin-bottom: 24px;
-  }
-}
-
-.nf-back{
-  width: 170px;
-  height: 45px;
-  margin-bottom: 10px;
-  @include bp(xs) {
-    height: 40px;
-    width: 190px;
-    margin-bottom: 35px;
-  }
-}
-
-.nf-pic {
-  picture {
-    display: block;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    min-width: 1920px;
-    @media (max-height: 1679px){
-      min-width: 1520px;
-    }
-    @media (max-height: 999px){
-      transform: translateX(-50%) translateY(-100px);
-      margin-bottom: -100px;
-    }
-    @include bp(md) {
-      min-width: calc(100vw + 200px);
-      transform: translateX(-50%) translateY(0);
-      margin-bottom: 0;
-    }
+  &__sm{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    margin-top: 10px;
+    text-align: center;
     @include bp(xs) {
-      min-width: unset;
-      left: auto;
-      transform: none;
+      font-size: 14px;
+      margin-top: 21px;
     }
-    img {
-      width: 100%;
-      //height: fit-content;
-      height: auto;
-      object-fit: contain;
+    >span{
+      text-decoration: underline;
+      cursor: pointer;
+      transition: linear .2s;
+      &:hover{
+        text-decoration: none;
+        color: $red;
+      }
+    }
+  }
+}
+
+.nf-buttons{
+  display: flex;
+  justify-content: center;
+  margin: 42px auto 0;
+  @include bp(xs) {
+    margin-top: 13px;
+  }
+  .btn{
+    width: 210px;
+    margin: 0 15px;
+    @include bp(xs) {
+      width: 130px;
+      margin: 0 5px;
     }
   }
 }

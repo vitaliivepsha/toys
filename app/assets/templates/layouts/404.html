@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noindex">
-    <title>Vizion</title>
-    <link rel="shortcut icon" href="../../images/favicon.png" type="image/jpg">
-    <meta name="theme-color" content="#101B25">
-    <meta name="msapplication-navbutton-color" content="#101B25">
-    <meta name="apple-mobile-web-app-status-bar-style" content="#101B25">
+    <title>Exceptional Concepts</title>
+    <link rel="shortcut icon" href="../../images/favicon.png" type="image/png">
+    <meta name="theme-color" content="#1C3557">
+    <meta name="msapplication-navbutton-color" content="#1C3557">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#1C3557">
 </head>
 
 <body id="main">
@@ -18,29 +18,29 @@ ${require('../parts/header.html')}
 <main class="main">
     <div class="nf">
         <div class="container">
-            <div class="breadcrumbs">
-                <a href="/">Головна</a>
-                <span>Сторінка не знайдена</span>
+            <div class="breadcrumbs-wrapper">
+                <div class="breadcrumbs">
+                    <a href="/">Home</a>
+                    <span>Page not found</span>
+                </div>
             </div>
         </div>
         <div class="nf-page">
             <div class="container">
-                <div class="page-title">Сторінка не знайдена</div>
-                <div class="nf-txt">Будь ласка, перейдіть на попередню сторінку або скористайтеся меню сайту або
-                    перейдіть до нашого каталогу.
+                <div class="nf-pic">
+                    <picture>
+                        <source media="(max-width: 574px)" srcset="../../images/404-mob.jpg" type="image/jpg">
+                        <source srcset="../../images/404.jpg" type="image/jpg">
+                        <img src="../../images/404.jpg" class="lazy" alt="">
+                    </picture>
                 </div>
-                <a href="javascript:void(0)" class="btn nf-back">До каталогу</a>
-            </div>
-            <div class="nf-pic">
-                <picture>
-                    <source media="(min-width: 575px)" srcset="../../images/404.webp" type="image/webp">
-                    <source media="(min-width: 575px)" srcset="../../images/404.png" type="image/png">
-                    <source srcset="../../images/pixel.webp" data-original="../../images/404-mob.webp" class="lazy-web"
-                            type="image/webp">
-                    <source srcset="../../images/pixel.png" data-original="../../images/404-mob.png" class="lazy-web"
-                            type="image/png">
-                    <img src="../../images/pixel.png" data-original="../../images/404-mob.png" class="lazy" alt="">
-                </picture>
+                <div class="nf-title">404</div>
+                <div class="nf-txt">Ooops! We can't seem to find the page that you're looking for.</div>
+                <div class="nf-txt__sm">You can try going back to the to the <span class="nf-back">previous page</span> or returning to our Homepage or go to Shop</div>
+                <div class="nf-buttons">
+                    <a href="javascript:void(0)" class="btn btn-lg btn-tr">Go to Shop</a>
+                    <a href="/" class="btn btn-lg btn-y">Go to Home</a>
+                </div>
             </div>
         </div>
     </div>

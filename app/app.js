@@ -141,6 +141,12 @@ $(function() {
         e.stopPropagation();
     });
 
+    // 404 back
+
+    $('.nf-back').click(function (){
+        window.history.back();
+    });
+
   $('.popup-btn:not(.product-video, .catalog-filter__video-btn, .video-gallery__item)').magnificPopup({
     callbacks: {
       open: function() {
