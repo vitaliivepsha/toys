@@ -1,0 +1,69 @@
+.breadcrumbs {
+  padding: 24px 0 31px 0;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 12px;
+  color: $main;
+  @include bp(xs) {
+    padding: 8px 0 14px 0;
+    font-size: 10px;
+    line-height: 14px;
+  }
+
+  a {
+    color: rgba($main, .5);
+    text-decoration: none;
+
+    &:hover, &:focus {
+      color: $accent;
+      text-decoration: none;
+
+      &:before {
+        color: rgba($main, .5);
+      }
+    }
+
+    &:before {
+      content: '/';
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0 4px 0 0;
+      position: relative;
+      transition: linear .2s;
+      color: rgba($main, .5);
+      @include bp(xs) {
+        margin: 0 8px 0 7px;
+      }
+
+    }
+
+    &:first-child {
+      &:before {
+        display: none;
+      }
+    }
+  }
+
+  span {
+    cursor: default;
+
+    &:before {
+      content: '/';
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0 4px 0 0;
+      position: relative;
+      color: rgba($main, .5);
+      @include bp(xs) {
+        margin: 0 8px 0 7px;
+      }
+    }
+
+    &:first-child {
+      &:before {
+        color: rgba($main, 0.5);
+      }
+    }
+  }
+}

@@ -1,0 +1,226 @@
+.section-offers{
+  padding-bottom: 85px;
+  @include bp(md) {
+    overflow: hidden;
+  }
+  @include bp(xs) {
+    padding-bottom: 50px;
+  }
+  >.container{
+    position: relative;
+    z-index: 2;
+  }
+}
+
+.offers-banner{
+  width: 100%;
+  height: 660px;
+  position: relative;
+  text-align: center;
+  color: #fff;
+  @include bp(md) {
+    height: 460px;
+  }
+  @include bp(xs) {
+    height: calc(100vw - 3px);
+  }
+  img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &:after{
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($main, .4);
+    z-index: 1;
+  }
+  .container{
+    text-align: center;
+    padding-top: 296px;
+    position: relative;
+    z-index: 2;
+    @include bp(md) {
+      padding-top: 160px;
+    }
+    @include bp(xs) {
+      height: 100%;
+      padding-top: 30px;
+      padding-bottom: 100px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+    }
+  }
+}
+
+.offers-title{
+  display: block;
+  margin-bottom: 4px;
+  font-family: $title;
+  font-weight: 700;
+  font-size: 90px;
+  line-height: 90px;
+  @include bp(md) {
+    font-size: 70px;
+    line-height: 70px;
+  }
+  @include bp(xs) {
+    font-size: 42px;
+    line-height: 45px;
+    margin-bottom: 15px;
+  }
+}
+
+.offers-link{
+  color: #fff;
+  font-size: 18px;
+  line-height: 26px;
+  text-decoration: underline;
+  @include bp(xs) {
+    font-size: 12px;
+    line-height: 10px;
+  }
+  &:hover{
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+.offers-slider__wrapper{
+  margin-top: -132px;
+  position: relative;
+  z-index: 1;
+  @include bp(xs) {
+    margin: -68px - 5px 0;
+  }
+}
+
+.offers-slider{
+  .slick-list{
+    @include bp(md) {
+      overflow: visible;
+    }
+  }
+  .slick-slide{
+    width: 200px;
+    max-width: 200px;
+    padding: 0 15px;
+    @include bp(xs) {
+      padding: 0 5px;
+      width: 100px;
+      max-width: 100px;
+    }
+  }
+  .slide{
+    height: 220px;
+    padding: 30px 10px 10px;
+    background: $bg-grey;
+    border-radius: 10px;
+    @include bp(xs) {
+      height: 123px;
+      padding: 14px 5px 7px;
+    }
+    &:hover{
+      .offers-slider__title{
+        color: $red;
+      }
+    }
+  }
+  .slick-arrow{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    top: 50%;
+    transform: translateY(-50%);
+    transition: linear .2s;
+    border: none;
+    font-size: 0;
+    @include bp(xs) {
+      opacity: 0;
+      visibility: hidden;
+      display: none;
+    }
+    &.slick-disabled{
+      opacity: 0;
+      visibility: hidden;
+    }
+    &.slick-prev{
+      left: -10px;
+    }
+    &.slick-next{
+      right: -10px;
+      &:before{
+        transform: scale(-1, -1);
+      }
+    }
+    &:hover{
+      &:before{
+        background-color: $red;
+      }
+    }
+    &:before{
+      content: '';
+      width: 22px;
+      height: 22px;
+      -webkit-mask: url("../images/icons/slider-arrow.svg");
+      mask: url("../images/icons/slider-arrow.svg");
+      -webkit-mask-position: center;
+      mask-position: center;
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
+      -webkit-mask-size: contain;
+      mask-size: contain;
+      background-color: $main;
+    }
+  }
+}
+
+.offers-slider__pic{
+  height: 120px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include bp(xs) {
+    height: 67px;
+  }
+  img{
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+}
+
+.offers-slider__title{
+  display: block;
+  font-size: 14px;
+  line-height: 120%;
+  color: $main;
+  text-decoration: none;
+  text-align: center;
+  transition: linear .2s;
+  max-width: 134px;
+  margin: 25px auto 0;
+  text-transform: capitalize;
+  @include bp(xs) {
+    font-size: 12px;
+    margin-top: 5px;
+  }
+}

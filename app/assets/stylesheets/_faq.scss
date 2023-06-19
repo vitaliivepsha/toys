@@ -1,0 +1,88 @@
+.page-faq {
+  padding-top: 30px;
+  padding-bottom: 80px;
+  @include bp(xs) {
+    padding-top: 23px;
+    padding-bottom: 67px;
+  }
+  .faq-consult {
+    margin-bottom: 0;
+  }
+  .faq-item {
+    padding: 23px 35px 22px 35px;
+    background: #FFFFFF;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.03);
+    border-radius: 10px;
+    @include bp(xs) {
+      padding: 17px 15px 22px 31px;
+    }
+    + .faq-item {
+      margin-top: 20px;
+    }
+  }
+  .faq-item__title {
+    position: relative;
+    margin-bottom: 9px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 15px;
+    color: $main;
+    @include bp(xs) {
+      line-height: 120%;
+      margin-bottom: 7px;
+    }
+    i {
+      position: absolute;
+      left: -23px;
+      top: -1px;
+      width: 20px;
+      height: 20px;
+      svg {
+        width: 100%;
+      }
+    }
+  }
+  .faq-item__text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: $main;
+    p {
+      margin: 0;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 150%;
+      color: $main;
+    }
+    a {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 150%;
+      color: $accent;
+      &:hover {
+        color: $blue;
+      }
+    }
+    ul {
+      list-style: disc;
+      margin-left: 15px;
+    }
+    ol {
+      list-style: decimal;
+      margin-left: 15px;
+    }
+    li {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 150%;
+      color: $main;
+    }
+  }
+  .page-faq__content {
+    margin-bottom: 30px;
+    @include bp(xs) {
+      margin-bottom: 40px;
+    }
+  }
+}

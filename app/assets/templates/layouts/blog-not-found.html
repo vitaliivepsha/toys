@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Vizion</title>
+  <link rel="shortcut icon" href="../../images/favicon.png" type="image/jpg">
+  <meta name="theme-color" content="#101B25">
+  <meta name="msapplication-navbutton-color" content="#101B25">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#101B25">
+</head>
+
+<body id="main">
+  ${require('../parts/header.html')}
+  <main class="main">
+      <div class="container">
+          <div class="breadcrumbs">
+              <a href="/">Головна</a>
+              <span>Блог</span>
+          </div>
+          <div class="blog">
+              <div class="blog-top">
+                  <div class="page-title">Блог</div>
+                  <div class="blog-alert blog-alert__mob">
+                      <svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M33 15.9924L29.34 11.742L29.85 6.11562L24.435 4.86192L21.6 0L16.5 2.2322L11.4 0L8.565 4.86192L3.15 6.10033L3.66 11.7267L0 15.9924L3.66 20.2427L3.15 25.8844L8.565 27.1381L11.4 32L16.5 29.7525L21.6 31.9847L24.435 27.1228L29.85 25.8691L29.34 20.2427L33 15.9924ZM18 23.6369H15V20.5791H18V23.6369ZM18 17.5213H15V8.34783H18V17.5213Z" fill="#AF3B2B"/>
+                      </svg>
+                      Інформація не знайдена. Будь ласка, спробуйте змінити запрос або обрати відповідну категорію.
+                  </div>
+                  <form class="blog-form">
+                      <input type="search" name="text" value="" placeholder="Пошук по блогу">
+                      <button type="submit">
+                          <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M6.72917 2.125C7.95027 2.125 9.12136 2.61008 9.9848 3.47353C10.8483 4.33698 11.3333 5.50807 11.3333 6.72917C11.3333 7.86958 10.9154 8.91792 10.2283 9.72542L10.4196 9.91667H10.9792L14.5208 13.4583L13.4583 14.5208L9.91667 10.9792V10.4196L9.72542 10.2283C8.88997 10.9415 7.82759 11.3333 6.72917 11.3333C5.50807 11.3333 4.33698 10.8483 3.47353 9.9848C2.61008 9.12136 2.125 7.95027 2.125 6.72917C2.125 5.50807 2.61008 4.33698 3.47353 3.47353C4.33698 2.61008 5.50807 2.125 6.72917 2.125ZM6.72917 3.54167C4.95833 3.54167 3.54167 4.95833 3.54167 6.72917C3.54167 8.5 4.95833 9.91667 6.72917 9.91667C8.5 9.91667 9.91667 8.5 9.91667 6.72917C9.91667 4.95833 8.5 3.54167 6.72917 3.54167Z" fill="#17232E"/>
+                          </svg>
+                      </button>
+                  </form>
+              </div>
+              <div class="blog-alert">
+                  <svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M33 15.9924L29.34 11.742L29.85 6.11562L24.435 4.86192L21.6 0L16.5 2.2322L11.4 0L8.565 4.86192L3.15 6.10033L3.66 11.7267L0 15.9924L3.66 20.2427L3.15 25.8844L8.565 27.1381L11.4 32L16.5 29.7525L21.6 31.9847L24.435 27.1228L29.85 25.8691L29.34 20.2427L33 15.9924ZM18 23.6369H15V20.5791H18V23.6369ZM18 17.5213H15V8.34783H18V17.5213Z" fill="#AF3B2B"/>
+                  </svg>
+                  Інформація не знайдена. Будь ласка, спробуйте змінити запрос або обрати відповідну категорію.
+              </div>
+              <div class="blog-categories__wrapper">
+                  <ul class="blog-categories">
+                      <li class="current">
+                          <span>Усі категорії</span>
+                      </li>
+                      <li>
+                          <a href="javascript:void(0)">Лабораторія</a>
+                      </li>
+                      <li>
+                          <a href="javascript:void(0)">Електрохірургія</a>
+                      </li>
+                      <li>
+                          <a href="javascript:void(0)">Кардіологія</a>
+                      </li>
+                      <li>
+                          <a href="javascript:void(0)">Медичні меблі</a>
+                      </li>
+                  </ul>
+              </div>
+              <div class="blog-items row">
+                  <div class="col-lg-6 col-md-6 col-sm-12">
+                      <a href="javascript:void(0)" class="blog-item">
+                          <picture>
+                              <source srcset="../../images/pixel.webp" data-original="../../images/blog-01.webp" class="lazy-web" type="image/webp">
+                              <source srcset="../../images/pixel.jpg" data-original="../../images/blog-01.jpg" class="lazy-web" type="image/jpg">
+                              <img src="../../images/pixel.jpg" data-original="../../images/blog-01.jpg" class="lazy" alt="">
+                          </picture>
+                          <div>
+                              <span class="blog-item__title">Обладнання VIZION  в Україні</span>
+                              <div class="blog-item__descr">Якість надання медичних послуг, як в приватних, так і в державних клініках безпосередньо залежить від багатьох факторів багатьох факторів</div>
+                              <div class="blog-item__footer">
+                                  <span class="blog-item__category">Лабораторія</span>
+                                  <span class="blog-item__date">08.06.2022</span>
+                                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path d="M3.57813 10.55C3.45313 10.425 3.39063 10.277 3.39063 10.106C3.39063 9.93533 3.45313 9.7875 3.57813 9.6625L7.24063 6L3.56562 2.325C3.44896 2.20833 3.39062 2.0625 3.39062 1.8875C3.39062 1.7125 3.45312 1.5625 3.57812 1.4375C3.70312 1.3125 3.85113 1.25 4.02213 1.25C4.19279 1.25 4.34063 1.3125 4.46563 1.4375L8.66563 5.65C8.71563 5.7 8.75113 5.75417 8.77213 5.8125C8.79279 5.87083 8.80313 5.93333 8.80313 6C8.80313 6.06667 8.79279 6.12917 8.77213 6.1875C8.75113 6.24583 8.71563 6.3 8.66563 6.35L4.45312 10.5625C4.33646 10.6792 4.19279 10.7375 4.02213 10.7375C3.85113 10.7375 3.70313 10.675 3.57813 10.55Z" fill="#AF3B2B"/>
+                                  </svg>
+                              </div>
+                          </div>
+                      </a>
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-sm-12">
+                      <a href="javascript:void(0)" class="blog-item">
+                          <picture>
+                              <source srcset="../../images/pixel.webp" data-original="../../images/blog-02.webp" class="lazy-web" type="image/webp">
+                              <source srcset="../../images/pixel.jpg" data-original="../../images/blog-02.jpg" class="lazy-web" type="image/jpg">
+                              <img src="../../images/pixel.jpg" data-original="../../images/blog-02.jpg" class="lazy" alt="">
+                          </picture>
+                          <div>
+                              <span class="blog-item__title">Медичне обладнання для боротьби з COVID</span>
+                              <div class="blog-item__descr">В умовах пандемії в Україні, як і в усьому світі, особливо гостро стоїть питання оснащення медичних установ обладнанням, необхідним для багатьох факторів</div>
+                              <div class="blog-item__footer">
+                                  <span class="blog-item__category">Хірургія</span>
+                                  <span class="blog-item__date">24.01.2023</span>
+                                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path d="M3.57813 10.55C3.45313 10.425 3.39063 10.277 3.39063 10.106C3.39063 9.93533 3.45313 9.7875 3.57813 9.6625L7.24063 6L3.56562 2.325C3.44896 2.20833 3.39062 2.0625 3.39062 1.8875C3.39062 1.7125 3.45312 1.5625 3.57812 1.4375C3.70312 1.3125 3.85113 1.25 4.02213 1.25C4.19279 1.25 4.34063 1.3125 4.46563 1.4375L8.66563 5.65C8.71563 5.7 8.75113 5.75417 8.77213 5.8125C8.79279 5.87083 8.80313 5.93333 8.80313 6C8.80313 6.06667 8.79279 6.12917 8.77213 6.1875C8.75113 6.24583 8.71563 6.3 8.66563 6.35L4.45312 10.5625C4.33646 10.6792 4.19279 10.7375 4.02213 10.7375C3.85113 10.7375 3.70313 10.675 3.57813 10.55Z" fill="#AF3B2B"/>
+                                  </svg>
+                              </div>
+                          </div>
+                      </a>
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-sm-12">
+                      <a href="javascript:void(0)" class="blog-item">
+                          <picture>
+                              <source srcset="../../images/pixel.webp" data-original="../../images/blog-01.webp" class="lazy-web" type="image/webp">
+                              <source srcset="../../images/pixel.jpg" data-original="../../images/blog-01.jpg" class="lazy-web" type="image/jpg">
+                              <img src="../../images/pixel.jpg" data-original="../../images/blog-01.jpg" class="lazy" alt="">
+                          </picture>
+                          <div>
+                              <span class="blog-item__title">Обладнання VIZION  в Україні</span>
+                              <div class="blog-item__descr">Якість надання медичних послуг, як в приватних, так і в державних клініках безпосередньо залежить від багатьох факторів багатьох факторів</div>
+                              <div class="blog-item__footer">
+                                  <span class="blog-item__category">Лабораторія</span>
+                                  <span class="blog-item__date">08.06.2022</span>
+                                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path d="M3.57813 10.55C3.45313 10.425 3.39063 10.277 3.39063 10.106C3.39063 9.93533 3.45313 9.7875 3.57813 9.6625L7.24063 6L3.56562 2.325C3.44896 2.20833 3.39062 2.0625 3.39062 1.8875C3.39062 1.7125 3.45312 1.5625 3.57812 1.4375C3.70312 1.3125 3.85113 1.25 4.02213 1.25C4.19279 1.25 4.34063 1.3125 4.46563 1.4375L8.66563 5.65C8.71563 5.7 8.75113 5.75417 8.77213 5.8125C8.79279 5.87083 8.80313 5.93333 8.80313 6C8.80313 6.06667 8.79279 6.12917 8.77213 6.1875C8.75113 6.24583 8.71563 6.3 8.66563 6.35L4.45312 10.5625C4.33646 10.6792 4.19279 10.7375 4.02213 10.7375C3.85113 10.7375 3.70313 10.675 3.57813 10.55Z" fill="#AF3B2B"/>
+                                  </svg>
+                              </div>
+                          </div>
+                      </a>
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-sm-12">
+                      <a href="javascript:void(0)" class="blog-item">
+                          <picture>
+                              <source srcset="../../images/pixel.webp" data-original="../../images/blog-02.webp" class="lazy-web" type="image/webp">
+                              <source srcset="../../images/pixel.jpg" data-original="../../images/blog-02.jpg" class="lazy-web" type="image/jpg">
+                              <img src="../../images/pixel.jpg" data-original="../../images/blog-02.jpg" class="lazy" alt="">
+                          </picture>
+                          <div>
+                              <span class="blog-item__title">Медичне обладнання для боротьби з COVID</span>
+                              <div class="blog-item__descr">В умовах пандемії в Україні, як і в усьому світі, особливо гостро стоїть питання оснащення медичних установ обладнанням, необхідним для багатьох факторів</div>
+                              <div class="blog-item__footer">
+                                  <span class="blog-item__category">Хірургія</span>
+                                  <span class="blog-item__date">24.01.2023</span>
+                                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path d="M3.57813 10.55C3.45313 10.425 3.39063 10.277 3.39063 10.106C3.39063 9.93533 3.45313 9.7875 3.57813 9.6625L7.24063 6L3.56562 2.325C3.44896 2.20833 3.39062 2.0625 3.39062 1.8875C3.39062 1.7125 3.45312 1.5625 3.57812 1.4375C3.70312 1.3125 3.85113 1.25 4.02213 1.25C4.19279 1.25 4.34063 1.3125 4.46563 1.4375L8.66563 5.65C8.71563 5.7 8.75113 5.75417 8.77213 5.8125C8.79279 5.87083 8.80313 5.93333 8.80313 6C8.80313 6.06667 8.79279 6.12917 8.77213 6.1875C8.75113 6.24583 8.71563 6.3 8.66563 6.35L4.45312 10.5625C4.33646 10.6792 4.19279 10.7375 4.02213 10.7375C3.85113 10.7375 3.70313 10.675 3.57813 10.55Z" fill="#AF3B2B"/>
+                                  </svg>
+                              </div>
+                          </div>
+                      </a>
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-sm-12">
+                      <a href="javascript:void(0)" class="blog-item">
+                          <picture>
+                              <source srcset="../../images/pixel.webp" data-original="../../images/blog-01.webp" class="lazy-web" type="image/webp">
+                              <source srcset="../../images/pixel.jpg" data-original="../../images/blog-01.jpg" class="lazy-web" type="image/jpg">
+                              <img src="../../images/pixel.jpg" data-original="../../images/blog-01.jpg" class="lazy" alt="">
+                          </picture>
+                          <div>
+                              <span class="blog-item__title">Обладнання VIZION  в Україні</span>
+                              <div class="blog-item__descr">Якість надання медичних послуг, як в приватних, так і в державних клініках безпосередньо залежить від багатьох факторів багатьох факторів</div>
+                              <div class="blog-item__footer">
+                                  <span class="blog-item__category">Лабораторія</span>
+                                  <span class="blog-item__date">08.06.2022</span>
+                                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path d="M3.57813 10.55C3.45313 10.425 3.39063 10.277 3.39063 10.106C3.39063 9.93533 3.45313 9.7875 3.57813 9.6625L7.24063 6L3.56562 2.325C3.44896 2.20833 3.39062 2.0625 3.39062 1.8875C3.39062 1.7125 3.45312 1.5625 3.57812 1.4375C3.70312 1.3125 3.85113 1.25 4.02213 1.25C4.19279 1.25 4.34063 1.3125 4.46563 1.4375L8.66563 5.65C8.71563 5.7 8.75113 5.75417 8.77213 5.8125C8.79279 5.87083 8.80313 5.93333 8.80313 6C8.80313 6.06667 8.79279 6.12917 8.77213 6.1875C8.75113 6.24583 8.71563 6.3 8.66563 6.35L4.45312 10.5625C4.33646 10.6792 4.19279 10.7375 4.02213 10.7375C3.85113 10.7375 3.70313 10.675 3.57813 10.55Z" fill="#AF3B2B"/>
+                                  </svg>
+                              </div>
+                          </div>
+                      </a>
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-sm-12">
+                      <a href="javascript:void(0)" class="blog-item">
+                          <picture>
+                              <source srcset="../../images/pixel.webp" data-original="../../images/blog-02.webp" class="lazy-web" type="image/webp">
+                              <source srcset="../../images/pixel.jpg" data-original="../../images/blog-02.jpg" class="lazy-web" type="image/jpg">
+                              <img src="../../images/pixel.jpg" data-original="../../images/blog-02.jpg" class="lazy" alt="">
+                          </picture>
+                          <div>
+                              <span class="blog-item__title">Медичне обладнання для боротьби з COVID</span>
+                              <div class="blog-item__descr">В умовах пандемії в Україні, як і в усьому світі, особливо гостро стоїть питання оснащення медичних установ обладнанням, необхідним для багатьох факторів</div>
+                              <div class="blog-item__footer">
+                                  <span class="blog-item__category">Хірургія</span>
+                                  <span class="blog-item__date">24.01.2023</span>
+                                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path d="M3.57813 10.55C3.45313 10.425 3.39063 10.277 3.39063 10.106C3.39063 9.93533 3.45313 9.7875 3.57813 9.6625L7.24063 6L3.56562 2.325C3.44896 2.20833 3.39062 2.0625 3.39062 1.8875C3.39062 1.7125 3.45312 1.5625 3.57812 1.4375C3.70312 1.3125 3.85113 1.25 4.02213 1.25C4.19279 1.25 4.34063 1.3125 4.46563 1.4375L8.66563 5.65C8.71563 5.7 8.75113 5.75417 8.77213 5.8125C8.79279 5.87083 8.80313 5.93333 8.80313 6C8.80313 6.06667 8.79279 6.12917 8.77213 6.1875C8.75113 6.24583 8.71563 6.3 8.66563 6.35L4.45312 10.5625C4.33646 10.6792 4.19279 10.7375 4.02213 10.7375C3.85113 10.7375 3.70313 10.675 3.57813 10.55Z" fill="#AF3B2B"/>
+                                  </svg>
+                              </div>
+                          </div>
+                      </a>
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-sm-12">
+                      <a href="javascript:void(0)" class="blog-item">
+                          <picture>
+                              <source srcset="../../images/pixel.webp" data-original="../../images/blog-01.webp" class="lazy-web" type="image/webp">
+                              <source srcset="../../images/pixel.jpg" data-original="../../images/blog-01.jpg" class="lazy-web" type="image/jpg">
+                              <img src="../../images/pixel.jpg" data-original="../../images/blog-01.jpg" class="lazy" alt="">
+                          </picture>
+                          <div>
+                              <span class="blog-item__title">Обладнання VIZION  в Україні</span>
+                              <div class="blog-item__descr">Якість надання медичних послуг, як в приватних, так і в державних клініках безпосередньо залежить від багатьох факторів багатьох факторів</div>
+                              <div class="blog-item__footer">
+                                  <span class="blog-item__category">Лабораторія</span>
+                                  <span class="blog-item__date">08.06.2022</span>
+                                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path d="M3.57813 10.55C3.45313 10.425 3.39063 10.277 3.39063 10.106C3.39063 9.93533 3.45313 9.7875 3.57813 9.6625L7.24063 6L3.56562 2.325C3.44896 2.20833 3.39062 2.0625 3.39062 1.8875C3.39062 1.7125 3.45312 1.5625 3.57812 1.4375C3.70312 1.3125 3.85113 1.25 4.02213 1.25C4.19279 1.25 4.34063 1.3125 4.46563 1.4375L8.66563 5.65C8.71563 5.7 8.75113 5.75417 8.77213 5.8125C8.79279 5.87083 8.80313 5.93333 8.80313 6C8.80313 6.06667 8.79279 6.12917 8.77213 6.1875C8.75113 6.24583 8.71563 6.3 8.66563 6.35L4.45312 10.5625C4.33646 10.6792 4.19279 10.7375 4.02213 10.7375C3.85113 10.7375 3.70313 10.675 3.57813 10.55Z" fill="#AF3B2B"/>
+                                  </svg>
+                              </div>
+                          </div>
+                      </a>
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-sm-12">
+                      <a href="javascript:void(0)" class="blog-item">
+                          <picture>
+                              <source srcset="../../images/pixel.webp" data-original="../../images/blog-02.webp" class="lazy-web" type="image/webp">
+                              <source srcset="../../images/pixel.jpg" data-original="../../images/blog-02.jpg" class="lazy-web" type="image/jpg">
+                              <img src="../../images/pixel.jpg" data-original="../../images/blog-02.jpg" class="lazy" alt="">
+                          </picture>
+                          <div>
+                              <span class="blog-item__title">Медичне обладнання для боротьби з COVID</span>
+                              <div class="blog-item__descr">В умовах пандемії в Україні, як і в усьому світі, особливо гостро стоїть питання оснащення медичних установ обладнанням, необхідним для багатьох факторів</div>
+                              <div class="blog-item__footer">
+                                  <span class="blog-item__category">Хірургія</span>
+                                  <span class="blog-item__date">24.01.2023</span>
+                                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path d="M3.57813 10.55C3.45313 10.425 3.39063 10.277 3.39063 10.106C3.39063 9.93533 3.45313 9.7875 3.57813 9.6625L7.24063 6L3.56562 2.325C3.44896 2.20833 3.39062 2.0625 3.39062 1.8875C3.39062 1.7125 3.45312 1.5625 3.57812 1.4375C3.70312 1.3125 3.85113 1.25 4.02213 1.25C4.19279 1.25 4.34063 1.3125 4.46563 1.4375L8.66563 5.65C8.71563 5.7 8.75113 5.75417 8.77213 5.8125C8.79279 5.87083 8.80313 5.93333 8.80313 6C8.80313 6.06667 8.79279 6.12917 8.77213 6.1875C8.75113 6.24583 8.71563 6.3 8.66563 6.35L4.45312 10.5625C4.33646 10.6792 4.19279 10.7375 4.02213 10.7375C3.85113 10.7375 3.70313 10.675 3.57813 10.55Z" fill="#AF3B2B"/>
+                                  </svg>
+                              </div>
+                          </div>
+                      </a>
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-sm-12">
+                      <a href="javascript:void(0)" class="blog-item">
+                          <picture>
+                              <source srcset="../../images/pixel.webp" data-original="../../images/blog-01.webp" class="lazy-web" type="image/webp">
+                              <source srcset="../../images/pixel.jpg" data-original="../../images/blog-01.jpg" class="lazy-web" type="image/jpg">
+                              <img src="../../images/pixel.jpg" data-original="../../images/blog-01.jpg" class="lazy" alt="">
+                          </picture>
+                          <div>
+                              <span class="blog-item__title">Обладнання VIZION  в Україні</span>
+                              <div class="blog-item__descr">Якість надання медичних послуг, як в приватних, так і в державних клініках безпосередньо залежить від багатьох факторів багатьох факторів</div>
+                              <div class="blog-item__footer">
+                                  <span class="blog-item__category">Лабораторія</span>
+                                  <span class="blog-item__date">08.06.2022</span>
+                                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path d="M3.57813 10.55C3.45313 10.425 3.39063 10.277 3.39063 10.106C3.39063 9.93533 3.45313 9.7875 3.57813 9.6625L7.24063 6L3.56562 2.325C3.44896 2.20833 3.39062 2.0625 3.39062 1.8875C3.39062 1.7125 3.45312 1.5625 3.57812 1.4375C3.70312 1.3125 3.85113 1.25 4.02213 1.25C4.19279 1.25 4.34063 1.3125 4.46563 1.4375L8.66563 5.65C8.71563 5.7 8.75113 5.75417 8.77213 5.8125C8.79279 5.87083 8.80313 5.93333 8.80313 6C8.80313 6.06667 8.79279 6.12917 8.77213 6.1875C8.75113 6.24583 8.71563 6.3 8.66563 6.35L4.45312 10.5625C4.33646 10.6792 4.19279 10.7375 4.02213 10.7375C3.85113 10.7375 3.70313 10.675 3.57813 10.55Z" fill="#AF3B2B"/>
+                                  </svg>
+                              </div>
+                          </div>
+                      </a>
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-sm-12">
+                      <a href="javascript:void(0)" class="blog-item">
+                          <picture>
+                              <source srcset="../../images/pixel.webp" data-original="../../images/blog-02.webp" class="lazy-web" type="image/webp">
+                              <source srcset="../../images/pixel.jpg" data-original="../../images/blog-02.jpg" class="lazy-web" type="image/jpg">
+                              <img src="../../images/pixel.jpg" data-original="../../images/blog-02.jpg" class="lazy" alt="">
+                          </picture>
+                          <div>
+                              <span class="blog-item__title">Медичне обладнання для боротьби з COVID</span>
+                              <div class="blog-item__descr">В умовах пандемії в Україні, як і в усьому світі, особливо гостро стоїть питання оснащення медичних установ обладнанням, необхідним для багатьох факторів</div>
+                              <div class="blog-item__footer">
+                                  <span class="blog-item__category">Хірургія</span>
+                                  <span class="blog-item__date">24.01.2023</span>
+                                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path d="M3.57813 10.55C3.45313 10.425 3.39063 10.277 3.39063 10.106C3.39063 9.93533 3.45313 9.7875 3.57813 9.6625L7.24063 6L3.56562 2.325C3.44896 2.20833 3.39062 2.0625 3.39062 1.8875C3.39062 1.7125 3.45312 1.5625 3.57812 1.4375C3.70312 1.3125 3.85113 1.25 4.02213 1.25C4.19279 1.25 4.34063 1.3125 4.46563 1.4375L8.66563 5.65C8.71563 5.7 8.75113 5.75417 8.77213 5.8125C8.79279 5.87083 8.80313 5.93333 8.80313 6C8.80313 6.06667 8.79279 6.12917 8.77213 6.1875C8.75113 6.24583 8.71563 6.3 8.66563 6.35L4.45312 10.5625C4.33646 10.6792 4.19279 10.7375 4.02213 10.7375C3.85113 10.7375 3.70313 10.675 3.57813 10.55Z" fill="#AF3B2B"/>
+                                  </svg>
+                              </div>
+                          </div>
+                      </a>
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-sm-12">
+                      <a href="javascript:void(0)" class="blog-item">
+                          <picture>
+                              <source srcset="../../images/pixel.webp" data-original="../../images/blog-01.webp" class="lazy-web" type="image/webp">
+                              <source srcset="../../images/pixel.jpg" data-original="../../images/blog-01.jpg" class="lazy-web" type="image/jpg">
+                              <img src="../../images/pixel.jpg" data-original="../../images/blog-01.jpg" class="lazy" alt="">
+                          </picture>
+                          <div>
+                              <span class="blog-item__title">Обладнання VIZION  в Україні</span>
+                              <div class="blog-item__descr">Якість надання медичних послуг, як в приватних, так і в державних клініках безпосередньо залежить від багатьох факторів багатьох факторів</div>
+                              <div class="blog-item__footer">
+                                  <span class="blog-item__category">Лабораторія</span>
+                                  <span class="blog-item__date">08.06.2022</span>
+                                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path d="M3.57813 10.55C3.45313 10.425 3.39063 10.277 3.39063 10.106C3.39063 9.93533 3.45313 9.7875 3.57813 9.6625L7.24063 6L3.56562 2.325C3.44896 2.20833 3.39062 2.0625 3.39062 1.8875C3.39062 1.7125 3.45312 1.5625 3.57812 1.4375C3.70312 1.3125 3.85113 1.25 4.02213 1.25C4.19279 1.25 4.34063 1.3125 4.46563 1.4375L8.66563 5.65C8.71563 5.7 8.75113 5.75417 8.77213 5.8125C8.79279 5.87083 8.80313 5.93333 8.80313 6C8.80313 6.06667 8.79279 6.12917 8.77213 6.1875C8.75113 6.24583 8.71563 6.3 8.66563 6.35L4.45312 10.5625C4.33646 10.6792 4.19279 10.7375 4.02213 10.7375C3.85113 10.7375 3.70313 10.675 3.57813 10.55Z" fill="#AF3B2B"/>
+                                  </svg>
+                              </div>
+                          </div>
+                      </a>
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-sm-12">
+                      <a href="javascript:void(0)" class="blog-item">
+                          <picture>
+                              <source srcset="../../images/pixel.webp" data-original="../../images/blog-02.webp" class="lazy-web" type="image/webp">
+                              <source srcset="../../images/pixel.jpg" data-original="../../images/blog-02.jpg" class="lazy-web" type="image/jpg">
+                              <img src="../../images/pixel.jpg" data-original="../../images/blog-02.jpg" class="lazy" alt="">
+                          </picture>
+                          <div>
+                              <span class="blog-item__title">Медичне обладнання для боротьби з COVID</span>
+                              <div class="blog-item__descr">В умовах пандемії в Україні, як і в усьому світі, особливо гостро стоїть питання оснащення медичних установ обладнанням, необхідним для багатьох факторів</div>
+                              <div class="blog-item__footer">
+                                  <span class="blog-item__category">Хірургія</span>
+                                  <span class="blog-item__date">24.01.2023</span>
+                                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path d="M3.57813 10.55C3.45313 10.425 3.39063 10.277 3.39063 10.106C3.39063 9.93533 3.45313 9.7875 3.57813 9.6625L7.24063 6L3.56562 2.325C3.44896 2.20833 3.39062 2.0625 3.39062 1.8875C3.39062 1.7125 3.45312 1.5625 3.57812 1.4375C3.70312 1.3125 3.85113 1.25 4.02213 1.25C4.19279 1.25 4.34063 1.3125 4.46563 1.4375L8.66563 5.65C8.71563 5.7 8.75113 5.75417 8.77213 5.8125C8.79279 5.87083 8.80313 5.93333 8.80313 6C8.80313 6.06667 8.79279 6.12917 8.77213 6.1875C8.75113 6.24583 8.71563 6.3 8.66563 6.35L4.45312 10.5625C4.33646 10.6792 4.19279 10.7375 4.02213 10.7375C3.85113 10.7375 3.70313 10.675 3.57813 10.55Z" fill="#AF3B2B"/>
+                                  </svg>
+                              </div>
+                          </div>
+                      </a>
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-sm-12">
+                      <a href="javascript:void(0)" class="blog-item">
+                          <picture>
+                              <source srcset="../../images/pixel.webp" data-original="../../images/blog-01.webp" class="lazy-web" type="image/webp">
+                              <source srcset="../../images/pixel.jpg" data-original="../../images/blog-01.jpg" class="lazy-web" type="image/jpg">
+                              <img src="../../images/pixel.jpg" data-original="../../images/blog-01.jpg" class="lazy" alt="">
+                          </picture>
+                          <div>
+                              <span class="blog-item__title">Обладнання VIZION  в Україні</span>
+                              <div class="blog-item__descr">Якість надання медичних послуг, як в приватних, так і в державних клініках безпосередньо залежить від багатьох факторів багатьох факторів</div>
+                              <div class="blog-item__footer">
+                                  <span class="blog-item__category">Лабораторія</span>
+                                  <span class="blog-item__date">08.06.2022</span>
+                                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path d="M3.57813 10.55C3.45313 10.425 3.39063 10.277 3.39063 10.106C3.39063 9.93533 3.45313 9.7875 3.57813 9.6625L7.24063 6L3.56562 2.325C3.44896 2.20833 3.39062 2.0625 3.39062 1.8875C3.39062 1.7125 3.45312 1.5625 3.57812 1.4375C3.70312 1.3125 3.85113 1.25 4.02213 1.25C4.19279 1.25 4.34063 1.3125 4.46563 1.4375L8.66563 5.65C8.71563 5.7 8.75113 5.75417 8.77213 5.8125C8.79279 5.87083 8.80313 5.93333 8.80313 6C8.80313 6.06667 8.79279 6.12917 8.77213 6.1875C8.75113 6.24583 8.71563 6.3 8.66563 6.35L4.45312 10.5625C4.33646 10.6792 4.19279 10.7375 4.02213 10.7375C3.85113 10.7375 3.70313 10.675 3.57813 10.55Z" fill="#AF3B2B"/>
+                                  </svg>
+                              </div>
+                          </div>
+                      </a>
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-sm-12">
+                      <a href="javascript:void(0)" class="blog-item">
+                          <picture>
+                              <source srcset="../../images/pixel.webp" data-original="../../images/blog-02.webp" class="lazy-web" type="image/webp">
+                              <source srcset="../../images/pixel.jpg" data-original="../../images/blog-02.jpg" class="lazy-web" type="image/jpg">
+                              <img src="../../images/pixel.jpg" data-original="../../images/blog-02.jpg" class="lazy" alt="">
+                          </picture>
+                          <div>
+                              <span class="blog-item__title">Медичне обладнання для боротьби з COVID</span>
+                              <div class="blog-item__descr">В умовах пандемії в Україні, як і в усьому світі, особливо гостро стоїть питання оснащення медичних установ обладнанням, необхідним для багатьох факторів</div>
+                              <div class="blog-item__footer">
+                                  <span class="blog-item__category">Хірургія</span>
+                                  <span class="blog-item__date">24.01.2023</span>
+                                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path d="M3.57813 10.55C3.45313 10.425 3.39063 10.277 3.39063 10.106C3.39063 9.93533 3.45313 9.7875 3.57813 9.6625L7.24063 6L3.56562 2.325C3.44896 2.20833 3.39062 2.0625 3.39062 1.8875C3.39062 1.7125 3.45312 1.5625 3.57812 1.4375C3.70312 1.3125 3.85113 1.25 4.02213 1.25C4.19279 1.25 4.34063 1.3125 4.46563 1.4375L8.66563 5.65C8.71563 5.7 8.75113 5.75417 8.77213 5.8125C8.79279 5.87083 8.80313 5.93333 8.80313 6C8.80313 6.06667 8.79279 6.12917 8.77213 6.1875C8.75113 6.24583 8.71563 6.3 8.66563 6.35L4.45312 10.5625C4.33646 10.6792 4.19279 10.7375 4.02213 10.7375C3.85113 10.7375 3.70313 10.675 3.57813 10.55Z" fill="#AF3B2B"/>
+                                  </svg>
+                              </div>
+                          </div>
+                      </a>
+                  </div>
+              </div>
+              <div class="pagination">
+                  <a href="javascript:void(0)" class="button prev disabled">
+                      <svg width="9" height="16" viewBox="0 0 9 16" fill="none"
+                           xmlns="http://www.w3.org/2000/svg">
+                          <path
+                              d="M8.64063 1.175C8.82813 1.3625 8.92188 1.5845 8.92188 1.841C8.92188 2.097 8.82813 2.31875 8.64063 2.50625L3.14687 8L8.65938 13.5125C8.83438 13.6875 8.92188 13.9063 8.92188 14.1688C8.92188 14.4312 8.82813 14.6563 8.64063 14.8437C8.45312 15.0312 8.23112 15.125 7.97462 15.125C7.71862 15.125 7.49687 15.0312 7.30937 14.8437L1.00937 8.525C0.934374 8.45 0.881125 8.36875 0.849625 8.28125C0.818625 8.19375 0.803124 8.1 0.803124 8C0.803124 7.9 0.818625 7.80625 0.849625 7.71875C0.881125 7.63125 0.934374 7.55 1.00937 7.475L7.32813 1.15625C7.50313 0.981251 7.71863 0.893751 7.97463 0.893751C8.23113 0.893751 8.45313 0.987501 8.64063 1.175Z"
+                              fill="#17232E"/>
+                      </svg>
+
+                  </a>
+                  <ul class="pagination__list">
+                      <li class="current">
+                          <span>1</span>
+                      </li>
+                      <li>
+                          <a href="javascript:void(0)">2</a>
+                      </li>
+                      <li>
+                          <a href="javascript:void(0)">3</a>
+                      </li>
+                      <li>
+                          <a href="javascript:void(0)">4</a>
+                      </li>
+                      <li class="dots">
+                          <a href="javascript:void(0)">
+                              <svg width="10" height="3" viewBox="0 0 10 3" fill="none"
+                                   xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                      d="M0.0527344 1.27539C0.0527344 1.80859 0.435547 2.13672 0.914062 2.13672C1.39258 2.13672 1.77539 1.80859 1.77539 1.27539C1.77539 0.755859 1.39258 0.414062 0.914062 0.414062C0.435547 0.414062 0.0527344 0.755859 0.0527344 1.27539ZM3.88086 1.27539C3.88086 1.80859 4.26367 2.13672 4.74219 2.13672C5.2207 2.13672 5.60352 1.80859 5.60352 1.27539C5.60352 0.755859 5.2207 0.414062 4.74219 0.414062C4.26367 0.414062 3.88086 0.755859 3.88086 1.27539ZM7.70898 1.27539C7.70898 1.80859 8.0918 2.13672 8.57031 2.13672C9.04883 2.13672 9.43164 1.80859 9.43164 1.27539C9.43164 0.755859 9.04883 0.414062 8.57031 0.414062C8.0918 0.414062 7.70898 0.755859 7.70898 1.27539Z"
+                                      fill="#17232E"/>
+                              </svg>
+                          </a>
+                      </li>
+                      <li>
+                          <a href="javascript:void(0)">32</a>
+                      </li>
+                  </ul>
+                  <a class="button next" href="javascript:void(0)">
+                      <svg width="9" height="16" viewBox="0 0 9 16" fill="none"
+                           xmlns="http://www.w3.org/2000/svg">
+                          <path
+                              d="M0.359375 14.825C0.171875 14.6375 0.078125 14.4155 0.078125 14.159C0.078125 13.903 0.171875 13.6813 0.359375 13.4938L5.85313 8L0.340625 2.4875C0.165625 2.3125 0.078125 2.09375 0.078125 1.83125C0.078125 1.56875 0.171875 1.34375 0.359375 1.15625C0.546875 0.96875 0.768875 0.875 1.02538 0.875C1.28138 0.875 1.50313 0.96875 1.69063 1.15625L7.99063 7.475C8.06563 7.55 8.11888 7.63125 8.15038 7.71875C8.18138 7.80625 8.19688 7.9 8.19688 8C8.19688 8.1 8.18138 8.19375 8.15038 8.28125C8.11888 8.36875 8.06563 8.45 7.99063 8.525L1.67187 14.8438C1.49687 15.0188 1.28138 15.1063 1.02538 15.1063C0.768875 15.1063 0.546875 15.0125 0.359375 14.825Z"
+                              fill="#17232E"/>
+                      </svg>
+                  </a>
+              </div>
+          </div>
+      </div>
+  </main>
+  ${require('../parts/footer.html')}
+</body>
+
+</html>

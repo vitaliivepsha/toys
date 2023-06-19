@@ -1,0 +1,174 @@
+.search-result-page {
+  .catalog-main__container {
+    width: 100%;
+    @include bp(xs) {
+      margin-bottom: -10px;
+    }
+  }
+  & + .section-reviews {
+    padding-bottom: 110px;
+    @include bp(xs) {
+      padding-bottom: 50px;
+    }
+  }
+}
+
+.search-result-empty {
+  margin-bottom: 58px;
+  @include bp(xs) {
+    margin-bottom: 65px;
+  }
+  .page-title {
+    margin-bottom: 24px;
+    @include bp(xs) {
+      margin-bottom: 15px;
+    }
+  }
+  .search-result-page__text {
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 20px;
+    color: $main;
+    @include bp(sm) {
+      font-size: 18px;
+    }
+    @include bp(xs) {
+      font-size: 16px;
+      line-height: 130%;
+    }
+    + .search-result-page__text {
+      margin-top: 10px;
+      @include bp(xs) {
+        margin-top: 8px;
+      }
+    }
+  }
+  .btn {
+    margin-top: 27px;
+    margin-bottom: 58px;
+    width: fit-content;
+    min-width: 177px;
+    height: 45px;
+    @include bp(xs) {
+      min-width: 190px;
+      height: 40px;
+      margin-top: 15px;
+      margin-bottom: 60px;
+    }
+  }
+}
+
+.thank-you {
+  padding-bottom: 242px;
+  @include bp(xs) {
+    padding-bottom: 95px;
+  }
+  .page-title {
+    margin-bottom: 24px;
+    @include bp(xs) {
+      margin-bottom: 22px;
+    }
+  }
+  .thank-you__order {
+    margin-bottom: 31px;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 20px;
+    color: $main;
+    @include bp(sm) {
+      font-size: 18px;
+    }
+    @include bp(xs) {
+      font-size: 16px;
+      line-height: 15px;
+    }
+    & span {
+      margin-left: 12px;
+      font-weight: 400;
+      font-size: 21px;
+      line-height: 20px;
+      color: $red;
+      @include bp(sm) {
+        font-size: 18px;
+      }
+      @include bp(xs) {
+        font-size: 16px;
+        line-height: 15px;
+        display: block;
+        margin: 13px 0;
+      }
+    }
+  }
+  .thank-you__text {
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 130%;
+    color: $main;
+    @include bp(sm) {
+      font-size: 18px;
+    }
+    @include bp(xs) {
+      font-size: 16px;
+      line-height: 130%;
+    }
+  }
+  .btn {
+    max-width: 267px;
+    height: 45px;
+    margin-top: 42px;
+    @include bp(xs) {
+      width: 215px;
+      height: 40px;
+      margin-top: 28px;
+    }
+  }
+}
+
+.no-goods {
+  margin-bottom: 320px;
+  @include bp(xs) {
+    margin-bottom: 113px;
+  }
+  .page-title {
+    margin-bottom: 24px;
+    @include bp(xs) {
+      margin-bottom: 20px;
+    }
+  }
+  .no-goods__text {
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 20px;
+    color: $main;
+    @include bp(sm) {
+      font-size: 18px;
+    }
+    @include bp(xs) {
+      font-size: 16px;
+      line-height: 130%;
+    }
+  }
+  .no-goods-btn {
+    display: flex;
+    gap: 32px;
+    margin-top: 50px;
+    @include bp(xs) {
+      flex-direction: column;
+      gap: 0;
+      margin-top: 35px;
+    }
+  }
+  .btn {
+    height: 45px;
+    max-width: 267px;
+    @include bp(xs) {
+      width: 215px;
+      height: 40px;
+    }
+    +.btn{
+      @include bp(xs) {
+        margin-top: 15px;
+      }
+    }
+  }
+}

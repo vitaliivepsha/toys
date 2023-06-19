@@ -1,0 +1,211 @@
+.section-main{
+  position: relative;
+  min-height: 900px;
+  margin-top: -100px;
+  @include bp(lg) {
+    min-height: 730px;
+  }
+  @include bp(md) {
+    min-height: 110vw;
+    margin-top: -60px;
+  }
+  @include bp(sm) {
+    min-height: 140.6vw;
+  }
+}
+
+.main-slider{
+  height: 900px;
+  width: 100%;
+  overflow: hidden;
+  @include bp(lg) {
+    height: 730px;
+  }
+  @include bp(md) {
+    height: 110vw;
+  }
+  @include bp(sm) {
+    height: 140.6vw;
+  }
+  .slide{
+    height: 900px;
+    @include bp(lg) {
+      height: 730px;
+    }
+    @include bp(md) {
+      height: 110vw;
+    }
+    @include bp(sm) {
+      height: 140.6vw;
+    }
+    img{
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .container{
+      height: 900px;
+      display: flex;
+      justify-content: center;
+      padding-top: 406px;
+      position: relative;
+      z-index: 1;
+      @include bp(lg) {
+        height: 730px;
+        padding-top: 300px;
+      }
+      @include bp(md) {
+        height: 110vw;
+      }
+      @include bp(sm) {
+        height: 140.6vw;
+        padding-top: 90px;
+        padding-bottom: 120px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+      }
+      @include bp(xs) {
+        padding-bottom: 58px;
+      }
+    }
+  }
+  .slick-arrow{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    top: 50%;
+    transform: translateY(-50%);
+    margin-top: 50px;
+    transition: linear .2s;
+    border: none;
+    font-size: 0;
+    @include bp(xs) {
+      width: 35px;
+      height: 35px;
+    }
+    &.slick-prev{
+      left: 55px;
+      @include bp(lg) {
+        left: 30px;
+      }
+      @include bp(xs) {
+        left: 10px;
+      }
+    }
+    &.slick-next{
+      right: 55px;
+      @include bp(lg) {
+        right: 30px;
+      }
+      @include bp(xs) {
+        right: 10px;
+      }
+      &:before{
+        transform: scale(-1, -1);
+      }
+    }
+    &:hover{
+      &:before{
+        background-color: $red;
+      }
+    }
+    &:before{
+      content: '';
+      width: 22px;
+      height: 22px;
+      -webkit-mask: url("../images/icons/slider-arrow.svg");
+      mask: url("../images/icons/slider-arrow.svg");
+      -webkit-mask-position: center;
+      mask-position: center;
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
+      -webkit-mask-size: contain;
+      mask-size: contain;
+      background-color: $main;
+      @include bp(xs) {
+        width: 15px;
+        height: 15px;
+      }
+    }
+  }
+  .slick-dots{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: calc(100vw - 30px);
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 15px;
+    li{
+      margin-right: 15px;
+      display: flex;
+      opacity: .5;
+      &.slick-active{
+        opacity: 1;
+      }
+      &:last-child{
+        margin-right: 0;
+      }
+      button{
+        border: none;
+        font-size: 0;
+        padding: 0;
+        border-radius: 50%;
+        width: 10px;
+        height: 10px;
+        background-color: #fff;
+      }
+    }
+  }
+}
+
+.main-slider__content{
+  text-align: center;
+  margin: 0 auto;
+  @include bp(lg) {
+    width: calc(100vw - 200px);
+  }
+  @include bp(xs) {
+    width: calc(100vw - 30px);
+  }
+}
+
+.main-slider__title{
+  display: block;
+  color: #fff;
+  margin-bottom: 40px;
+  font-family: $title;
+  font-size: 100px;
+  line-height: 112px;
+  font-weight: 700;
+  @include bp(lg) {
+    font-size: 86px;
+    line-height: 98px;
+  }
+  @include bp(xs) {
+    font-size: 42px;
+    line-height: 120%;
+    margin-bottom: 22px;
+  }
+}
+
+.main-slider__btn{
+  width: 230px;
+  margin: 0 auto;
+  @include bp(xs) {
+    width: 190px;
+  }
+}

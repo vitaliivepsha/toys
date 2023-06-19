@@ -1,0 +1,42 @@
+<div class="section section-consult">
+  <div class="container">
+    <div class="section-consult__wrapper">
+        <picture>
+            <source media="(min-width: 575px)" srcset="../../images/pixel.webp" data-original="../../images/consult-bg.webp" class="lazy-web" type="image/webp">
+            <source media="(min-width: 575px)" srcset="../../images/pixel.png" data-original="../../images/consult-bg.png" class="lazy-web" type="image/png">
+            <source srcset="../../images/pixel.webp" data-original="../../images/consult-bg__mob.webp" class="lazy-web"
+                    type="image/webp">
+            <source srcset="../../images/pixel.jpg" data-original="../../images/consult-bg__mob.png" class="lazy-web"
+                    type="image/png">
+            <img src="../../images/pixel.png" data-original="../../images/consult-bg__mob.png" class="lazy" alt="">
+        </picture>
+      <form class="consult-form ajax_form clear-styles" data-error-title="Помилка відправки!"
+            data-error-message="Спробуйте пізніше" data-success-title="Дякуємо за звернення!"
+        data-success-message="Наш менеджер зв’яжеться з Вами в найближчий час"
+            data-success-btn="Гаразд">
+          <div class="section-title">Зв’язатися з нами</div>
+          <div class="consult-form__row">
+              <label>Номер телефону</label>
+              <div class="input-wrapper">
+                  <input class="input" type="text" name="phone" data-title="Телефон"
+                         data-validate-required="Заповніть поле Телефон" data-validate-uaphone="Заповніть поле Телефон">
+              </div>
+          </div>
+          <div class="consult-form__row">
+              <label>Email</label>
+              <div class="input-wrapper">
+                  <input class="input" type="text" name="email" data-title="Email"
+                         data-validate-required="Заповніть поле Email">
+              </div>
+          </div>
+          <div class="consult-form__row">
+              <label>Повідомлення</label>
+              <div class="input-wrapper">
+                  <textarea class="textarea" name="message" data-title="Повідомлення"></textarea>
+              </div>
+          </div>
+          <button class="btn btn-r" type="submit" data-sending="Відправляється..." data-error="Помилка :(" data-sent="Відправлено">Отримати консультацію</button>
+      </form>
+    </div>
+  </div>
+</div>

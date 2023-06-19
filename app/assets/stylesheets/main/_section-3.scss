@@ -1,0 +1,117 @@
+.section-concepts{
+  padding: 79px 0 109px;
+  background-color: $main;
+  color: #fff;
+  text-align: center;
+  @include bp(xs) {
+    padding: 40px 0 50px;
+  }
+}
+
+.concepts-star{
+  width: 20px;
+  height: 20px;
+  margin: 0 auto 50px;
+  @include bp(xs) {
+    width: 15px;
+    height: 15px;
+    margin-bottom: 15px;
+  }
+}
+
+.concepts-pretitle{
+  display: block;
+  font-size: 24px;
+  line-height: 36px;
+  margin-bottom: 50px;
+  @include bp(xs) {
+    font-size: 14px;
+    line-height: 21px;
+    margin-bottom: 27px;
+  }
+}
+
+.concepts-title{
+  display: block;
+  max-width: 920px;
+  margin: 0 auto 30px;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 110%;
+  font-family: $title;
+  @include bp(xs) {
+    font-size: 24px;
+    line-height: 130%;
+    max-width: calc(100% - 30px);
+    margin-bottom: 16px;
+  }
+}
+
+.concepts-descr{
+  display: block;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 50px;
+  @include bp(xs) {
+    font-size: 14px;
+    line-height: 21px;
+    margin-bottom: 12px;
+  }
+}
+
+.concepts-btn{
+  width: 230px;
+  margin: 0 auto;
+  @include bp(xs) {
+    width: 190px;
+  }
+}
+
+// marquee
+
+.section-marquee {
+  padding: 50px 0;
+  @include bp(xs) {
+    padding: 20px 0;
+  }
+}
+
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  font-size: 18px;
+  line-height: 27px;
+  text-transform: uppercase;
+  @include bp(xs) {
+    font-size: 12px;
+    line-height: 18px;
+  }
+  > div {
+    display: inline-flex;
+    align-items: center;
+    width: max-content;
+    will-change: transform;
+    animation: marquee 135s linear infinite;
+    svg {
+      width: 14px;
+      height: 14px;
+      min-width: 14px;
+      margin: 0 40px;
+      @include bp(xs) {
+        width: 10px;
+        height: 10px;
+        min-width: 10px;
+        margin: 0 15px;
+      }
+    }
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-100%, 0);
+  }
+}

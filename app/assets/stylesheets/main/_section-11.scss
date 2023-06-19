@@ -1,0 +1,160 @@
+.section-features{
+  background-color: $bg-grey;
+  padding-top: 142px;
+  padding-bottom: 125px;
+  position: relative;
+  @include bp(md) {
+    padding-bottom: 65px;
+  }
+  @include bp(xs) {
+    padding-top: 88px;
+    padding-bottom: 46px;
+  }
+  >svg{
+    position: absolute;
+    top: 14px;
+    left: 50%;
+    transform: translateX(calc(-50% + 19px));
+    @include bp(xs) {
+      transform: translateX(-50%);
+      width: 68px;
+      height: 40px;
+      top: 18px;
+    }
+  }
+  .club-form{
+    margin-top: 90px;
+    @include bp(xs) {
+      margin-top: 44px;
+    }
+  }
+}
+
+.features-title{
+  display: block;
+  text-align: center;
+  font-family: $title;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 110%;
+  max-width: 550px;
+  margin: 0 auto 54px;
+  @include bp(xs) {
+    font-size: 24px;
+    line-height: 130%;
+    margin-bottom: 30px;
+  }
+}
+
+.features-wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: -30px;
+  @include bp(xs) {
+    margin-bottom: -20px;
+    padding: 0 20px;
+  }
+  .col-xs-12{
+    margin-bottom: 30px;
+    @include bp(xs) {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.features-top__line{
+  display: flex;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  @include bp(xs) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  i{
+    display: flex;
+    align-items: center;
+    width: 25px;
+    min-width: 25px;
+    height: 25px;
+    margin-right: 15px;
+    @include bp(xs) {
+      margin-right: 7px;
+    }
+  }
+}
+
+.features-bot__line{
+  display: block;
+  font-size: 14px;
+  line-height: 21px;
+  margin-top: 11px;
+  @include bp(xs) {
+    font-size: 12px;
+    line-height: 18px;
+    margin-top: 2px;
+  }
+}
+
+
+
+
+
+
+.section-consult {
+  padding: 40px 0 75px;
+  @include bp(xs) {
+    padding: 25px 0 45px;
+  }
+}
+
+.section-consult__wrapper {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 54px 30px 60px;
+  @include bp(xs) {
+    padding: 40px 18px 30px;
+  }
+  >picture{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.consult-form{
+  width: 350px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  max-width: 100%;
+  .section-title{
+    display: block;
+    text-transform: uppercase;
+    margin: 0 0 20px;
+  }
+  .consult-form__row{
+    +.consult-form__row{
+      margin-top: 11px;
+    }
+    >label{
+      display: block;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 12px;
+      margin-bottom: 3px;
+      color: $grey;
+    }
+  }
+  .btn{
+    margin-top: 20px;
+  }
+}
