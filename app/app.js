@@ -4,10 +4,11 @@
 
 if (process.env.NODE_ENV !== 'production') {
   require('./assets/templates/layouts/index.html');
-    require('./assets/templates/layouts/blog.html');
-    require('./assets/templates/layouts/blog-article.html');
+  require('./assets/templates/layouts/blog.html');
+  require('./assets/templates/layouts/blog-article.html');
   require('./assets/templates/layouts/catalog.html');
   require('./assets/templates/layouts/catalog-checked-filters.html');
+  require('./assets/templates/layouts/catalog-checked-category.html');
   require('./assets/templates/layouts/search-results.html');
   require('./assets/templates/layouts/search-results-empty.html');
   require('./assets/templates/layouts/thank-you.html');
