@@ -4,6 +4,11 @@
   @include bp(xs) {
     padding: 50px 0;
   }
+  .products-card__colors{
+    .slick-arrow{
+      background-color: $bg-grey;
+    }
+  }
 }
 
 .video-wrapper{
@@ -381,7 +386,7 @@
     position: absolute;
     right: 0;
     top: 0;
-    background-color: $bg-grey;
+    background-color: #fff;
     width: 24px;
     padding-left: 0;
     padding-right: 1px;

@@ -85,11 +85,19 @@ $(function() {
     $('body, html').animate({scrollTop: pos}, 500);
   });
 
-  $(window).resize(function() {
+  /*$(window).resize(function() {
     setTimeout(function() {
       $('.slick-slider').slick('setPosition');
     }, 100);
-  });
+  });*/
+
+    $(window).on('resize orientationchange', function(){
+        if($('.slick-slider').length){
+            setTimeout(function() {
+                $('.slick-slider')[0].slick.refresh();
+            }, 100);
+        }
+    });
 
   // video preview
 
