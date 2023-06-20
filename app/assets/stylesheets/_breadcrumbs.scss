@@ -34,7 +34,7 @@
       transition: linear .2s;
       color: rgba($text-grey2, 0.6);
       @include bp(xs) {
-        margin: 0 8px 0 7px;
+        margin: 0 7px 0 4px;
       }
     }
     &:first-child {

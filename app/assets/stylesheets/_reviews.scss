@@ -2,6 +2,11 @@
   .container{
     position: relative;
   }
+  .breadcrumbs-wrapper{
+    @include bp(xs) {
+      margin-bottom: -14px;
+    }
+  }
   .btn{
     width: 207px;
     border-color: #fff;
