@@ -41,6 +41,7 @@
     "html-webpack-plugin": "2.22.0",
     "image-webpack-loader": "^3.3.1",
     "jquery": "^3.3.1",
+    "jquery-validation": "^1.19.5",
     "jquery.maskedinput": "^1.4.1",
     "js-datepicker": "^5.2.1",
     "jscrollpane": "^2.1.3",
@@ -103,7 +104,6 @@
   "dependencies": {
     "ion-rangeslider": "^2.3.1",
     "jquery-asRange": "^0.3.4",
-    "jquery-validation": "^1.19.5",
     "jquery.nicescroll": "^3.7.6",
     "mark.js": "^8.11.1",
     "owl.carousel": "^2.3.4",
