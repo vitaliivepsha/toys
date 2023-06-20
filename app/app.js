@@ -4,10 +4,11 @@
 
 if (process.env.NODE_ENV !== 'production') {
   require('./assets/templates/layouts/index.html');
-    require('./assets/templates/layouts/blog.html');
-    require('./assets/templates/layouts/blog-article.html');
+  require('./assets/templates/layouts/blog.html');
+  require('./assets/templates/layouts/blog-article.html');
   require('./assets/templates/layouts/catalog.html');
   require('./assets/templates/layouts/catalog-checked-filters.html');
+  require('./assets/templates/layouts/catalog-checked-category.html');
   require('./assets/templates/layouts/search-results.html');
   require('./assets/templates/layouts/search-results-empty.html');
   require('./assets/templates/layouts/thank-you.html');
@@ -37,8 +38,9 @@ var Popup = require('_modules/popup');
 var LightGallery = require('_modules/lightgallery');
 require('../node_modules/sumoselect/jquery.sumoselect.min');
 require('../node_modules/mark.js/dist/jquery.mark.min');
+require('../node_modules/jquery-validation/dist/jquery.validate.min');
 require('_modules/succinct/succinct');
-require('../node_modules/ion-rangeslider/js/ion.rangeSlider');
+//require('../node_modules/ion-rangeslider/js/ion.rangeSlider');
 
 // Stylesheet entrypoint
 require('_stylesheets/app.scss');
@@ -155,19 +157,80 @@ $(function() {
         window.history.back();
     });
 
-  $('.popup-btn:not(.product-video, .catalog-filter__video-btn, .video-gallery__item)').magnificPopup({
-    callbacks: {
-      open: function() {
-        $('.mfp-wrap').css('overflow', 'initial').removeAttr('tabindex');
-      },
-      beforeOpen: function() {
-        $('body').addClass('mfp-open');
-      },
-      afterClose: function() {
-        $('body').removeClass('mfp-open');
-      }
-    }
-  });
+    // validation
+
+    $('.validate-form').each(function () {
+        $(this).validate({
+            highlight: function (element) {
+                $(element).parent().addClass('error');
+            },
+            unhighlight: function (element) {
+                $(element).parent().removeClass('error');
+            },
+            rules: {
+                name: {
+                    required: true,
+                },
+                phone: {
+                    required: true,
+                },
+                email: {
+                    required: true,
+                },
+            },
+            messages: {
+                name: {
+                    required: 'Fill out the name',
+                },
+                phone: {
+                    required: 'Fill out the phone',
+                },
+                email: {
+                    required: 'Fill out the email',
+                },
+            },
+            submitHandler: function () {
+                if ($('#reviews-form')) {
+                    $.ajax({
+                        data: $('#reviews-form').serialize(),
+                        success: function (data) {
+                            $.magnificPopup.instance.close = function (){
+                                $('.reviews-popup__success').removeClass('mfp-with-zoom');
+                                setTimeout(function() {
+                                    $.magnificPopup.proto.close.call(this);
+                                }, 300);
+                            };
+                            $.magnificPopup.open({
+                                items: {
+                                    src: '#reviews-popup-success'
+                                }
+                            });
+                            setTimeout(function() {
+                                $('.reviews-popup__success').addClass('mfp-with-zoom');
+                            }, 100);
+                            /*$('html, body').animate({
+                                scrollTop: $('#refugees-form-success').offset().top - 200
+                            }, 200);*/
+                        }
+                    });
+                }
+            }
+        });
+    });
+
+  // $('.popup-btn:not(.product-video, .catalog-filter__video-btn, .video-gallery__item)').magnificPopup({
+  //   callbacks: {
+  //     open: function() {
+  //       $('.mfp-wrap').css('overflow', 'initial').removeAttr('tabindex');
+  //     },
+  //     beforeOpen: function() {
+  //       $('body').addClass('mfp-open');
+  //     },
+  //     afterClose: function() {
+  //       $('body').removeClass('mfp-open');
+  //     }
+  //   }
+  // });
 
     // ===========================
 
@@ -421,12 +484,6 @@ $(function() {
     forceCustomRendering: true
   });
 
-    // reviews
-  $('.page-reviews__top-form').css('display', 'none');
-  $('.page-reviews__top-btn').click(function() {
-    $(this).toggleClass('active').closest('.page-reviews__top-wrapper').next().slideToggle();
-  });
-
     // header-search
 
   $('.header-search input[type="search"]').each(function() {
@@ -582,7 +639,7 @@ $(function() {
 
     // catalog range
 
-  var $range = $('.js-range-slider'),
+  /*var $range = $('.js-range-slider'),
     $inputFrom = $('.js-input-from'),
     $inputTo = $('.js-input-to'),
     instance,
@@ -639,7 +696,7 @@ $(function() {
     instance.update({
       to: val
     });
-  });
+  });*/
 
 
     // catalog sort dropdown

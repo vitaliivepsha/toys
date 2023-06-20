@@ -1,249 +1,83 @@
-.page-reviews {
-  padding-bottom: 53px;
-  @include bp(xs) {
-    padding-bottom: 60px;
+.reviews-top{
+  .container{
+    position: relative;
+  }
+  .breadcrumbs-wrapper{
+    @include bp(xs) {
+      margin-bottom: -14px;
+    }
+  }
+  .btn{
+    width: 207px;
+    border-color: #fff;
+    color: #fff;
+    position: absolute;
+    right: 15px;
+    bottom: 36px;
+    @include bp(xs) {
+      width: 130px;
+      height: 40px;
+      padding: 0 10px;
+      right: 20px;
+      bottom: 18px;
+    }
+    &:hover{
+      color: $main;
+      background-color: #fff;
+    }
   }
 }
 
-.page-reviews__top-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 45px;
-  margin-bottom: 30px;
+.page-reviews{
+  background-color: $bg-grey;
+  padding: 50px 0 60px;
   @include bp(xs) {
-    align-items: flex-start;
-    margin-bottom: 20px;
+    padding: 30px 0 50px;
+  }
+  .pagination{
+    margin-top: 70px;
+    @include bp(xs) {
+      margin-top: 40px;
+    }
   }
 }
 
-.page-head__top-text {
-  margin: 0;
-  font-weight: 400;
+.page-reviews__item{
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 23px 33px 20px 25px;
+  @include bp(xs) {
+    padding: 21px 25px 16px 23px;
+  }
+  +.page-reviews__item{
+    margin-top: 20px;
+  }
+}
+
+.page-reviews__item-text{
+  margin-top: 11px;
   font-size: 14px;
   line-height: 130%;
-  color: $main;
   @include bp(xs) {
-    font-size: 12px;
-    margin-top: 11px;
+    margin-top: 10px;
   }
-}
-
-.page-reviews__top-btn {
-  height: 45px;
-  width: fit-content;
-  min-width: 160px;
-  box-shadow: none !important;
-  @include bp(xs) {
-    width: 135px;
-    min-width: 135px;
-    height: 35px;
-    position: relative;
-    top: -27px;
-    padding: 0 10px;
-  }
-  &.active {
-    border: 1px solid $main;
-    background-color: transparent;
-    color: $main;
-  }
-}
-
-.page-reviews__top-form {
-  display: block;
-  margin-bottom: 53px;
-  background-color: $main;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.03);
-  border-radius: 10px;
-  padding: 64px 40px 69px 40px;
-  @include bp(xs) {
-    margin-top: 6px;
-    margin-bottom: 40px;
-    padding: 33px 18px 48px;
-  }
-}
-
-.page-reviews__top-form-title {
-  margin-bottom: 18px;
-  font-weight: 500;
-  font-size: 21px;
-  line-height: 21px;
-  color: $text-grey;
-  text-align: center;
-  @include bp(xs) {
-    font-size: 18px;
-    line-height: 17px;
-    margin-bottom: 26px;
-  }
-  span {
-    position: relative;
-    padding-left: 23px;
-    @include bp(xs) {
-      padding-left: 13px;
-    }
-    &:before {
-      flex-shrink: 0;
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 10px;
-      height: 10px;
-      background-color: $red;
-      @include bp(xs) {
-        width: 7px;
-        height: 7px;
-      }
-    }
-  }
-
-}
-
-.review-form {
-  width: 100%;
-  max-width: 370px;
-  margin: 0 auto;
-  .btn {
-    background-color: $red;
-    &:hover,
-    &:focus {
-      background-color: #fff;
-      color: $main;
+  >*{
+    margin-bottom: 14px;
+    &:last-child{
+      margin-bottom: 0;
     }
   }
 }
 
-.review-form__row {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 14px;
-  @include bp(xs) {
-    flex-direction: column;
-    gap: 0;
-    margin-bottom: 11px;
-  }
-  .review-form__inner {
-    flex-grow: 1;
-    width: 50%;
-    @include bp(xs) {
-      width: 100%;
-    }
-    +.review-form__inner {
-      @include bp(xs) {
-        margin-top: 11px;
-      }
-    }
-  }
-}
-
-.review-form__inner {
-  .textarea {
-    height: 78px;
-  }
-  label {
-    display: block;
-    margin-bottom: 5px;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 12px;
-    color: $text-grey;
-    @include bp(xs) {
-      margin-bottom: 3px;
-    }
-  }
-}
-
-.review-form__rating {
-  margin-top: 20px;
-  margin-bottom: 27px;
+.page-reviews__item-bot{
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  > span {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 12px;
-    color: $text-grey;
-  }
-
-  .rating {
-    margin-right: -5px;
-  }
-
-  .rating > input ~ label {
-    cursor: pointer;
-  }
-
-  .rating > input {
-    display: none;
-  }
-
-  .rating > label:before {
-    display: block;
-    content: "";
-    width: 15px;
-    height: 15px;
-    // star-empty
-    -webkit-mask: url("../images/icons/star.svg");
-    mask: url("../images/icons/star.svg");
-    -webkit-mask-position: center;
-    mask-position: center;
-    -webkit-mask-repeat: no-repeat;
-    mask-repeat: no-repeat;
-    -webkit-mask-size: contain;
-    mask-size: contain;
-    background-color: $text-grey;
-    margin-right: 5px;
-  }
-
-  .rating > label {
-    width: auto;
-    float: right;
-    margin-right: 0;
-    margin-bottom: 0;
-  }
-
-  .rating:not(:checked) > label:hover:before,
-  .rating:not(:checked) > label:hover ~ label:before,
-  .rating > input:checked + label:hover:before,
-  .rating > input:checked ~ label:before,
-  .rating > input:checked ~ label:hover:before,
-  .rating > input:checked ~ label:hover ~ label:before,
-  .rating > label:hover ~ input:checked ~ label:before {
-    // star-full
-    -webkit-mask: url("../images/icons/star-full.svg");
-    mask: url("../images/icons/star-full.svg");
-    -webkit-mask-position: center;
-    mask-position: center;
-    -webkit-mask-repeat: no-repeat;
-    mask-repeat: no-repeat;
-    -webkit-mask-size: contain;
-    mask-size: contain;
-  }
-
-  .rating > input:checked ~ label:before {
-    // star-full
-    -webkit-mask: url("../images/icons/star-full.svg");
-    mask: url("../images/icons/star-full.svg");
-    -webkit-mask-position: center;
-    mask-position: center;
-    -webkit-mask-repeat: no-repeat;
-    mask-repeat: no-repeat;
-    -webkit-mask-size: contain;
-    mask-size: contain;
-  }
+  align-items: baseline;
+  margin-top: 18px;
+  font-size: 12px;
+  line-height: 18px;
+  color: rgba($main, .5);
 }
-
-.page-reviews__content {
-  margin-bottom: 60px;
-  @include bp(xs) {
-    margin-bottom: 40px;
-  }
-}
-
 
 
 

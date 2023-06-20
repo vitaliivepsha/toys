@@ -1,64 +1,283 @@
 .mfp-bg {
-  background: rgba(23, 35, 46, 0.3);
-  -webkit-backdrop-filter: blur(5px);
-  backdrop-filter: blur(5px);
+  background: rgba(28, 53, 87, 0.7);
 }
 
 .mfp-container {
   padding: 0;
 }
 
+.mfp-ready .mfp-with-zoom {
+  opacity: 1;
+  transform: scale(1);
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
 .popup {
   position: relative;
   margin: 0 auto;
-  background: #FFFFFF;
-  box-shadow: 0 0 20px rgba(56, 56, 56, 0.2);
+  background: #fff;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.03);
   border-radius: 10px;
-
+  max-width: calc(100vw - 30px);
   .mfp-close {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background-color: #fff;
-    top: 0;
-    right: -40px;
+    width: 24px;
+    height: 24px;
+    background-color: transparent;
+    top: 22px;
+    right: 24px;
     font-size: 0;
     opacity: 1;
-    @include bp(md) {
-      box-shadow: 0 0 20px rgba(56, 56, 56, 0.2);
-      top: 10px;
-      right: 15px;
+    cursor: pointer;
+    @include bp(xs) {
+      width: 20px;
+      height: 20px;
+      top: 14px;
+      right: 11px;
     }
-
-    &:hover {
-      &:before, &:after {
-        background-color: $blue-mid;
+    svg{
+      pointer-events: none;
+      @include bp(xs) {
+        width: 20px;
+        height: 20px;
       }
     }
+    &:hover {
+      svg{
+        path{
+          fill: $red;
+        }
+      }
+    }
+  }
+  .input, .textarea{
+    border-color: $main;
+  }
+}
 
-    //&:before {
-    //  position: absolute;
-    //  content: '';
-    //  width: 12px;
-    //  height: 1px;
-    //  background-color: $text;
-    //  transform: rotate(-45deg);
-    //  top: 9px;
-    //  left: 4px;
-    //  transition: background-color linear 0.2s;
-    //}
-    //
-    //&:after {
-    //  position: absolute;
-    //  content: '';
-    //  width: 12px;
-    //  height: 1px;
-    //  background-color: $text;
-    //  transform: rotate(45deg);
-    //  top: 9px;
-    //  left: 4px;
-    //  transition: background-color linear 0.2s;
-    //}
+.popup-title{
+  display: block;
+  font-family: $title;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 150%;
+  color: $main;
+  text-align: center;
+  @include bp(xs) {
+    font-size: 24px;
+    line-height: 110%;
+  }
+}
+
+.reviews-popup{
+  width: 770px;
+  padding: 64px 150px 72px;
+  @include bp(md) {
+    padding: 64px 110px 72px;
+  }
+  @include bp(sm) {
+    padding: 64px 50px 72px;
+  }
+  @include bp(xs) {
+    padding: 35px 15px 40px;
+  }
+  .popup-title{
+    margin-bottom: 27px;
+    @include bp(xs) {
+      max-width: 190px;
+      margin: 0 auto 15px;
+    }
+  }
+}
+
+.reviews-form{
+  .textarea{
+    @include bp(xs) {
+      height: 90px;
+    }
+  }
+}
+
+.reviews-form__row{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  @include bp(xs) {
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+  .input-wrapper{
+    width: calc(50% - 7px);
+    @include bp(xs) {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.review-form__rating {
+  padding: 11px 0 18px;
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba($main, .1);
+  align-items: center;
+  @include bp(xs) {
+    padding: 10px 0 20px;
+    margin-bottom: 15px;
+  }
+  > span {
+    font-size: 14px;
+    line-height: 21px;
+    @include bp(xs) {
+      font-size: 12px;
+      line-height: 18px;
+    }
+  }
+  .rating {
+    margin-right: -5px;
+  }
+  .rating > input ~ label {
+    cursor: pointer;
+  }
+  .rating > input {
+    display: none;
+  }
+  .rating > label:before {
+    display: block;
+    content: "";
+    width: 13px;
+    height: 13px;
+    // star-empty
+    -webkit-mask: url("../images/icons/star-empty.svg");
+    mask: url("../images/icons/star-empty.svg");
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    background-color: #D9D9D9;
+    margin-right: 5px;
+  }
+  .rating > label {
+    width: auto;
+    float: right;
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+  .rating:not(:checked) > label:hover:before,
+  .rating:not(:checked) > label:hover ~ label:before,
+  .rating > input:checked + label:hover:before,
+  .rating > input:checked ~ label:before,
+  .rating > input:checked ~ label:hover:before,
+  .rating > input:checked ~ label:hover ~ label:before,
+  .rating > label:hover ~ input:checked ~ label:before {
+    // star-full
+    -webkit-mask: url("../images/icons/star-fill.svg");
+    mask: url("../images/icons/star-fill.svg");
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    background-color: $yellow;
+  }
+  .rating > input:checked ~ label:before {
+    // star-full
+    -webkit-mask: url("../images/icons/star-fill.svg");
+    mask: url("../images/icons/star-fill.svg");
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    background-color: $yellow;
+  }
+}
+
+.reviews-form__footer{
+  display: flex;
+  justify-content: space-between;
+  @include bp(xs) {
+    flex-direction: column;
+  }
+  .checkbox-wrapper{
+    width: calc(100% - 224px);
+    @include bp(xs) {
+      width: 100%;
+    }
+    input{
+      +label{
+        color: $main;
+      }
+    }
+  }
+  .btn{
+    width: 210px;
+    @include bp(xs) {
+      width: 100%;
+      margin-top: 24px;
+    }
+  }
+}
+
+.reviews-popup__success{
+  width: 770px;
+  padding: 64px 150px 80px;
+  opacity: 0;
+  transform: scale(0);
+  -webkit-backface-visibility: hidden;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  @include bp(md) {
+    padding: 64px 110px 80px;
+  }
+  @include bp(sm) {
+    padding: 64px 50px 80px;
+  }
+  @include bp(xs) {
+    padding: 35px 15px 40px;
+  }
+  .popup-title{
+    margin-bottom: 30px;
+    @include bp(xs) {
+      margin: 0 auto 15px;
+    }
+  }
+  .mfp-close{
+    &.btn{
+      position: static;
+      font-size: 16px;
+      color: #fff;
+      background-color: $main;
+      width: 210px;
+      height: 50px;
+      margin: 20px auto 0;
+      @include bp(xs) {
+        height: 45px;
+        width: 130px;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+.reviews-popup__success-txt{
+  margin: 0 auto;
+  max-width: 370px;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  @include bp(xs) {
+    font-size: 14px;
+    line-height: 20px;
   }
 }
 
@@ -66,7 +285,6 @@
   width: 847px;
   max-width: 100%;
   padding: 25px 47px 43px;
-
   .mfp-close {
     top: -20px;
     right: -22px;

@@ -5,6 +5,7 @@
   background-color: $main;
   @include bp(xs) {
     min-height: 150px;
+    padding-top: 10px;
     padding-bottom: 10px;
   }
 

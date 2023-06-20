@@ -6,262 +6,192 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noindex">
-    <title>Vizion</title>
-    <link rel="shortcut icon" href="../../images/favicon.png" type="image/jpg">
-    <meta name="theme-color" content="#101B25">
-    <meta name="msapplication-navbutton-color" content="#101B25">
-    <meta name="apple-mobile-web-app-status-bar-style" content="#101B25">
+    <title>Exceptional Concepts</title>
+    <link rel="shortcut icon" href="../../images/favicon.png" type="image/png">
+    <meta name="theme-color" content="#1C3557">
+    <meta name="msapplication-navbutton-color" content="#1C3557">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#1C3557">
 </head>
 
 <body id="main">
 ${require('../parts/header.html')}
 <main class="main">
-    <div class="container">
-        <div class="breadcrumbs">
-            <a href="/">Головна</a>
-            <span>Відгуки</span>
-        </div>
-        <div class="page-title">Відгуки</div>
-        <div class="page-reviews">
-            <div class="page-reviews__top">
-                <div class="page-reviews__top-wrapper">
-                    <p class="page-head__top-text">Залишайте свої відгуки та побажання. </p>
-                    <span class="btn page-reviews__top-btn">Залишити відгук</span>
-                </div>
-                <div class="page-reviews__top-form">
-                    <div class="page-reviews__top-form-title"><span>Напишіть відгук</span></div>
-                    <form class="review-form ajax_form clear-styles" data-error-title="Помилка відправки!"
-                          data-error-message="Спробуйте пізніше" data-success-title="Дякуємо за відгук"
-                          data-success-message="Відгук буде опубліковано після перевірки модератором">
-                        <div class="review-form__wrapper">
-                            <div class="review-form__row">
-                                <div class="review-form__inner">
-                                    <label>Ім’я</label>
-                                    <div class="input-wrapper">
-                                        <input class="input" type="text" name="name" data-title="Name"
-                                               data-validate-required="Заповніть поле Ім’я">
-                                    </div>
-                                </div>
-                                <div class="review-form__inner">
-                                    <label>Email</label>
-                                    <div class="input-wrapper">
-                                        <input class="input" type="text" name="email" data-title="Email"
-                                               data-validate-required="Заповніть поле Email">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="review-form__inner">
-                                <label>Ваш відгук</label>
-                                <div class="input-wrapper">
-                                            <textarea class="textarea" name="message"
-                                                      data-validate-required="Напишіть свій відгук"
-                                                      data-title="Повідомлення"></textarea>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="review-form__rating">
-                            <span>Ваша оцінка</span>
-                            <fieldset class="rating">
-                                <input type="radio" id="star5" name="grade" value="5"><label class="rating-star"
-                                                                                             for="star5"></label>
-                                <input type="radio" id="star4" name="grade" value="4"><label class="rating-star"
-                                                                                             for="star4"></label>
-                                <input type="radio" id="star3" name="grade" value="3"><label class="rating-star"
-                                                                                             for="star3"></label>
-                                <input type="radio" id="star2" name="grade" value="2"><label class="rating-star"
-                                                                                             for="star2"></label>
-                                <input type="radio" id="star1" name="grade" value="1"><label class="rating-star"
-                                                                                             for="star1"></label>
-                            </fieldset>
-                        </div>
-                        <button class="btn btn-b" type="submit" data-sending="Відправляється..." data-error="Помилка :(" data-sent="Відправлено">Залишити відгук</button>
-                    </form>
+    <div class="page-top reviews-top">
+        <div class="container">
+            <div class="breadcrumbs-wrapper">
+                <div class="breadcrumbs">
+                    <a href="javascript:void(0)">Home</a>
+                    <span>Reviews</span>
                 </div>
             </div>
-            <div class="page-reviews__content">
-                <div class="reviews-item">
-                    <div class="reviews-item__rating">
-                        <div class="rating-stars">
-                            <span class="rating-star icon-star active"></span>
-                            <span class="rating-star icon-star active"></span>
-                            <span class="rating-star icon-star active"></span>
-                            <span class="rating-star icon-star active"></span>
-                            <span class="rating-star icon-star"></span>
-                        </div>
-                    </div>
-                    <div class="reviews-item__text">
-                        Praesent ac felis eu metus hendrerit volutpat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos...
-                    </div>
-                    <div class="reviews-item__bot">
-                        <span class="reviews-item__date">08.06.2022</span>
-                        <span class="reviews-item__name">Аліна</span>
-                    </div>
+            <h1 class="page-title">Reviews</h1>
+            <span class="btn btn-tr popup-btn" data-mfp-src="#reviews-popup">Write a review</span>
+        </div>
+    </div>
+    <div class="page-reviews">
+        <div class="container">
+            <div class="page-reviews__item">
+                <div class="rating-stars">
+                    <span class="rating-star icon-star active"></span>
+                    <span class="rating-star icon-star active"></span>
+                    <span class="rating-star icon-star active"></span>
+                    <span class="rating-star icon-star active"></span>
+                    <span class="rating-star icon-star"></span>
                 </div>
-                <div class="reviews-item">
-                    <div class="reviews-item__rating">
-                        <div class="rating-stars">
-                            <span class="rating-star icon-star active"></span>
-                            <span class="rating-star icon-star active"></span>
-                            <span class="rating-star icon-star active"></span>
-                            <span class="rating-star icon-star active"></span>
-                            <span class="rating-star icon-star"></span>
-                        </div>
-                    </div>
-                    <div class="reviews-item__text">
-                        Curabitur tincidunt erat diam, id aliquet libero convallis nec. Nullam elementum lobortis elit. Vivamus eget fringilla tellus. Praesent ac felis eu metus hendrerit volutpat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos...                </div>
-                    <div class="reviews-item__bot">
-                        <span class="reviews-item__date">08.06.2022</span>
-                        <span class="reviews-item__name">Кирило</span>
-                    </div>
+                <div class="page-reviews__item-text">
+                    <p>Lorem ipsum dolor sit amet consectet-ur. Aliquam lectus libero vitae neque cursus id consequat. Consectetur pretium auctor enim lectus.</p>
                 </div>
-                <div class="reviews-item">
-                    <div class="reviews-item__rating">
-                        <div class="rating-stars">
-                            <span class="rating-star icon-star active"></span>
-                            <span class="rating-star icon-star active"></span>
-                            <span class="rating-star icon-star active"></span>
-                            <span class="rating-star icon-star active"></span>
-                            <span class="rating-star icon-star"></span>
-                        </div>
-                    </div>
-                    <div class="reviews-item__text">
-                        Nullam elementum lobortis elit. Vivamus eget fringilla tellus.                 </div>
-                    <div class="reviews-item__bot">
-                        <span class="reviews-item__date">08.06.2022</span>
-                        <span class="reviews-item__name">Андрій</span>
-                    </div>
+                <div class="page-reviews__item-bot">
+                    <span class="page-reviews__item-name">Andrea L.</span>
+                    <span class="page-reviews__item-date">21/03/2023</span>
                 </div>
-                <div class="reviews-item">
-                    <div class="reviews-item__rating">
-                        <div class="rating-stars">
-                            <span class="rating-star icon-star active"></span>
-                            <span class="rating-star icon-star active"></span>
-                            <span class="rating-star icon-star active"></span>
-                            <span class="rating-star icon-star active"></span>
-                            <span class="rating-star icon-star"></span>
-                        </div>
-                    </div>
-                    <div class="reviews-item__text">
-                        Praesent ac felis eu metus hendrerit volutpat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos...
-                    </div>
-                    <div class="reviews-item__bot">
-                        <span class="reviews-item__date">08.06.2022</span>
-                        <span class="reviews-item__name">Аліна</span>
-                    </div>
+            </div>
+            <div class="page-reviews__item">
+                <div class="rating-stars">
+                    <span class="rating-star icon-star active"></span>
+                    <span class="rating-star icon-star active"></span>
+                    <span class="rating-star icon-star active"></span>
+                    <span class="rating-star icon-star active"></span>
+                    <span class="rating-star icon-star active"></span>
                 </div>
-                <div class="reviews-item">
-                    <div class="reviews-item__rating">
-                        <div class="rating-stars">
-                            <span class="rating-star icon-star active"></span>
-                            <span class="rating-star icon-star active"></span>
-                            <span class="rating-star icon-star active"></span>
-                            <span class="rating-star icon-star active"></span>
-                            <span class="rating-star icon-star"></span>
-                        </div>
-                    </div>
-                    <div class="reviews-item__text">
-                        Curabitur tincidunt erat diam, id aliquet libero convallis nec. Nullam elementum lobortis elit. Vivamus eget fringilla tellus. Praesent ac felis eu metus hendrerit volutpat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos...                </div>
-                    <div class="reviews-item__bot">
-                        <span class="reviews-item__date">08.06.2022</span>
-                        <span class="reviews-item__name">Кирило</span>
-                    </div>
+                <div class="page-reviews__item-text">
+                    <p>Habitant dolor ultricies velit nibh turpis consequat diam faucibus adipiscing. Volutpat tellus lectus facilisi adipiscing.Lorem ipsum dolor sit amet consectet-ur. Aliquam lectus libero vitae neque cursus id consequat. Consectetur pretium auctor enim lectus.</p>
                 </div>
-                <div class="reviews-item">
-                    <div class="reviews-item__rating">
-                        <div class="rating-stars">
-                            <span class="rating-star icon-star active"></span>
-                            <span class="rating-star icon-star active"></span>
-                            <span class="rating-star icon-star active"></span>
-                            <span class="rating-star icon-star active"></span>
-                            <span class="rating-star icon-star"></span>
-                        </div>
-                    </div>
-                    <div class="reviews-item__text">
-                        Nullam elementum lobortis elit. Vivamus eget fringilla tellus.                 </div>
-                    <div class="reviews-item__bot">
-                        <span class="reviews-item__date">08.06.2022</span>
-                        <span class="reviews-item__name">Андрій</span>
-                    </div>
+                <div class="page-reviews__item-bot">
+                    <span class="page-reviews__item-name">Liana Carita</span>
+                    <span class="page-reviews__item-date">21/03/2023</span>
                 </div>
-                <div class="reviews-item">
-                    <div class="reviews-item__rating">
-                        <div class="rating-stars">
-                            <span class="rating-star icon-star active"></span>
-                            <span class="rating-star icon-star active"></span>
-                            <span class="rating-star icon-star active"></span>
-                            <span class="rating-star icon-star active"></span>
-                            <span class="rating-star icon-star"></span>
-                        </div>
-                    </div>
-                    <div class="reviews-item__text">
-                        Praesent ac felis eu metus hendrerit volutpat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos...
-                    </div>
-                    <div class="reviews-item__bot">
-                        <span class="reviews-item__date">08.06.2022</span>
-                        <span class="reviews-item__name">Аліна</span>
-                    </div>
+            </div>
+            <div class="page-reviews__item">
+                <div class="rating-stars">
+                    <span class="rating-star icon-star active"></span>
+                    <span class="rating-star icon-star active"></span>
+                    <span class="rating-star icon-star active"></span>
+                    <span class="rating-star icon-star active"></span>
+                    <span class="rating-star icon-star active"></span>
                 </div>
-                <div class="reviews-item">
-                    <div class="reviews-item__rating">
-                        <div class="rating-stars">
-                            <span class="rating-star icon-star active"></span>
-                            <span class="rating-star icon-star active"></span>
-                            <span class="rating-star icon-star active"></span>
-                            <span class="rating-star icon-star active"></span>
-                            <span class="rating-star icon-star"></span>
-                        </div>
-                    </div>
-                    <div class="reviews-item__text">
-                        Curabitur tincidunt erat diam, id aliquet libero convallis nec. Nullam elementum lobortis elit. Vivamus eget fringilla tellus. Praesent ac felis eu metus hendrerit volutpat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos...                </div>
-                    <div class="reviews-item__bot">
-                        <span class="reviews-item__date">08.06.2022</span>
-                        <span class="reviews-item__name">Кирило</span>
-                    </div>
+                <div class="page-reviews__item-text">
+                    <p>Lorem ipsum dolor sit amet consectet-ur. Aliquam lectus libero vitae neque cursus id consequat. Consectetur pretium auctor enim lectus.</p>
+                </div>
+                <div class="page-reviews__item-bot">
+                    <span class="page-reviews__item-name">Patricia Guerra</span>
+                    <span class="page-reviews__item-date">21/03/2023</span>
+                </div>
+            </div>
+            <div class="page-reviews__item">
+                <div class="rating-stars">
+                    <span class="rating-star icon-star active"></span>
+                    <span class="rating-star icon-star active"></span>
+                    <span class="rating-star icon-star active"></span>
+                    <span class="rating-star icon-star active"></span>
+                    <span class="rating-star icon-star"></span>
+                </div>
+                <div class="page-reviews__item-text">
+                    <p>Lorem ipsum dolor sit amet consectet-ur. Aliquam lectus libero vitae neque cursus id consequat. Consectetur pretium auctor enim lectus.</p>
+                </div>
+                <div class="page-reviews__item-bot">
+                    <span class="page-reviews__item-name">Andrea L.</span>
+                    <span class="page-reviews__item-date">21/03/2023</span>
+                </div>
+            </div>
+            <div class="page-reviews__item">
+                <div class="rating-stars">
+                    <span class="rating-star icon-star active"></span>
+                    <span class="rating-star icon-star active"></span>
+                    <span class="rating-star icon-star active"></span>
+                    <span class="rating-star icon-star active"></span>
+                    <span class="rating-star icon-star active"></span>
+                </div>
+                <div class="page-reviews__item-text">
+                    <p>Habitant dolor ultricies velit nibh turpis consequat diam faucibus adipiscing. Volutpat tellus lectus facilisi adipiscing.Lorem ipsum dolor sit amet consectet-ur. Aliquam lectus libero vitae neque cursus id consequat. Consectetur pretium auctor enim lectus.</p>
+                </div>
+                <div class="page-reviews__item-bot">
+                    <span class="page-reviews__item-name">Liana Carita</span>
+                    <span class="page-reviews__item-date">21/03/2023</span>
+                </div>
+            </div>
+            <div class="page-reviews__item">
+                <div class="rating-stars">
+                    <span class="rating-star icon-star active"></span>
+                    <span class="rating-star icon-star active"></span>
+                    <span class="rating-star icon-star active"></span>
+                    <span class="rating-star icon-star active"></span>
+                    <span class="rating-star icon-star active"></span>
+                </div>
+                <div class="page-reviews__item-text">
+                    <p>Lorem ipsum dolor sit amet consectet-ur. Aliquam lectus libero vitae neque cursus id consequat. Consectetur pretium auctor enim lectus.</p>
+                </div>
+                <div class="page-reviews__item-bot">
+                    <span class="page-reviews__item-name">Patricia Guerra</span>
+                    <span class="page-reviews__item-date">21/03/2023</span>
+                </div>
+            </div>
+            <div class="page-reviews__item">
+                <div class="rating-stars">
+                    <span class="rating-star icon-star active"></span>
+                    <span class="rating-star icon-star active"></span>
+                    <span class="rating-star icon-star active"></span>
+                    <span class="rating-star icon-star active"></span>
+                    <span class="rating-star icon-star"></span>
+                </div>
+                <div class="page-reviews__item-text">
+                    <p>Lorem ipsum dolor sit amet consectet-ur. Aliquam lectus libero vitae neque cursus id consequat. Consectetur pretium auctor enim lectus.</p>
+                </div>
+                <div class="page-reviews__item-bot">
+                    <span class="page-reviews__item-name">Andrea L.</span>
+                    <span class="page-reviews__item-date">21/03/2023</span>
+                </div>
+            </div>
+            <div class="page-reviews__item">
+                <div class="rating-stars">
+                    <span class="rating-star icon-star active"></span>
+                    <span class="rating-star icon-star active"></span>
+                    <span class="rating-star icon-star active"></span>
+                    <span class="rating-star icon-star active"></span>
+                    <span class="rating-star icon-star active"></span>
+                </div>
+                <div class="page-reviews__item-text">
+                    <p>Habitant dolor ultricies velit nibh turpis consequat diam faucibus adipiscing. Volutpat tellus lectus facilisi adipiscing.Lorem ipsum dolor sit amet consectet-ur. Aliquam lectus libero vitae neque cursus id consequat. Consectetur pretium auctor enim lectus.</p>
+                </div>
+                <div class="page-reviews__item-bot">
+                    <span class="page-reviews__item-name">Liana Carita</span>
+                    <span class="page-reviews__item-date">21/03/2023</span>
+                </div>
+            </div>
+            <div class="page-reviews__item">
+                <div class="rating-stars">
+                    <span class="rating-star icon-star active"></span>
+                    <span class="rating-star icon-star active"></span>
+                    <span class="rating-star icon-star active"></span>
+                    <span class="rating-star icon-star active"></span>
+                    <span class="rating-star icon-star active"></span>
+                </div>
+                <div class="page-reviews__item-text">
+                    <p>Lorem ipsum dolor sit amet consectet-ur. Aliquam lectus libero vitae neque cursus id consequat. Consectetur pretium auctor enim lectus.</p>
+                </div>
+                <div class="page-reviews__item-bot">
+                    <span class="page-reviews__item-name">Patricia Guerra</span>
+                    <span class="page-reviews__item-date">21/03/2023</span>
                 </div>
             </div>
             <div class="pagination">
-                <a href="javascript:void(0)" class="button prev disabled">
-                    <svg width="9" height="16" viewBox="0 0 9 16" fill="none"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M8.64063 1.175C8.82813 1.3625 8.92188 1.5845 8.92188 1.841C8.92188 2.097 8.82813 2.31875 8.64063 2.50625L3.14687 8L8.65938 13.5125C8.83438 13.6875 8.92188 13.9063 8.92188 14.1688C8.92188 14.4312 8.82813 14.6563 8.64063 14.8437C8.45312 15.0312 8.23112 15.125 7.97462 15.125C7.71862 15.125 7.49687 15.0312 7.30937 14.8437L1.00937 8.525C0.934374 8.45 0.881125 8.36875 0.849625 8.28125C0.818625 8.19375 0.803124 8.1 0.803124 8C0.803124 7.9 0.818625 7.80625 0.849625 7.71875C0.881125 7.63125 0.934374 7.55 1.00937 7.475L7.32813 1.15625C7.50313 0.981251 7.71863 0.893751 7.97463 0.893751C8.23113 0.893751 8.45313 0.987501 8.64063 1.175Z"
-                            fill="#17232E"/>
+                <a href="javascript:void(0)" class="prev disabled">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.62485 7.4095L6.75969 10.5443C6.87656 10.6612 6.93499 10.7988 6.93499 10.9572C6.93499 11.1156 6.87656 11.253 6.75969 11.3693C6.64282 11.4862 6.50519 11.5446 6.3468 11.5446C6.18841 11.5446 6.05105 11.4862 5.93473 11.3693L1.80994 7.24451C1.69307 7.12764 1.63464 6.99001 1.63464 6.83162C1.63464 6.67323 1.69307 6.53587 1.80994 6.41955L5.93473 2.29476C6.0516 2.17789 6.18923 2.11946 6.34762 2.11946C6.50602 2.11946 6.64337 2.17789 6.75969 2.29476C6.87656 2.41163 6.93499 2.54926 6.93499 2.70765C6.93499 2.86605 6.87656 3.0034 6.75969 3.11972L3.62485 6.25456L10.967 6.25456C11.1182 6.25456 11.2523 6.313 11.3691 6.42986C11.486 6.54673 11.5444 6.68079 11.5444 6.83203C11.5444 6.98327 11.486 7.11733 11.3691 7.2342C11.2523 7.35107 11.1182 7.4095 10.967 7.4095L3.62485 7.4095Z" fill="#1C3557"/>
                     </svg>
-
                 </a>
-                <ul class="pagination__list">
-                    <li class="current">
-                        <span>1</span>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0)">2</a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0)">3</a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0)">4</a>
-                    </li>
-                    <li class="dots">
-                        <a href="javascript:void(0)">
-                            <svg width="10" height="3" viewBox="0 0 10 3" fill="none"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M0.0527344 1.27539C0.0527344 1.80859 0.435547 2.13672 0.914062 2.13672C1.39258 2.13672 1.77539 1.80859 1.77539 1.27539C1.77539 0.755859 1.39258 0.414062 0.914062 0.414062C0.435547 0.414062 0.0527344 0.755859 0.0527344 1.27539ZM3.88086 1.27539C3.88086 1.80859 4.26367 2.13672 4.74219 2.13672C5.2207 2.13672 5.60352 1.80859 5.60352 1.27539C5.60352 0.755859 5.2207 0.414062 4.74219 0.414062C4.26367 0.414062 3.88086 0.755859 3.88086 1.27539ZM7.70898 1.27539C7.70898 1.80859 8.0918 2.13672 8.57031 2.13672C9.04883 2.13672 9.43164 1.80859 9.43164 1.27539C9.43164 0.755859 9.04883 0.414062 8.57031 0.414062C8.0918 0.414062 7.70898 0.755859 7.70898 1.27539Z"
-                                    fill="#17232E"/>
-                            </svg>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0)">32</a>
-                    </li>
+                <ul>
+                    <li class="current"><span>1</span></li>
+                    <li><a href="javascript:void(0)">2</a></li>
+                    <li><a href="javascript:void(0)">3</a></li>
+                    <li><a href="javascript:void(0)">4</a></li>
+                    <li><a href="javascript:void(0)">5</a></li>
+                    <li><a href="javascript:void(0)">...</a></li>
+                    <li><a href="javascript:void(0)">12</a></li>
                 </ul>
-                <a class="button next" href="javascript:void(0)">
-                    <svg width="9" height="16" viewBox="0 0 9 16" fill="none"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M0.359375 14.825C0.171875 14.6375 0.078125 14.4155 0.078125 14.159C0.078125 13.903 0.171875 13.6813 0.359375 13.4938L5.85313 8L0.340625 2.4875C0.165625 2.3125 0.078125 2.09375 0.078125 1.83125C0.078125 1.56875 0.171875 1.34375 0.359375 1.15625C0.546875 0.96875 0.768875 0.875 1.02538 0.875C1.28138 0.875 1.50313 0.96875 1.69063 1.15625L7.99063 7.475C8.06563 7.55 8.11888 7.63125 8.15038 7.71875C8.18138 7.80625 8.19688 7.9 8.19688 8C8.19688 8.1 8.18138 8.19375 8.15038 8.28125C8.11888 8.36875 8.06563 8.45 7.99063 8.525L1.67187 14.8438C1.49687 15.0188 1.28138 15.1063 1.02538 15.1063C0.768875 15.1063 0.546875 15.0125 0.359375 14.825Z"
-                            fill="#17232E"/>
+                <a href="javascript:void(0)" class="next">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.3761 7.4095L7.24129 10.5443C7.12442 10.6612 7.06598 10.7988 7.06598 10.9572C7.06598 11.1156 7.12442 11.253 7.24129 11.3693C7.35816 11.4862 7.49579 11.5446 7.65418 11.5446C7.81257 11.5446 7.94992 11.4862 8.06624 11.3693L12.191 7.24451C12.3079 7.12764 12.3663 6.99001 12.3663 6.83162C12.3663 6.67323 12.3079 6.53587 12.191 6.41955L8.06624 2.29476C7.94937 2.17789 7.81174 2.11946 7.65335 2.11946C7.49496 2.11946 7.3576 2.17789 7.24129 2.29476C7.12442 2.41163 7.06598 2.54926 7.06598 2.70765C7.06598 2.86605 7.12442 3.0034 7.24129 3.11972L10.3761 6.25456L3.034 6.25456C2.88276 6.25456 2.7487 6.313 2.63183 6.42986C2.51496 6.54673 2.45653 6.68079 2.45653 6.83203C2.45653 6.98327 2.51496 7.11733 2.63183 7.2342C2.7487 7.35107 2.88276 7.4095 3.034 7.4095L10.3761 7.4095Z" fill="#1C3557"/>
                     </svg>
                 </a>
             </div>
@@ -270,7 +200,62 @@ ${require('../parts/header.html')}
 </main>
 ${require('../parts/footer.html')}
 <div class="mfp-hide">
-
+    <div class="popup reviews-popup" id="reviews-popup">
+        <button title="Close (Esc)" type="button" class="mfp-close">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18.3002 5.71022C18.2077 5.61752 18.0978 5.54397 17.9768 5.49379C17.8559 5.44361 17.7262 5.41778 17.5952 5.41778C17.4643 5.41778 17.3346 5.44361 17.2136 5.49379C17.0926 5.54397 16.9827 5.61752 16.8902 5.71022L12.0002 10.5902L7.11022 5.70022C7.01764 5.60764 6.90773 5.5342 6.78677 5.4841C6.6658 5.43399 6.53615 5.4082 6.40522 5.4082C6.27429 5.4082 6.14464 5.43399 6.02368 5.4841C5.90272 5.5342 5.79281 5.60764 5.70022 5.70022C5.60764 5.79281 5.5342 5.90272 5.4841 6.02368C5.43399 6.14464 5.4082 6.27429 5.4082 6.40522C5.4082 6.53615 5.43399 6.6658 5.4841 6.78677C5.5342 6.90773 5.60764 7.01764 5.70022 7.11022L10.5902 12.0002L5.70022 16.8902C5.60764 16.9828 5.5342 17.0927 5.4841 17.2137C5.43399 17.3346 5.4082 17.4643 5.4082 17.5952C5.4082 17.7262 5.43399 17.8558 5.4841 17.9768C5.5342 18.0977 5.60764 18.2076 5.70022 18.3002C5.79281 18.3928 5.90272 18.4662 6.02368 18.5163C6.14464 18.5665 6.27429 18.5922 6.40522 18.5922C6.53615 18.5922 6.6658 18.5665 6.78677 18.5163C6.90773 18.4662 7.01764 18.3928 7.11022 18.3002L12.0002 13.4102L16.8902 18.3002C16.9828 18.3928 17.0927 18.4662 17.2137 18.5163C17.3346 18.5665 17.4643 18.5922 17.5952 18.5922C17.7262 18.5922 17.8558 18.5665 17.9768 18.5163C18.0977 18.4662 18.2076 18.3928 18.3002 18.3002C18.3928 18.2076 18.4662 18.0977 18.5163 17.9768C18.5665 17.8558 18.5922 17.7262 18.5922 17.5952C18.5922 17.4643 18.5665 17.3346 18.5163 17.2137C18.4662 17.0927 18.3928 16.9828 18.3002 16.8902L13.4102 12.0002L18.3002 7.11022C18.6802 6.73022 18.6802 6.09022 18.3002 5.71022Z" fill="#1C3557"/>
+            </svg>
+        </button>
+        <span class="popup-title">Your review about the shop</span>
+        <form class="reviews-form validate-form" id="reviews-form">
+            <div class="reviews-form__row">
+                <div class="input-wrapper">
+                    <input class="input" type="text" name="name">
+                    <label>Your name*</label>
+                </div>
+                <div class="input-wrapper">
+                    <input class="input" type="text" name="email">
+                    <label>Your email*</label>
+                </div>
+            </div>
+            <div class="input-wrapper">
+                <textarea class="textarea" name="message"></textarea>
+                <label>Message</label>
+            </div>
+            <div class="review-form__rating">
+                <span>Please, rate the shop</span>
+                <fieldset class="rating">
+                    <input type="radio" id="star5" name="grade" value="5"><label class="rating-star"
+                                                                                 for="star5"></label>
+                    <input type="radio" id="star4" name="grade" value="4"><label class="rating-star"
+                                                                                 for="star4"></label>
+                    <input type="radio" id="star3" name="grade" value="3"><label class="rating-star"
+                                                                                 for="star3"></label>
+                    <input type="radio" id="star2" name="grade" value="2"><label class="rating-star"
+                                                                                 for="star2"></label>
+                    <input type="radio" id="star1" name="grade" value="1"><label class="rating-star"
+                                                                                 for="star1"></label>
+                </fieldset>
+            </div>
+            <div class="reviews-form__footer">
+                <div class="checkbox-wrapper">
+                    <input type="checkbox" id="checkbox">
+                    <label for="checkbox">I have read and agree with <a href="javascript:void(0)">Privacy Policy</a> and <a href="javascript:void(0)">Terms & Conditions</a>.</label>
+                </div>
+                <button type="submit" class="btn">Send review</button>
+            </div>
+        </form>
+    </div>
+    <div class="popup reviews-popup__success" id="reviews-popup-success">
+        <button title="Close (Esc)" type="button" class="mfp-close">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18.3002 5.71022C18.2077 5.61752 18.0978 5.54397 17.9768 5.49379C17.8559 5.44361 17.7262 5.41778 17.5952 5.41778C17.4643 5.41778 17.3346 5.44361 17.2136 5.49379C17.0926 5.54397 16.9827 5.61752 16.8902 5.71022L12.0002 10.5902L7.11022 5.70022C7.01764 5.60764 6.90773 5.5342 6.78677 5.4841C6.6658 5.43399 6.53615 5.4082 6.40522 5.4082C6.27429 5.4082 6.14464 5.43399 6.02368 5.4841C5.90272 5.5342 5.79281 5.60764 5.70022 5.70022C5.60764 5.79281 5.5342 5.90272 5.4841 6.02368C5.43399 6.14464 5.4082 6.27429 5.4082 6.40522C5.4082 6.53615 5.43399 6.6658 5.4841 6.78677C5.5342 6.90773 5.60764 7.01764 5.70022 7.11022L10.5902 12.0002L5.70022 16.8902C5.60764 16.9828 5.5342 17.0927 5.4841 17.2137C5.43399 17.3346 5.4082 17.4643 5.4082 17.5952C5.4082 17.7262 5.43399 17.8558 5.4841 17.9768C5.5342 18.0977 5.60764 18.2076 5.70022 18.3002C5.79281 18.3928 5.90272 18.4662 6.02368 18.5163C6.14464 18.5665 6.27429 18.5922 6.40522 18.5922C6.53615 18.5922 6.6658 18.5665 6.78677 18.5163C6.90773 18.4662 7.01764 18.3928 7.11022 18.3002L12.0002 13.4102L16.8902 18.3002C16.9828 18.3928 17.0927 18.4662 17.2137 18.5163C17.3346 18.5665 17.4643 18.5922 17.5952 18.5922C17.7262 18.5922 17.8558 18.5665 17.9768 18.5163C18.0977 18.4662 18.2076 18.3928 18.3002 18.3002C18.3928 18.2076 18.4662 18.0977 18.5163 17.9768C18.5665 17.8558 18.5922 17.7262 18.5922 17.5952C18.5922 17.4643 18.5665 17.3346 18.5163 17.2137C18.4662 17.0927 18.3928 16.9828 18.3002 16.8902L13.4102 12.0002L18.3002 7.11022C18.6802 6.73022 18.6802 6.09022 18.3002 5.71022Z" fill="#1C3557"/>
+            </svg>
+        </button>
+        <span class="popup-title">Thanks for review</span>
+        <div class="reviews-popup__success-txt">Your review will be published after verification by a moderator.</div>
+        <button title="Close (Esc)" type="button" class="btn mfp-close">Ok</button>
+    </div>
 </div>
 
 </body>
