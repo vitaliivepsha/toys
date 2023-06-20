@@ -262,7 +262,7 @@
       margin: 20px auto 0;
       @include bp(xs) {
         height: 45px;
-        width: 130px;
+        width: 200px;
         font-size: 14px;
       }
     }
@@ -280,6 +280,87 @@
     line-height: 20px;
   }
 }
+
+.callback-popup{
+  width: 770px;
+  padding: 64px 150px 62px;
+  @include bp(md) {
+    padding: 64px 110px 62px;
+  }
+  @include bp(sm) {
+    padding: 64px 50px 62px;
+  }
+  @include bp(xs) {
+    padding: 35px 15px 40px;
+  }
+  .popup-title{
+    margin-bottom: 27px;
+    @include bp(xs) {
+      margin: 0 auto 15px;
+    }
+  }
+}
+
+.callback-form{
+  .input-wrapper{
+    margin-bottom: 20px;
+    @include bp(xs) {
+      margin-bottom: 10px;
+    }
+  }
+  .textarea{
+    @include bp(xs) {
+      height: 90px;
+    }
+  }
+}
+
+.callback-form__row{
+  display: flex;
+  justify-content: space-between;
+  @include bp(xs) {
+    flex-direction: column;
+  }
+  .input-wrapper{
+    width: calc(50% - 7px);
+    @include bp(xs) {
+      width: 100%;
+    }
+  }
+}
+
+.callback-form__footer{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+  @include bp(xs) {
+    flex-direction: column;
+  }
+  .checkbox-wrapper{
+    width: calc(100% - 224px);
+    @include bp(xs) {
+      width: 100%;
+    }
+    input{
+      +label{
+        color: $main;
+      }
+    }
+  }
+  .btn{
+    width: 210px;
+    @include bp(xs) {
+      width: 100%;
+      margin-top: 24px;
+    }
+  }
+}
+
+
+
+
+
+
 
 .photo-popup {
   width: 847px;
@@ -1480,65 +1561,81 @@
   padding: 0;
 }
 
+.swal2-container.swal2-shown{
+  background: rgba(28, 53, 87, 0.7);
+}
+
 .swal2-modal {
-  width: 430px !important;
+  width: 770px !important;
   max-width: calc(100vw - 30px) !important;
   background: #fff !important;
   font-family: $default;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1) !important;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.03) !important;
   border-radius: 10px;
-  padding: 64px 45px 87px !important;
+  min-height: 338px;
+  padding: 64px 150px !important;
   overflow: visible;
+  @include bp(md) {
+    padding: 64px 110px !important;
+  }
+  @include bp(sm) {
+    padding: 64px 50px !important;
+  }
   @include bp(xs) {
-    padding: 64px 18px 70px !important;
+    min-height: unset;
+    padding: 35px 15px 40px !important;
   }
   .swal2-icon {
     display: none !important;
   }
   .swal2-title {
-    font-weight: 500;
+    font-family: $title;
+    font-weight: 700;
     font-size: 30px;
-    line-height: 29px;
+    line-height: 150%;
     color: $main;
-    margin-bottom: 28px;
+    margin-bottom: 20px;
     text-align: center;
     @include bp(xs) {
-      font-size: 21px;
-      line-height: 20px;
-      margin-bottom: 17px;
+      font-size: 24px;
+      line-height: 110%;
+      margin-bottom: 15px;
     }
   }
   .swal2-content {
     font-weight: 400;
-    font-size: 18px;
-    line-height: 130%;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    font-family: $default;
     color: $main;
     @include bp(xs) {
-      font-size: 16px;
-      max-width: 254px;
+      font-size: 14px;
+      line-height: 20px;
       margin: 0 auto;
     }
   }
   .swal2-buttonswrapper {
-    margin-top: 29px;
+    margin-top: 24px;
     @include bp(xs) {
-      margin-top: 13px;
+      margin-top: 20px;
     }
   }
   .swal2-styled {
     margin: 0 auto;
-    width: 235px;
-    height: 45px;
+    width: 210px;
+    height: 50px;
     font-size: 16px;
     font-weight: 400;
-    background: $accent !important;
+    color: #fff;
+    background: $main !important;
     border: none !important;
-    border-radius: 40px;
+    border-radius: 300px;
     transition: all ease-in-out 0.2s;
     box-shadow: none !important;
     @include bp(xs) {
       width: 200px;
-      height: 40px;
+      height: 45px;
       font-size: 14px;
     }
     &:hover {
@@ -1550,20 +1647,19 @@
     align-items: center;
     justify-content: center;
     font-size: 0;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background: #FFFFFF;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    top: -36px;
-    right: -37px;
+    width: 24px;
+    height: 24px;
+    background-color: transparent;
+    top: 22px;
+    right: 24px;
     opacity: 1;
     padding: 0;
     cursor: pointer;
-    @include bp(sm) {
-      right: 0;
-      top: auto;
-      bottom: calc(100% + 10px);
+    @include bp(xs) {
+      width: 20px;
+      height: 20px;
+      top: 14px;
+      right: 11px;
     }
     &:hover {
       &:before {
@@ -1573,8 +1669,8 @@
     &:before{
       content: '';
       display: block;
-      width: 8px;
-      height: 9px;
+      width: 24px;
+      height: 24px;
       -webkit-mask: url("../images/icons/popup-close.svg");
       mask: url("../images/icons/popup-close.svg");
       -webkit-mask-position: center;
@@ -1583,7 +1679,11 @@
       mask-repeat: no-repeat;
       -webkit-mask-size: contain;
       mask-size: contain;
-      background-color: $grey;
+      background-color: $main;
+      @include bp(xs) {
+        width: 20px;
+        height: 20px;
+      }
     }
   }
 }

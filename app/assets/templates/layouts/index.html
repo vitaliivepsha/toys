@@ -855,7 +855,7 @@
                   <div class="faq-descr">If you have a question that isn’t answered in our FAQs then please get in touch and let us know.</div>
                   <div class="faq-buttons">
                       <a class="btn" href="javascript:void(0)">See all FAQs</a>
-                      <span class="btn btn-tr">Get in touch</span>
+                      <span class="btn btn-tr popup-btn" data-mfp-src="#callback-popup">Get in touch</span>
                   </div>
               </div>
               <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 faq-right">
@@ -1004,180 +1004,48 @@
   </main>
   ${require('../parts/footer.html')}
   <div class="mfp-hide">
-      <div class="popup cart-popup" id="cart-popup">
-          <div class="mfp-close">
-              <svg width="8" height="9" viewBox="0 0 8 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                      d="M7.75126 1.461L5.21238 3.99988L7.75126 6.53877C8.08291 6.87042 8.08291 7.41937 7.75126 7.75103C7.57971 7.92257 7.36242 8.00263 7.14513 8.00263C6.92784 8.00263 6.71055 7.92257 6.539 7.75103L4.00012 5.21214L1.46123 7.75103C1.28969 7.92257 1.07239 8.00263 0.855102 8.00263C0.63781 8.00263 0.420519 7.92257 0.248973 7.75103C0.0894577 7.58962 0 7.37183 0 7.1449C0 6.91796 0.0894577 6.70018 0.248973 6.53877L2.78786 3.99988L0.248973 1.461C-0.0826829 1.12935 -0.0826829 0.580398 0.248973 0.248742C0.580629 -0.082914 1.12958 -0.082914 1.46123 0.248742L4.00012 2.78762L6.539 0.248742C6.87066 -0.082914 7.4196 -0.082914 7.75126 0.248742C8.08291 0.580398 8.08291 1.12935 7.75126 1.461Z"
-                      fill="#6C6C6C"/>
+      <div class="popup callback-popup" id="callback-popup">
+          <button title="Close (Esc)" type="button" class="mfp-close">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M18.3002 5.71022C18.2077 5.61752 18.0978 5.54397 17.9768 5.49379C17.8559 5.44361 17.7262 5.41778 17.5952 5.41778C17.4643 5.41778 17.3346 5.44361 17.2136 5.49379C17.0926 5.54397 16.9827 5.61752 16.8902 5.71022L12.0002 10.5902L7.11022 5.70022C7.01764 5.60764 6.90773 5.5342 6.78677 5.4841C6.6658 5.43399 6.53615 5.4082 6.40522 5.4082C6.27429 5.4082 6.14464 5.43399 6.02368 5.4841C5.90272 5.5342 5.79281 5.60764 5.70022 5.70022C5.60764 5.79281 5.5342 5.90272 5.4841 6.02368C5.43399 6.14464 5.4082 6.27429 5.4082 6.40522C5.4082 6.53615 5.43399 6.6658 5.4841 6.78677C5.5342 6.90773 5.60764 7.01764 5.70022 7.11022L10.5902 12.0002L5.70022 16.8902C5.60764 16.9828 5.5342 17.0927 5.4841 17.2137C5.43399 17.3346 5.4082 17.4643 5.4082 17.5952C5.4082 17.7262 5.43399 17.8558 5.4841 17.9768C5.5342 18.0977 5.60764 18.2076 5.70022 18.3002C5.79281 18.3928 5.90272 18.4662 6.02368 18.5163C6.14464 18.5665 6.27429 18.5922 6.40522 18.5922C6.53615 18.5922 6.6658 18.5665 6.78677 18.5163C6.90773 18.4662 7.01764 18.3928 7.11022 18.3002L12.0002 13.4102L16.8902 18.3002C16.9828 18.3928 17.0927 18.4662 17.2137 18.5163C17.3346 18.5665 17.4643 18.5922 17.5952 18.5922C17.7262 18.5922 17.8558 18.5665 17.9768 18.5163C18.0977 18.4662 18.2076 18.3928 18.3002 18.3002C18.3928 18.2076 18.4662 18.0977 18.5163 17.9768C18.5665 17.8558 18.5922 17.7262 18.5922 17.5952C18.5922 17.4643 18.5665 17.3346 18.5163 17.2137C18.4662 17.0927 18.3928 16.9828 18.3002 16.8902L13.4102 12.0002L18.3002 7.11022C18.6802 6.73022 18.6802 6.09022 18.3002 5.71022Z" fill="#1C3557"/>
               </svg>
-          </div>
-          <div class="cart-popup__header">У кошику</div>
-          <div class="cart-popup__body">
-              <div class="cart-popup__item">
-                  <div class="cart-popup__wrapper">
-                      <span class="cart-popup__item-close">
-                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="7.5" cy="7.5" r="7" stroke="#6C6C6C"/>
-                            <path
-                                d="M9.94207 5.93151L8.32332 7.55026L9.94207 9.16901C10.1535 9.38047 10.1535 9.73047 9.94207 9.94193C9.8327 10.0513 9.69416 10.1023 9.55562 10.1023C9.41707 10.1023 9.27853 10.0513 9.16916 9.94193L7.55041 8.32318L5.93166 9.94193C5.82228 10.0513 5.68374 10.1023 5.5452 10.1023C5.40666 10.1023 5.26812 10.0513 5.15874 9.94193C5.05704 9.83901 5 9.70016 5 9.55547C5 9.41078 5.05704 9.27192 5.15874 9.16901L6.77749 7.55026L5.15874 5.93151C4.94728 5.72005 4.94728 5.37005 5.15874 5.15859C5.3702 4.94714 5.7202 4.94714 5.93166 5.15859L7.55041 6.77734L9.16916 5.15859C9.38062 4.94714 9.73062 4.94714 9.94207 5.15859C10.1535 5.37005 10.1535 5.72005 9.94207 5.93151Z"
-                                fill="#6C6C6C"/>
-                        </svg>
-                      </span>
-                      <div class="cart-popup__item-pic">
-                          <picture>
-                              <source srcset="../../images/pixel.webp" data-original="../../images/pic-01.webp"
-                                      class="lazy-web" type="image/webp">
-                              <source srcset="../../images/pixel.png" data-original="../../images/pic-01.png"
-                                      class="lazy-web" type="image/png">
-                              <img src="../../images/pixel.png" data-original="../../images/pic-01.png" class="lazy"
-                                   alt="">
-                          </picture>
-                      </div>
-                      <div class="cart-popup__item-info">
-                          <div class="cart-popup__item-top">
-                              <a href="javascript:void(0)" class="cart-popup__item-name">Апарат штучної вентиляції легенів Inspiration 3e eVent Medical</a>
-                              <div class="cart-popup__item-price">3446748 <span>грн</span></div>
-                          </div>
-                          <div class="cart-popup__item-bot">
-                              <span class="cart-popup__item-id">71264015</span>
-                              <div class="product-counter">
-                                  <span class="minus">-</span>
-                                  <input class="counter" type="text" value="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');">
-                                  <span class="plus">+</span>
-                              </div>
-                          </div>
-                      </div>
+          </button>
+          <span class="popup-title">Let’s talk with us</span>
+          <form class="callback-form ajax_form clear-styles" id="callback-form" data-error-title="Sending error!"
+                data-error-message="Try again later" data-success-title="Thank you for your request!"
+                data-success-message="Our manager will contact you shortly"
+                data-success-btn="Ok">
+              <div class="callback-form__row">
+                  <div class="input-wrapper">
+                      <input class="input" type="text" name="first_name" data-title="First name"
+                             data-validate-required="Fill out the First name">
+                      <label>First name*</label>
+                  </div>
+                  <div class="input-wrapper">
+                      <input class="input" type="text" name="last_name" data-title="Last name"
+                             data-validate-required="Fill out the Last name">
+                      <label>Last name*</label>
                   </div>
               </div>
-              <div class="cart-popup__item">
-                  <div class="cart-popup__wrapper">
-                      <span class="cart-popup__item-close">
-                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="7.5" cy="7.5" r="7" stroke="#6C6C6C"/>
-                            <path
-                                d="M9.94207 5.93151L8.32332 7.55026L9.94207 9.16901C10.1535 9.38047 10.1535 9.73047 9.94207 9.94193C9.8327 10.0513 9.69416 10.1023 9.55562 10.1023C9.41707 10.1023 9.27853 10.0513 9.16916 9.94193L7.55041 8.32318L5.93166 9.94193C5.82228 10.0513 5.68374 10.1023 5.5452 10.1023C5.40666 10.1023 5.26812 10.0513 5.15874 9.94193C5.05704 9.83901 5 9.70016 5 9.55547C5 9.41078 5.05704 9.27192 5.15874 9.16901L6.77749 7.55026L5.15874 5.93151C4.94728 5.72005 4.94728 5.37005 5.15874 5.15859C5.3702 4.94714 5.7202 4.94714 5.93166 5.15859L7.55041 6.77734L9.16916 5.15859C9.38062 4.94714 9.73062 4.94714 9.94207 5.15859C10.1535 5.37005 10.1535 5.72005 9.94207 5.93151Z"
-                            fill="#6C6C6C"/>
-                        </svg>
-                      </span>
-                      <div class="cart-popup__item-pic">
-                          <picture>
-                              <source srcset="../../images/pixel.webp" data-original="../../images/pic-02.webp"
-                                      class="lazy-web" type="image/webp">
-                              <source srcset="../../images/pixel.png" data-original="../../images/pic-02.png"
-                                      class="lazy-web" type="image/png">
-                              <img src="../../images/pixel.png" data-original="../../images/pic-02.png" class="lazy"
-                                   alt="">
-                          </picture>
-                      </div>
-                      <div class="cart-popup__item-info">
-                          <div class="cart-popup__item-top">
-                              <a href="javascript:void(0)" class="cart-popup__item-name">Дефібрилятор VIZION 2398</a>
-                              <div class="cart-popup__item-price">346641 <span>грн</span></div>
-                          </div>
-                          <div class="cart-popup__item-bot">
-                              <span class="cart-popup__item-id">71264015</span>
-                              <div class="product-counter">
-                                  <span class="minus">-</span>
-                                  <input class="counter" type="text" value="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');">
-                                  <span class="plus">+</span>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
+              <div class="input-wrapper">
+                  <input class="input" type="text" name="email" data-title="Email"
+                         data-validate-required="Fill out the email">
+                  <label>Your email*</label>
               </div>
-              <div class="cart-popup__item">
-                  <div class="cart-popup__wrapper">
-                      <span class="cart-popup__item-close">
-                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="7.5" cy="7.5" r="7" stroke="#6C6C6C"/>
-                            <path
-                            d="M9.94207 5.93151L8.32332 7.55026L9.94207 9.16901C10.1535 9.38047 10.1535 9.73047 9.94207 9.94193C9.8327 10.0513 9.69416 10.1023 9.55562 10.1023C9.41707 10.1023 9.27853 10.0513 9.16916 9.94193L7.55041 8.32318L5.93166 9.94193C5.82228 10.0513 5.68374 10.1023 5.5452 10.1023C5.40666 10.1023 5.26812 10.0513 5.15874 9.94193C5.05704 9.83901 5 9.70016 5 9.55547C5 9.41078 5.05704 9.27192 5.15874 9.16901L6.77749 7.55026L5.15874 5.93151C4.94728 5.72005 4.94728 5.37005 5.15874 5.15859C5.3702 4.94714 5.7202 4.94714 5.93166 5.15859L7.55041 6.77734L9.16916 5.15859C9.38062 4.94714 9.73062 4.94714 9.94207 5.15859C10.1535 5.37005 10.1535 5.72005 9.94207 5.93151Z"
-                            fill="#6C6C6C"/>
-                        </svg>
-                      </span>
-                      <div class="cart-popup__item-pic">
-                          <picture>
-                              <source srcset="../../images/pixel.webp" data-original="../../images/pic-02.webp"
-                                      class="lazy-web" type="image/webp">
-                              <source srcset="../../images/pixel.png" data-original="../../images/pic-02.png"
-                                      class="lazy-web" type="image/png">
-                              <img src="../../images/pixel.png" data-original="../../images/pic-02.png" class="lazy"
-                                   alt="">
-                          </picture>
-                      </div>
-                      <div class="cart-popup__item-info">
-                          <div class="cart-popup__item-top">
-                              <a href="javascript:void(0)" class="cart-popup__item-name">Дефібрилятор VIZION 2398</a>
-                              <div class="cart-popup__item-price">346641 <span>грн</span></div>
-                          </div>
-                          <div class="cart-popup__item-bot">
-                              <span class="cart-popup__item-id">71264015</span>
-                              <div class="product-counter">
-                                  <span class="minus">-</span>
-                                  <input class="counter" type="text" value="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');">
-                                  <span class="plus">+</span>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
+              <div class="input-wrapper">
+                  <textarea class="textarea" name="message" data-title="Message"></textarea>
+                  <label>Message</label>
               </div>
-          </div>
-          <div class="cart-popup__footer">
-              <div class="cart-popup__total">
-                  <span>Загальна сумма:</span>
-                  <div>3446748 <span>грн</span></div>
-              </div>
-              <div class="cart-popup__buttons">
-                  <div class="mfp-close">
-                      Продовжити покупки
+              <div class="callback-form__footer">
+                  <div class="checkbox-wrapper">
+                      <input type="checkbox" id="checkbox">
+                      <label for="checkbox">I have read and agree with <a href="javascript:void(0)">Privacy Policy</a> and <a href="javascript:void(0)">Terms & Conditions</a>.</label>
                   </div>
-                  <a href="javascript:void(0)" class="cart-popup__order">Оформити замовлення</a>
+                  <button type="submit" class="btn" data-sending="Sending..." data-error="Error :(" data-sent="Sent">Send message</button>
               </div>
-          </div>
-      </div>
-      <div class="popup popup-questions" id="popup-questions">
-          <div class="mfp-close">
-              <svg width="8" height="9" viewBox="0 0 8 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                      d="M7.75126 1.461L5.21238 3.99988L7.75126 6.53877C8.08291 6.87042 8.08291 7.41937 7.75126 7.75103C7.57971 7.92257 7.36242 8.00263 7.14513 8.00263C6.92784 8.00263 6.71055 7.92257 6.539 7.75103L4.00012 5.21214L1.46123 7.75103C1.28969 7.92257 1.07239 8.00263 0.855102 8.00263C0.63781 8.00263 0.420519 7.92257 0.248973 7.75103C0.0894577 7.58962 0 7.37183 0 7.1449C0 6.91796 0.0894577 6.70018 0.248973 6.53877L2.78786 3.99988L0.248973 1.461C-0.0826829 1.12935 -0.0826829 0.580398 0.248973 0.248742C0.580629 -0.082914 1.12958 -0.082914 1.46123 0.248742L4.00012 2.78762L6.539 0.248742C6.87066 -0.082914 7.4196 -0.082914 7.75126 0.248742C8.08291 0.580398 8.08291 1.12935 7.75126 1.461Z"
-                      fill="#6C6C6C"/>
-              </svg>
-          </div>
-          <div class="popup-questions__title">Маєте питання?</div>
-          <div class="popup-questions__text">Залиште контактні данні і менеджер зв’яжеться з Вами, щоб проконсультувати по всім питанням. </div>
-          <form class="popup-questions__form ajax_form clear-styles" data-error-title="Помилка відправки!"
-                data-error-message="Спробуйте пізніше" data-success-title="Дякуємо за звернення"
-                data-success-message="Наш менеджер зв’яжеться з Вами в найближчий час">
-              <div class="popup-questions__form-row two-inputs">
-                  <div class="popup-questions__form-inner">
-                      <label>Телефон</label>
-                      <div class="input-wrapper">
-                          <input class="input" type="text" name="phone" data-title="Телефон"
-                                 data-validate-required="Заповніть поле Телефон" data-validate-uaphone="Заповніть поле Телефон">
-                      </div>
-                  </div>
-                  <div class="popup-questions__form-inner">
-                      <label>Email</label>
-                      <div class="input-wrapper">
-                          <input class="input" type="text" name="email" data-title="Email"
-                                 data-validate-required="Заповніть поле Email">
-                      </div>
-                  </div>
-              </div>
-              <div class="popup-questions__form-row">
-                  <div class="popup-questions__form-inner">
-                      <label>Повідомлення</label>
-                      <div class="input-wrapper">
-                          <textarea class="textarea" name="message" data-title="Повідомлення"></textarea>
-                      </div>
-                  </div>
-              </div>
-              <button class="btn btn-b" type="submit" data-sending="Відправляється..." data-error="Помилка :(" data-sent="Відправлено">Отримати консультацію</button>
           </form>
       </div>
   </div>
-
 </body>
 
 </html>
