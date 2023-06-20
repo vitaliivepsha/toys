@@ -438,7 +438,7 @@ main {
 .input-wrapper {
   position: relative;
   &.focus{
-    .input{
+    .input, .textarea{
       border-color: $main;
       +label{
         font-size: 10px;
@@ -453,7 +453,7 @@ main {
     }
   }
   &.filled{
-    .input{
+    .input, .textarea{
       border-color: $main;
       +label{
         font-size: 10px;
@@ -472,7 +472,6 @@ main {
       border-color: $red;
       background-color: #fff;
       color: transparent;
-
       &::placeholder {
         color: transparent !important;
       }
@@ -490,6 +489,68 @@ main {
     pointer-events: none;
     font-family: $default;
     background-color: #fff;
+  }
+}
+
+.validate-form{
+  .input-wrapper {
+    &.error {
+      .input {
+        border-color: $red;
+        +label{
+          margin-bottom: 0;
+          font-weight: 400;
+          color: $red;
+          position: absolute;
+          left: 20px;
+          transition: ease-in-out .3s;
+          pointer-events: none;
+          font-size: 10px;
+          line-height: 15px;
+          top: 8px;
+          @include bp(xs) {
+            font-size: 10px;
+            line-height: 15px;
+            top: 4px;
+            left: 15px;
+          }
+          +label{
+            opacity: 0;
+            display: none;
+          }
+        }
+      }
+    }
+    &.filled{
+      .input{
+        +label{
+          opacity: 0;
+          +label{
+            margin-bottom: 0;
+            font-weight: 400;
+            color: rgba($main, .5);
+            position: absolute;
+            left: 20px;
+            transition: ease-in-out .3s;
+            pointer-events: none;
+            font-size: 10px;
+            line-height: 15px;
+            top: 8px;
+            @include bp(xs) {
+              font-size: 10px;
+              line-height: 15px;
+              top: 4px;
+              left: 15px;
+            }
+          }
+        }
+      }
+      >label{
+        &:last-child{
+          opacity: 1;
+        }
+      }
+    }
   }
 }
 
@@ -609,21 +670,42 @@ main {
   display: block;
   background-color: #fff;
   width: 100%;
-  border-radius: 3px;
-  border: 1px solid #fff;
+  border-radius: 5px;
+  border: 1px solid rgba($main, .2);
   outline: none !important;
   box-shadow: none !important;
   font-weight: 400;
-  font-size: 12px;
-  line-height: 16px;
-  padding: 15px;
+  font-size: 14px;
+  line-height: 21px;
+  padding: 19px 20px 20px;
   color: $main;
   resize: none;
-  height: 90px;
+  height: 132px;
   -webkit-appearance: none;
   appearance: none;
   overflow: hidden;
   overflow-y: auto;
+  @include bp(xs) {
+    padding: 15px;
+  }
+  +label{
+    margin-bottom: 0;
+    font-weight: 400;
+    color: rgba($main, .5);
+    font-size: 14px;
+    line-height: 21px;
+    position: absolute;
+    left: 20px;
+    top: 15px;
+    transition: ease-in-out .3s;
+    pointer-events: none;
+    @include bp(xs) {
+      font-size: 12px;
+      line-height: 18px;
+      left: 15px;
+      top: 11px;
+    }
+  }
   @supports (-webkit-touch-callout: none) {
     font-size: 16px;
   }
