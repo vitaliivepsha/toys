@@ -25,6 +25,10 @@
       width: 25px;
       height: 25px;
     }
+    &.disabled{
+      opacity: .5;
+      pointer-events: none;
+    }
     &:hover{
       background-color: $main;
       svg{
@@ -88,7 +92,7 @@
         font-weight: 400;
         font-size: 16px;
         line-height: 130%;
-        background-color: #fff;
+        background-color: transparent;
         color: $main;
         @include bp(xs) {
           width: 25px;
