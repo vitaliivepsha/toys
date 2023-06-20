@@ -190,12 +190,12 @@ $(function() {
                 },
             },
             submitHandler: function () {
-                if ($('#reviews-form')) {
+                if ($('#reviews-form').length) {
                     $.ajax({
                         data: $('#reviews-form').serialize(),
                         success: function (data) {
                             $.magnificPopup.instance.close = function (){
-                                $('.reviews-popup__success').removeClass('mfp-with-zoom');
+                                $('#reviews-popup-success').removeClass('mfp-with-zoom');
                                 setTimeout(function() {
                                     $.magnificPopup.proto.close.call(this);
                                 }, 300);
@@ -206,11 +206,32 @@ $(function() {
                                 }
                             });
                             setTimeout(function() {
-                                $('.reviews-popup__success').addClass('mfp-with-zoom');
+                                $('#reviews-popup-success').addClass('mfp-with-zoom');
                             }, 100);
                             /*$('html, body').animate({
                                 scrollTop: $('#refugees-form-success').offset().top - 200
                             }, 200);*/
+                        }
+                    });
+                }
+                if ($('#club-form').length) {
+                    $.ajax({
+                        data: $('#club-form').serialize(),
+                        success: function (data) {
+                            $.magnificPopup.instance.close = function (){
+                                $('#club-popup-success').removeClass('mfp-with-zoom');
+                                setTimeout(function() {
+                                    $.magnificPopup.proto.close.call(this);
+                                }, 300);
+                            };
+                            $.magnificPopup.open({
+                                items: {
+                                    src: '#club-popup-success'
+                                }
+                            });
+                            setTimeout(function() {
+                                $('#club-popup-success').addClass('mfp-with-zoom');
+                            }, 100);
                         }
                     });
                 }

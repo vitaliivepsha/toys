@@ -98,11 +98,34 @@
         border-color: #fff;
       }
     }
+    &.error {
+      .input {
+        border-color: $red;
+        +label{
+          color: $red;
+        }
+      }
+    }
+    &.filled{
+      .input{
+        +label{
+          +label{
+            color: #fff;
+          }
+        }
+      }
+    }
   }
   .input{
     border-color: #fff;
     color: #fff;
     background-color: transparent;
+    &:-webkit-autofill,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill:hover{
+      -webkit-text-fill-color: #fff;
+      caret-color: #fff;
+    }
     +label{
       color: $bg-grey;
     }
