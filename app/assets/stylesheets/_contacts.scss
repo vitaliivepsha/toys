@@ -1,23 +1,149 @@
 .contacts-page {
-  padding-bottom: 100px;
-  @include bp(xs) {
-    padding-bottom: 60px;
+  padding-top: 110px;
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
-  .page-title {
-    margin-bottom: 47px;
-    @include bp(xs) {
-      margin-bottom: 15px;
+}
+
+.contacts-page__content {
+  max-width: 570px;
+}
+
+.contacts-page__content-text {
+  margin-bottom: 28px;
+  padding-bottom: 26px;
+  border-bottom: 1px solid $main;
+
+  span {
+    display: block;
+    margin-bottom: 40px;
+    font-family: $title;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 150%;
+  }
+
+  p {
+    margin: 0;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+
+    + p {
+      margin-top: 12px;
+    }
+
+    strong {
+      font-size: 18px;
+      line-height: 140%;
+      font-weight: 500;
     }
   }
-  .about-contacts {
-    margin-bottom: 30px;
-    @include bp(xs) {
-      margin-bottom: 20px;
+
+}
+
+
+.contacts-page__content-bot {
+  display: flex;
+  flex-wrap: wrap;
+
+  > div {
+    width: 50%;
+  }
+}
+
+.contacts-page__content-bot-left {
+  a {
+    display: block;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: $default;
+
+    &:hover {
+      color: $red;
+    }
+
+    + a {
+      margin-top: 4px;
     }
   }
-  .about-page__contacts{
-    .about-map {
-      margin-bottom: 0;
+
+  ul {
+    margin-top: 22px;
+
+    li {
+
     }
   }
 }
+
+.contacts-page__content-bot-right {
+  span {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: $main;
+  }
+}
+
+.contacts-social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  transition: ease 0.3s;
+
+  a {
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+//  contacts-form
+
+.contacts-form__title {
+  margin-bottom: 27px;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 150%;
+}
+
+.contacts-form {
+
+}
+
+.contacts-form__row {
+  display: flex;
+  gap: 15px;
+}
+
+
+
+//.contacts-page {
+//  padding-bottom: 100px;
+//  @include bp(xs) {
+//    padding-bottom: 60px;
+//  }
+//  .page-title {
+//    margin-bottom: 47px;
+//    @include bp(xs) {
+//      margin-bottom: 15px;
+//    }
+//  }
+//  .about-contacts {
+//    margin-bottom: 30px;
+//    @include bp(xs) {
+//      margin-bottom: 20px;
+//    }
+//  }
+//  .about-page__contacts{
+//    .about-map {
+//      margin-bottom: 0;
+//    }
+//  }
+//}
