@@ -338,12 +338,12 @@
 }
 
 .products-card__colors{
-  height: 47px;
+  height: 48px;
   display: flex;
   width: 100%;
   flex: 1 0 auto;
   @include bp(xs) {
-    height: 35px;
+    height: 36px;
   }
   .slick-list, .slick-track{
     min-width: 100%;
@@ -473,6 +473,16 @@
       -webkit-mask-size: contain;
       mask-size: contain;
       background-color: $yellow;
+    }
+  }
+}
+
+.product-related{
+  padding: 90px 0 50px;
+  .bestsellers-slider__wrapper{
+    border-bottom: none;
+    +.bestsellers-slider__wrapper{
+      margin-top: 15px;
     }
   }
 }

@@ -674,7 +674,7 @@
 
 }
 
-.filter-btn {
+/*.filter-btn {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -684,22 +684,22 @@
   padding: 12px;
   background-color: transparent;
   outline: none;
-  border: 1px solid $accent;
+  border: 1px solid $main;
   border-radius: 40px;
   font-weight: 400;
   font-size: 16px;
   line-height: 130%;
-  color: $accent;
+  color: $main;
   transition: all ease-in-out 0.2s;
 
   &:hover,
   &:focus {
-    background-color: $accent;
+    background-color: $main;
     color: #fff;
   }
-}
+}*/
 
-.catalog-filter__video {
+/*.catalog-filter__video {
   & a {
     display: block;
     padding: 29px 25px 22px 24px;
@@ -792,7 +792,6 @@
   font-weight: 400;
   font-size: 12px;
   line-height: 130%;
-  color: $grey;
 }
 
 .catalog-main__checked-filter-item {
@@ -825,7 +824,7 @@
       margin-left: 6px;
     }
   }
-}
+}*/
 
 // cards
 
@@ -857,25 +856,20 @@
   }
 }
 
-.catalog-filters__show-all {
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 16px;
-  text-align: right;
-  padding-right: 15px;
-  cursor: pointer;
-  display: block;
-  padding-top: 15px;
-  color: $blue-mid;
-  letter-spacing: 0.01em;
-  @include bp(xs) {
-    padding-top: 5px;
-  }
-
-  &:hover {
-    color: $blue-mid2;
-  }
-}
+//.catalog-filters__show-all {
+//  font-weight: 400;
+//  font-size: 12px;
+//  line-height: 16px;
+//  text-align: right;
+//  padding-right: 15px;
+//  cursor: pointer;
+//  display: block;
+//  padding-top: 15px;
+//  letter-spacing: 0.01em;
+//  @include bp(xs) {
+//    padding-top: 5px;
+//  }
+//}
 
 .catalog-main__container {
   width: calc(100% - 300px);
@@ -894,8 +888,8 @@
   }
 }
 
+/*
 .catalog-main__categories {
-  background-color: $grey;
   border-radius: 5px;
   padding: 10px 15px;
   display: flex;
@@ -907,6 +901,7 @@
     display: none;
   }
 }
+*/
 
 //.catalog-main__categories-title {
 //  margin: 3px 0;
@@ -914,14 +909,13 @@
 //  padding-right: 14px;
 //}
 
-.catalog-main__categories-item {
+/*.catalog-main__categories-item {
   display: flex;
   padding-right: 24px;
   position: relative;
   font-weight: 500;
   letter-spacing: 0.02em;
   text-decoration: none;
-  color: $text;
   margin: 3px 0;
 
   &:after {
@@ -931,7 +925,6 @@
     top: 0;
     height: 12px;
     width: 1px;
-    background-color: $text;
   }
 
   &:hover, &:focus {
@@ -942,9 +935,9 @@
     margin-left: 3px;
     opacity: .5;
   }
-}
+}*/
 
-.catalog-main__view {
+/*.catalog-main__view {
   display: flex;
   @include bp(xs) {
     padding-bottom: 2px;
@@ -955,34 +948,15 @@
     margin-left: 12px;
     cursor: pointer;
 
-    &:hover {
-      svg {
-        > * {
-          fill: $blue-mid;
-        }
-      }
-    }
-
-    &.active {
-      svg {
-        opacity: 1;
-
-        > * {
-          fill: $blue-mid;
-        }
-      }
-    }
-
     svg {
       opacity: .5;
     }
   }
-}
+}*/
 
-.catalog-main__item-wrapper {
+/*.catalog-main__item-wrapper {
   position: relative;
   height: 100%;
-  background-color: $grey;
   border-radius: 5px;
   overflow: hidden;
 
@@ -1170,9 +1144,9 @@
       }
     }
   }
-}
+}*/
 
-.catalog-main__item-tooltip {
+/*.catalog-main__item-tooltip {
   position: absolute;
   top: 15px;
   right: 15px;
@@ -1231,17 +1205,15 @@
       }
     }
   }
-}
+}*/
 
-.catalog-main__item {
+/*.catalog-main__item {
   display: block;
   height: 100%;
   text-decoration: none;
-  color: $text;
 
   &:hover, &:focus {
     text-decoration: none;
-    color: $text;
   }
 }
 
@@ -1324,14 +1296,6 @@
       background-color: rgba(56, 56, 56, 0.8);
     }
   }
-
-  &.on-order {
-    color: $blue-mid;
-
-    &:before {
-      background-color: $blue-mid;
-    }
-  }
 }
 
 .catalog-main__item-title {
@@ -1380,24 +1344,17 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid $blue-mid;
   width: 84px;
   height: 34px;
   min-height: 34px;
   font-size: 14px;
   line-height: 19px;
-  color: $blue-mid;
   padding: 0;
   border-radius: 5px;
   transition: linear .2s;
   @include bp(xs) {
     margin-top: 8px;
     width: 100%;
-  }
-  &:hover {
-    border-color: $blue-mid;
-    background-color: $blue-mid;
-    color: #fff;
   }
   &.not-available {
     border: 1px solid #8e8e8e;
@@ -1408,7 +1365,7 @@
       color: #fff;
     }
   }
-}
+}*/
 
 .catalog-filter__buttons {
   display: none;
@@ -1616,12 +1573,12 @@
     height: 40px;
 
     &.btn-back {
-      border-color: $accent;
+      border-color: $main;
       background-color: #fff;
-      color: $accent;
+      color: $main;
 
       &:hover {
-        background-color: $accent;
+        background-color: $main;
         color: #fff;
       }
     }

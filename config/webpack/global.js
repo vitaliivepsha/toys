@@ -59,7 +59,7 @@ module.exports = function(_path, ENV) {
         {
           test: /\.html$/,
           loaders: [
-            'html-loader?attrs=source:srcset link:href img:src img:data-src img:srcset picture:data-src div:data-src a:data-mfp-src source:data-original div:data-mfp-src img:data-original img:scrset source:src img:data-lazy li:data-src div:data-src&interpolate=1',
+            'html-loader?attrs=source:srcset link:href img:src img:data-src img:srcset picture:data-src div:data-src div:data-poster a:data-mfp-src source:data-original div:data-mfp-src img:data-original img:scrset source:src img:data-lazy li:data-src video:poster div:data-src&interpolate=1',
             'purifycss-loader'
           ]
         },
