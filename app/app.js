@@ -713,9 +713,29 @@ $(function() {
 
     // product counter
 
+    $('.product-counter input').each(function() {
+        var input = $(this);
+        var val = parseInt(input.val());
+        var minus = $(this).parent().find('.minus');
+        if (val > 1) {
+            minus.removeClass('disabled');
+        }
+        else{
+            minus.addClass('disabled');
+        }
+    });
+
   $('.plus').click(function() {
     var input = $(this).parent().find('input');
+    var minus = $(this).parent().find('.minus');
+      var val = parseInt(input.val());
     input.val(parseInt(input.val()) + 1).change();
+      if (val > 0) {
+          minus.removeClass('disabled');
+      }
+      else{
+          minus.addClass('disabled');
+      }
   });
 
   $('.minus').click(function() {
@@ -723,6 +743,12 @@ $(function() {
     var val = parseInt(input.val());
     if (val > 1) {
       val--;
+    }
+    if (val > 1) {
+        $(this).removeClass('disabled');
+    }
+    else{
+        $(this).addClass('disabled');
     }
     input.val(val).change();
   });
@@ -733,7 +759,7 @@ $(function() {
     $(this).addClass('active').siblings().removeClass('active')
             .closest('.tabs-wrapper').find('.tabs-content').removeClass('active').eq($(this).index()).addClass('active');
     $(window).trigger('resize');
-    $('.slick-slider').slick('setPosition');
+    $('.slick-slider')[0].slick.refresh();
   });
 
   // product tabs
