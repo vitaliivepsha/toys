@@ -233,6 +233,27 @@ $(function () {
                         }
                     });
                 }
+                if ($('#oneclick-form').length) {
+                    $.ajax({
+                        data: $('#oneclick-form').serialize(),
+                        success: function (data) {
+                            $.magnificPopup.instance.close = function () {
+                                $('#oneclick-popup-success').removeClass('mfp-with-zoom');
+                                setTimeout(function () {
+                                    $.magnificPopup.proto.close.call(this);
+                                }, 300);
+                            };
+                            $.magnificPopup.open({
+                                items: {
+                                    src: '#oneclick-popup-success'
+                                }
+                            });
+                            setTimeout(function () {
+                                $('#oneclick-popup-success').addClass('mfp-with-zoom');
+                            }, 100);
+                        }
+                    });
+                }
             }
         });
     });
