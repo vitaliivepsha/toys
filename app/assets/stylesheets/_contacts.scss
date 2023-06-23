@@ -114,7 +114,15 @@
 }
 
 .contacts-form {
+  padding-bottom: 56px;
+  .input,
+  .textarea {
+    border-color: #1C3557;
+  }
 
+  .input-wrapper {
+    margin-bottom: 15px;
+  }
 }
 
 .contacts-form__row {
@@ -122,6 +130,23 @@
   gap: 15px;
 }
 
+.contacts-form__bot {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 25px;
+
+  .checkbox-wrapper {
+    width: 100%;
+    max-width: 242px;
+    label {
+      color: $main;
+    }
+  }
+  .btn {
+    width: 210px;
+  }
+}
 
 
 //.contacts-page {

@@ -40,7 +40,6 @@
   margin: 0;
   margin-top: 50px;
   margin-bottom: 33px;
-  padding-top: 12px;
   font-family: $title;
   font-weight: 700;
   font-size: 30px;
@@ -57,6 +56,9 @@
   border-radius: 10px;
   overflow: hidden;
   margin-bottom: 31px;
+  @include bp(xs) {
+    margin-bottom: 10px;
+  }
 
   & picture {
     width: 100%;
@@ -82,12 +84,12 @@
   flex-wrap: wrap;
   justify-content: center;
   @include bp(xs) {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
   }
   + .about-page__video .video-wrapper{
     margin-bottom: 80px;
     @include bp(xs) {
-      margin-bottom: 50px;
+      margin-bottom: 30px;
     }
   }
 }
@@ -104,8 +106,9 @@
     padding-top: 13px;
   }
   @include bp(xs) {
+    margin-bottom: 30px;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 130%;
   }
 
@@ -131,6 +134,7 @@
     margin: 0 auto;
   }
   @include bp(xs) {
+    padding: 28px 15px 25px 15px;
     gap: 25px;
   }
 
@@ -236,11 +240,14 @@
 
 .about-page__bot-text {
   margin-bottom: 56px;
+  @include bp(xs) {
+    margin-bottom: 30px;
+  }
 
   + .club-form {
     margin-bottom: 90px;
     @include bp(xs) {
-      margin-bottom: 50px;
+      margin-bottom: 30px;
     }
   }
 
