@@ -41,6 +41,7 @@ require('../node_modules/mark.js/dist/jquery.mark.min');
 require('../node_modules/jquery-validation/dist/jquery.validate.min');
 require('_modules/succinct/succinct');
 //require('../node_modules/ion-rangeslider/js/ion.rangeSlider');
+var swal = require('sweetalert2');
 
 // Stylesheet entrypoint
 require('_stylesheets/app.scss');
@@ -559,13 +560,13 @@ $(function() {
     // chechout
     // chechout goods del
 
-  $('.checkout-goods__item-close').click(function() {
-    $(this).closest('.checkout-goods__item').remove();
-  });
-
-  $('.cart-popup__item-close').click(function() {
-    $(this).closest('.cart-popup__item').remove();
-  });
+  // $('.checkout-goods__item-close').click(function() {
+  //   $(this).closest('.checkout-goods__item').remove();
+  // });
+  //
+  // $('.cart-popup__item-close').click(function() {
+  //   $(this).closest('.cart-popup__item').remove();
+  // });
 
 
     // chechout comment
@@ -781,6 +782,41 @@ $(function() {
 
     $('.product-tabs__container .tabs').on('click', 'li:not([data-tab="reviews"])', function() {
         $('.customer-reviews__wrapper').slideDown();
+    });
+
+    // cart popup variations
+
+    $('.cart-popup__item-variation-current').on('click', function() {
+        $(this).toggleClass('active');
+    });
+
+    $(document).click(function () {
+        $('.cart-popup__item-variation-current').removeClass('active');
+    });
+
+    $(document).on('click', '.cart-popup__item-variations > div', function (e) {
+        e.stopPropagation();
+    });
+
+    $('.cart-popup__item-variations-list > li').on('click', function() {
+        var color = $(this).data('color');
+        $(this).closest('.cart-popup__item-variations')
+            .find('.cart-popup__item-variation-current').removeClass('active')
+            .find('span').html(color);
+    });
+
+    // remove from cart
+
+    $('.cart-item-remove').on('click', function() {
+        var $item = $(this).closest('.cart-popup__item');
+        swal({
+            title: 'Would you like to remove this item from the shopping cart?',
+            showCancelButton: true,
+            confirmButtonText: 'Ok',
+        }).then(
+            function() {
+                $item.remove();
+            });
     });
 
     // catalog range

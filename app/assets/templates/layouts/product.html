@@ -1121,121 +1121,164 @@
   </main>
   ${require('../parts/footer.html')}
   <div class="mfp-hide">
-      <div class="popup customer-reviews__popup" id="customer-reviews-popup">111</div>
+      <div class="popup customer-reviews__popup" id="customer-reviews-popup">
+          <button title="Close (Esc)" type="button" class="mfp-close">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M18.3002 5.71022C18.2077 5.61752 18.0978 5.54397 17.9768 5.49379C17.8559 5.44361 17.7262 5.41778 17.5952 5.41778C17.4643 5.41778 17.3346 5.44361 17.2136 5.49379C17.0926 5.54397 16.9827 5.61752 16.8902 5.71022L12.0002 10.5902L7.11022 5.70022C7.01764 5.60764 6.90773 5.5342 6.78677 5.4841C6.6658 5.43399 6.53615 5.4082 6.40522 5.4082C6.27429 5.4082 6.14464 5.43399 6.02368 5.4841C5.90272 5.5342 5.79281 5.60764 5.70022 5.70022C5.60764 5.79281 5.5342 5.90272 5.4841 6.02368C5.43399 6.14464 5.4082 6.27429 5.4082 6.40522C5.4082 6.53615 5.43399 6.6658 5.4841 6.78677C5.5342 6.90773 5.60764 7.01764 5.70022 7.11022L10.5902 12.0002L5.70022 16.8902C5.60764 16.9828 5.5342 17.0927 5.4841 17.2137C5.43399 17.3346 5.4082 17.4643 5.4082 17.5952C5.4082 17.7262 5.43399 17.8558 5.4841 17.9768C5.5342 18.0977 5.60764 18.2076 5.70022 18.3002C5.79281 18.3928 5.90272 18.4662 6.02368 18.5163C6.14464 18.5665 6.27429 18.5922 6.40522 18.5922C6.53615 18.5922 6.6658 18.5665 6.78677 18.5163C6.90773 18.4662 7.01764 18.3928 7.11022 18.3002L12.0002 13.4102L16.8902 18.3002C16.9828 18.3928 17.0927 18.4662 17.2137 18.5163C17.3346 18.5665 17.4643 18.5922 17.5952 18.5922C17.7262 18.5922 17.8558 18.5665 17.9768 18.5163C18.0977 18.4662 18.2076 18.3928 18.3002 18.3002C18.3928 18.2076 18.4662 18.0977 18.5163 17.9768C18.5665 17.8558 18.5922 17.7262 18.5922 17.5952C18.5922 17.4643 18.5665 17.3346 18.5163 17.2137C18.4662 17.0927 18.3928 16.9828 18.3002 16.8902L13.4102 12.0002L18.3002 7.11022C18.6802 6.73022 18.6802 6.09022 18.3002 5.71022Z" fill="#1C3557"/>
+              </svg>
+          </button>
+      </div>
 
       <div class="popup cart-popup" id="cart-popup">
-          <div class="mfp-close">
-              <svg width="8" height="9" viewBox="0 0 8 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                      d="M7.75126 1.461L5.21238 3.99988L7.75126 6.53877C8.08291 6.87042 8.08291 7.41937 7.75126 7.75103C7.57971 7.92257 7.36242 8.00263 7.14513 8.00263C6.92784 8.00263 6.71055 7.92257 6.539 7.75103L4.00012 5.21214L1.46123 7.75103C1.28969 7.92257 1.07239 8.00263 0.855102 8.00263C0.63781 8.00263 0.420519 7.92257 0.248973 7.75103C0.0894577 7.58962 0 7.37183 0 7.1449C0 6.91796 0.0894577 6.70018 0.248973 6.53877L2.78786 3.99988L0.248973 1.461C-0.0826829 1.12935 -0.0826829 0.580398 0.248973 0.248742C0.580629 -0.082914 1.12958 -0.082914 1.46123 0.248742L4.00012 2.78762L6.539 0.248742C6.87066 -0.082914 7.4196 -0.082914 7.75126 0.248742C8.08291 0.580398 8.08291 1.12935 7.75126 1.461Z"
-                      fill="#6C6C6C"/>
+          <button title="Close (Esc)" type="button" class="mfp-close">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M18.3002 5.71022C18.2077 5.61752 18.0978 5.54397 17.9768 5.49379C17.8559 5.44361 17.7262 5.41778 17.5952 5.41778C17.4643 5.41778 17.3346 5.44361 17.2136 5.49379C17.0926 5.54397 16.9827 5.61752 16.8902 5.71022L12.0002 10.5902L7.11022 5.70022C7.01764 5.60764 6.90773 5.5342 6.78677 5.4841C6.6658 5.43399 6.53615 5.4082 6.40522 5.4082C6.27429 5.4082 6.14464 5.43399 6.02368 5.4841C5.90272 5.5342 5.79281 5.60764 5.70022 5.70022C5.60764 5.79281 5.5342 5.90272 5.4841 6.02368C5.43399 6.14464 5.4082 6.27429 5.4082 6.40522C5.4082 6.53615 5.43399 6.6658 5.4841 6.78677C5.5342 6.90773 5.60764 7.01764 5.70022 7.11022L10.5902 12.0002L5.70022 16.8902C5.60764 16.9828 5.5342 17.0927 5.4841 17.2137C5.43399 17.3346 5.4082 17.4643 5.4082 17.5952C5.4082 17.7262 5.43399 17.8558 5.4841 17.9768C5.5342 18.0977 5.60764 18.2076 5.70022 18.3002C5.79281 18.3928 5.90272 18.4662 6.02368 18.5163C6.14464 18.5665 6.27429 18.5922 6.40522 18.5922C6.53615 18.5922 6.6658 18.5665 6.78677 18.5163C6.90773 18.4662 7.01764 18.3928 7.11022 18.3002L12.0002 13.4102L16.8902 18.3002C16.9828 18.3928 17.0927 18.4662 17.2137 18.5163C17.3346 18.5665 17.4643 18.5922 17.5952 18.5922C17.7262 18.5922 17.8558 18.5665 17.9768 18.5163C18.0977 18.4662 18.2076 18.3928 18.3002 18.3002C18.3928 18.2076 18.4662 18.0977 18.5163 17.9768C18.5665 17.8558 18.5922 17.7262 18.5922 17.5952C18.5922 17.4643 18.5665 17.3346 18.5163 17.2137C18.4662 17.0927 18.3928 16.9828 18.3002 16.8902L13.4102 12.0002L18.3002 7.11022C18.6802 6.73022 18.6802 6.09022 18.3002 5.71022Z" fill="#1C3557"/>
               </svg>
+          </button>
+          <div class="cart-popup__header">
+              <span class="popup-title">Your cart (2)</span>
           </div>
-          <div class="cart-popup__header">У кошику</div>
           <div class="cart-popup__body">
-              <div class="cart-popup__item">
-                  <div class="cart-popup__wrapper">
-                      <span class="cart-popup__item-close">
-                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="7.5" cy="7.5" r="7" stroke="#6C6C6C"/>
-                            <path
-                                d="M9.94207 5.93151L8.32332 7.55026L9.94207 9.16901C10.1535 9.38047 10.1535 9.73047 9.94207 9.94193C9.8327 10.0513 9.69416 10.1023 9.55562 10.1023C9.41707 10.1023 9.27853 10.0513 9.16916 9.94193L7.55041 8.32318L5.93166 9.94193C5.82228 10.0513 5.68374 10.1023 5.5452 10.1023C5.40666 10.1023 5.26812 10.0513 5.15874 9.94193C5.05704 9.83901 5 9.70016 5 9.55547C5 9.41078 5.05704 9.27192 5.15874 9.16901L6.77749 7.55026L5.15874 5.93151C4.94728 5.72005 4.94728 5.37005 5.15874 5.15859C5.3702 4.94714 5.7202 4.94714 5.93166 5.15859L7.55041 6.77734L9.16916 5.15859C9.38062 4.94714 9.73062 4.94714 9.94207 5.15859C10.1535 5.37005 10.1535 5.72005 9.94207 5.93151Z"
-                                fill="#6C6C6C"/>
-                        </svg>
-                      </span>
-                      <div class="cart-popup__item-pic">
-                          <picture>
-                              <source srcset="../../images/pixel.webp" data-original="../../images/pic-01.webp"
-                                      class="lazy-web" type="image/webp">
-                              <source srcset="../../images/pixel.png" data-original="../../images/pic-01.png"
-                                      class="lazy-web" type="image/png">
-                              <img src="../../images/pixel.png" data-original="../../images/pic-01.png" class="lazy"
-                                   alt="">
-                          </picture>
-                      </div>
-                      <div class="cart-popup__item-info">
-                          <div class="cart-popup__item-top">
-                              <a href="javascript:void(0)" class="cart-popup__item-name">Апарат штучної вентиляції легенів Inspiration 3e eVent Medical</a>
-                              <div class="cart-popup__item-price">3446748 <span>грн</span></div>
+              <div class="cart-popup__items">
+                  <div class="cart-popup__item">
+                      <div class="cart-popup__wrapper">
+                          <span class="cart-popup__item-remove cart-item-remove">
+                            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="7.5" cy="7.5" r="7" stroke="#1C3557"/>
+                                <path
+                                    d="M9.94207 5.93151L8.32332 7.55026L9.94207 9.16901C10.1535 9.38047 10.1535 9.73047 9.94207 9.94193C9.8327 10.0513 9.69416 10.1023 9.55562 10.1023C9.41707 10.1023 9.27853 10.0513 9.16916 9.94193L7.55041 8.32318L5.93166 9.94193C5.82228 10.0513 5.68374 10.1023 5.5452 10.1023C5.40666 10.1023 5.26812 10.0513 5.15874 9.94193C5.05704 9.83901 5 9.70016 5 9.55547C5 9.41078 5.05704 9.27192 5.15874 9.16901L6.77749 7.55026L5.15874 5.93151C4.94728 5.72005 4.94728 5.37005 5.15874 5.15859C5.3702 4.94714 5.7202 4.94714 5.93166 5.15859L7.55041 6.77734L9.16916 5.15859C9.38062 4.94714 9.73062 4.94714 9.94207 5.15859C10.1535 5.37005 10.1535 5.72005 9.94207 5.93151Z"
+                                    fill="#1C3557"/>
+                            </svg>
+                          </span>
+                          <div class="cart-popup__item-pic">
+                              <img src="../../images/item1-sm.jpg" alt="">
                           </div>
-                          <div class="cart-popup__item-bot">
-                              <span class="cart-popup__item-id">71264015</span>
-                              <div class="product-counter">
-                                  <span class="minus">-</span>
-                                  <input class="counter" type="text" value="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');">
-                                  <span class="plus">+</span>
+                          <div class="cart-popup__item-info">
+                              <div class="cart-popup__item-left">
+                                  <a href="javascript:void(0)" class="cart-popup__item-name">Round Saucer Snow Sled</a>
+                                  <span class="cart-popup__item-id">Eco122538</span>
+                                  <div class="cart-popup__item-variations">
+                                      <span>Color:</span>
+                                      <div>
+                                          <div class="cart-popup__item-variation-current">
+                                              <span>Dark Blue</span>
+                                              <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                  <path d="M5.3614 4.97384L5.36129 4.97393C5.30956 5.01911 5.25184 5.05256 5.1883 5.07253C5.12836 5.09138 5.06524 5.10028 4.99956 5.09999M5.3614 4.97384L4.63871 4.97393L4.63858 4.97382C4.69038 5.01933 4.74829 5.05292 4.81213 5.07267C4.87166 5.09109 4.93433 5.09995 4.99956 5.09999M5.3614 4.97384L8.90747 1.86795C9.03136 1.75975 9.1 1.62602 9.1 1.47004C9.1 1.31407 9.03136 1.18034 8.90747 1.07214L8.84169 1.14746L8.90757 1.07223C8.78344 0.963549 8.63499 0.909216 8.46723 0.909216C8.30137 0.909216 8.15579 0.9593 8.03713 1.06293L5 3.71516L1.96287 1.06293C1.83903 0.954775 1.6925 0.9 1.5277 0.9C1.36291 0.9 1.21638 0.954775 1.09253 1.06293C0.967355 1.17224 0.9 1.30946 0.9 1.47005C0.9 1.62839 0.962068 1.76323 1.08198 1.86795L4.63846 4.97372L5.3614 4.97384ZM4.99956 5.09999L5 5.00002V5.09999C4.99985 5.09999 4.99971 5.09999 4.99956 5.09999Z" fill="#1C3557" stroke="#1C3557" stroke-width="0.2"></path>
+                                              </svg>
+                                          </div>
+                                          <ul class="cart-popup__item-variations-list">
+                                              <li data-color="Green">Green</li>
+                                              <li data-color="Red">Red</li>
+                                              <li data-color="Yellow">Yellow</li>
+                                          </ul>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="cart-popup__item-right">
+                                  <div class="product-counter">
+                                      <span class="minus">
+                                        <svg width="14" height="3" viewBox="0 0 14 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M14 2.99805H8H6H0V0.998047H6H8H14V2.99805Z" fill="#1C3557"/>
+                                        </svg>
+                                      </span>
+                                      <input class="counter" type="text" value="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');">
+                                      <span class="plus">
+                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M11.8337 6.83073H6.83366V11.8307H5.16699V6.83073H0.166992V5.16406H5.16699V0.164062H6.83366V5.16406H11.8337V6.83073Z" fill="#1C3557"/>
+                                        </svg>
+                                      </span>
+                                  </div>
+                                  <div class="cart-popup__item-price">$37.99</div>
                               </div>
                           </div>
                       </div>
                   </div>
-              </div>
-              <div class="cart-popup__item">
-                  <div class="cart-popup__wrapper">
-                      <span class="cart-popup__item-close">
-                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="7.5" cy="7.5" r="7" stroke="#6C6C6C"/>
-                            <path
-                                d="M9.94207 5.93151L8.32332 7.55026L9.94207 9.16901C10.1535 9.38047 10.1535 9.73047 9.94207 9.94193C9.8327 10.0513 9.69416 10.1023 9.55562 10.1023C9.41707 10.1023 9.27853 10.0513 9.16916 9.94193L7.55041 8.32318L5.93166 9.94193C5.82228 10.0513 5.68374 10.1023 5.5452 10.1023C5.40666 10.1023 5.26812 10.0513 5.15874 9.94193C5.05704 9.83901 5 9.70016 5 9.55547C5 9.41078 5.05704 9.27192 5.15874 9.16901L6.77749 7.55026L5.15874 5.93151C4.94728 5.72005 4.94728 5.37005 5.15874 5.15859C5.3702 4.94714 5.7202 4.94714 5.93166 5.15859L7.55041 6.77734L9.16916 5.15859C9.38062 4.94714 9.73062 4.94714 9.94207 5.15859C10.1535 5.37005 10.1535 5.72005 9.94207 5.93151Z"
-                                fill="#6C6C6C"/>
-                        </svg>
-                      </span>
-                      <div class="cart-popup__item-pic">
-                          <picture>
-                              <source srcset="../../images/pixel.webp" data-original="../../images/pic-02.webp"
-                                      class="lazy-web" type="image/webp">
-                              <source srcset="../../images/pixel.png" data-original="../../images/pic-02.png"
-                                      class="lazy-web" type="image/png">
-                              <img src="../../images/pixel.png" data-original="../../images/pic-02.png" class="lazy"
-                                   alt="">
-                          </picture>
-                      </div>
-                      <div class="cart-popup__item-info">
-                          <div class="cart-popup__item-top">
-                              <a href="javascript:void(0)" class="cart-popup__item-name">Дефібрилятор VIZION 2398</a>
-                              <div class="cart-popup__item-price">346641 <span>грн</span></div>
+                  <div class="cart-popup__item">
+                      <div class="cart-popup__wrapper">
+                          <span class="cart-popup__item-remove cart-item-remove">
+                            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="7.5" cy="7.5" r="7" stroke="#1C3557"/>
+                                <path
+                                    d="M9.94207 5.93151L8.32332 7.55026L9.94207 9.16901C10.1535 9.38047 10.1535 9.73047 9.94207 9.94193C9.8327 10.0513 9.69416 10.1023 9.55562 10.1023C9.41707 10.1023 9.27853 10.0513 9.16916 9.94193L7.55041 8.32318L5.93166 9.94193C5.82228 10.0513 5.68374 10.1023 5.5452 10.1023C5.40666 10.1023 5.26812 10.0513 5.15874 9.94193C5.05704 9.83901 5 9.70016 5 9.55547C5 9.41078 5.05704 9.27192 5.15874 9.16901L6.77749 7.55026L5.15874 5.93151C4.94728 5.72005 4.94728 5.37005 5.15874 5.15859C5.3702 4.94714 5.7202 4.94714 5.93166 5.15859L7.55041 6.77734L9.16916 5.15859C9.38062 4.94714 9.73062 4.94714 9.94207 5.15859C10.1535 5.37005 10.1535 5.72005 9.94207 5.93151Z"
+                                    fill="#1C3557"/>
+                            </svg>
+                          </span>
+                          <div class="cart-popup__item-pic">
+                              <img src="../../images/instagram-01.jpg" alt="">
                           </div>
-                          <div class="cart-popup__item-bot">
-                              <span class="cart-popup__item-id">71264015</span>
-                              <div class="product-counter">
-                                  <span class="minus">-</span>
-                                  <input class="counter" type="text" value="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');">
-                                  <span class="plus">+</span>
+                          <div class="cart-popup__item-info">
+                              <div class="cart-popup__item-left">
+                                  <a href="javascript:void(0)" class="cart-popup__item-name">Round Saucer Snow Sled Dark Blue Spince</a>
+                                  <span class="cart-popup__item-id">Eco122538</span>
+                              </div>
+                              <div class="cart-popup__item-right">
+                                  <div class="product-counter">
+                                      <span class="minus">
+                                        <svg width="14" height="3" viewBox="0 0 14 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M14 2.99805H8H6H0V0.998047H6H8H14V2.99805Z" fill="#1C3557"/>
+                                        </svg>
+                                      </span>
+                                      <input class="counter" type="text" value="2" oninput="this.value=this.value.replace(/[^0-9]/g,'');">
+                                      <span class="plus">
+                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M11.8337 6.83073H6.83366V11.8307H5.16699V6.83073H0.166992V5.16406H5.16699V0.164062H6.83366V5.16406H11.8337V6.83073Z" fill="#1C3557"/>
+                                        </svg>
+                                      </span>
+                                  </div>
+                                  <div class="cart-popup__item-price">$134</div>
                               </div>
                           </div>
                       </div>
                   </div>
-              </div>
-              <div class="cart-popup__item">
-                  <div class="cart-popup__wrapper">
-                      <span class="cart-popup__item-close">
-                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="7.5" cy="7.5" r="7" stroke="#6C6C6C"/>
-                            <path
-                                d="M9.94207 5.93151L8.32332 7.55026L9.94207 9.16901C10.1535 9.38047 10.1535 9.73047 9.94207 9.94193C9.8327 10.0513 9.69416 10.1023 9.55562 10.1023C9.41707 10.1023 9.27853 10.0513 9.16916 9.94193L7.55041 8.32318L5.93166 9.94193C5.82228 10.0513 5.68374 10.1023 5.5452 10.1023C5.40666 10.1023 5.26812 10.0513 5.15874 9.94193C5.05704 9.83901 5 9.70016 5 9.55547C5 9.41078 5.05704 9.27192 5.15874 9.16901L6.77749 7.55026L5.15874 5.93151C4.94728 5.72005 4.94728 5.37005 5.15874 5.15859C5.3702 4.94714 5.7202 4.94714 5.93166 5.15859L7.55041 6.77734L9.16916 5.15859C9.38062 4.94714 9.73062 4.94714 9.94207 5.15859C10.1535 5.37005 10.1535 5.72005 9.94207 5.93151Z"
-                                fill="#6C6C6C"/>
-                        </svg>
-                      </span>
-                      <div class="cart-popup__item-pic">
-                          <picture>
-                              <source srcset="../../images/pixel.webp" data-original="../../images/pic-02.webp"
-                                      class="lazy-web" type="image/webp">
-                              <source srcset="../../images/pixel.png" data-original="../../images/pic-02.png"
-                                      class="lazy-web" type="image/png">
-                              <img src="../../images/pixel.png" data-original="../../images/pic-02.png" class="lazy"
-                                   alt="">
-                          </picture>
-                      </div>
-                      <div class="cart-popup__item-info">
-                          <div class="cart-popup__item-top">
-                              <a href="javascript:void(0)" class="cart-popup__item-name">Дефібрилятор VIZION 2398</a>
-                              <div class="cart-popup__item-price">346641 <span>грн</span></div>
+                  <div class="cart-popup__item">
+                      <div class="cart-popup__wrapper">
+                          <span class="cart-popup__item-remove cart-item-remove">
+                            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="7.5" cy="7.5" r="7" stroke="#1C3557"/>
+                                <path
+                                    d="M9.94207 5.93151L8.32332 7.55026L9.94207 9.16901C10.1535 9.38047 10.1535 9.73047 9.94207 9.94193C9.8327 10.0513 9.69416 10.1023 9.55562 10.1023C9.41707 10.1023 9.27853 10.0513 9.16916 9.94193L7.55041 8.32318L5.93166 9.94193C5.82228 10.0513 5.68374 10.1023 5.5452 10.1023C5.40666 10.1023 5.26812 10.0513 5.15874 9.94193C5.05704 9.83901 5 9.70016 5 9.55547C5 9.41078 5.05704 9.27192 5.15874 9.16901L6.77749 7.55026L5.15874 5.93151C4.94728 5.72005 4.94728 5.37005 5.15874 5.15859C5.3702 4.94714 5.7202 4.94714 5.93166 5.15859L7.55041 6.77734L9.16916 5.15859C9.38062 4.94714 9.73062 4.94714 9.94207 5.15859C10.1535 5.37005 10.1535 5.72005 9.94207 5.93151Z"
+                                    fill="#1C3557"/>
+                            </svg>
+                          </span>
+                          <div class="cart-popup__item-pic">
+                              <img src="../../images/item1-sm.jpg" alt="">
                           </div>
-                          <div class="cart-popup__item-bot">
-                              <span class="cart-popup__item-id">71264015</span>
-                              <div class="product-counter">
-                                  <span class="minus">-</span>
-                                  <input class="counter" type="text" value="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');">
-                                  <span class="plus">+</span>
+                          <div class="cart-popup__item-info">
+                              <div class="cart-popup__item-left">
+                                  <a href="javascript:void(0)" class="cart-popup__item-name">Round Saucer Snow Sled</a>
+                                  <span class="cart-popup__item-id">Eco122538</span>
+                                  <div class="cart-popup__item-variations">
+                                      <span>Color:</span>
+                                      <div>
+                                          <div class="cart-popup__item-variation-current">
+                                              <span>Dark Blue</span>
+                                              <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                  <path d="M5.3614 4.97384L5.36129 4.97393C5.30956 5.01911 5.25184 5.05256 5.1883 5.07253C5.12836 5.09138 5.06524 5.10028 4.99956 5.09999M5.3614 4.97384L4.63871 4.97393L4.63858 4.97382C4.69038 5.01933 4.74829 5.05292 4.81213 5.07267C4.87166 5.09109 4.93433 5.09995 4.99956 5.09999M5.3614 4.97384L8.90747 1.86795C9.03136 1.75975 9.1 1.62602 9.1 1.47004C9.1 1.31407 9.03136 1.18034 8.90747 1.07214L8.84169 1.14746L8.90757 1.07223C8.78344 0.963549 8.63499 0.909216 8.46723 0.909216C8.30137 0.909216 8.15579 0.9593 8.03713 1.06293L5 3.71516L1.96287 1.06293C1.83903 0.954775 1.6925 0.9 1.5277 0.9C1.36291 0.9 1.21638 0.954775 1.09253 1.06293C0.967355 1.17224 0.9 1.30946 0.9 1.47005C0.9 1.62839 0.962068 1.76323 1.08198 1.86795L4.63846 4.97372L5.3614 4.97384ZM4.99956 5.09999L5 5.00002V5.09999C4.99985 5.09999 4.99971 5.09999 4.99956 5.09999Z" fill="#1C3557" stroke="#1C3557" stroke-width="0.2"></path>
+                                              </svg>
+                                          </div>
+                                          <ul class="cart-popup__item-variations-list">
+                                              <li data-color="Green">Green</li>
+                                              <li data-color="Red">Red</li>
+                                              <li data-color="Yellow">Yellow</li>
+                                          </ul>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="cart-popup__item-right">
+                                  <div class="product-counter">
+                                      <span class="minus">
+                                        <svg width="14" height="3" viewBox="0 0 14 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M14 2.99805H8H6H0V0.998047H6H8H14V2.99805Z" fill="#1C3557"/>
+                                        </svg>
+                                      </span>
+                                      <input class="counter" type="text" value="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');">
+                                      <span class="plus">
+                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M11.8337 6.83073H6.83366V11.8307H5.16699V6.83073H0.166992V5.16406H5.16699V0.164062H6.83366V5.16406H11.8337V6.83073Z" fill="#1C3557"/>
+                                        </svg>
+                                      </span>
+                                  </div>
+                                  <div class="cart-popup__item-price">$37.99</div>
                               </div>
                           </div>
                       </div>
@@ -1244,18 +1287,21 @@
           </div>
           <div class="cart-popup__footer">
               <div class="cart-popup__total">
-                  <span>Загальна сумма:</span>
-                  <div>3446748 <span>грн</span></div>
+                  <span>Subtotal</span>
+                  <div>
+                      <span class="cart-popup__total-price">$172.99 USD</span>
+                      <span class="cart-popup__total-footnote">Taxes and <a href="javascript:void(0)">shipping</a> calculated at checkout</span>
+                  </div>
               </div>
               <div class="cart-popup__buttons">
-                  <div class="mfp-close">
-                      Продовжити покупки
+                  <div title="Close (Esc)" class="btn btn-tr mfp-close">
+                      Continue shopping
                   </div>
-                  <a href="javascript:void(0)" class="cart-popup__order">Оформити замовлення</a>
+                  <a href="javascript:void(0)" class="btn cart-popup__order">Go to checkout</a>
               </div>
           </div>
       </div>
-      <div class="popup popup-service" id="popup-consult">
+      <!--<div class="popup popup-service" id="popup-consult">
           <div class="mfp-close">
               <svg width="8" height="9" viewBox="0 0 8 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -1297,8 +1343,8 @@
                   <button class="btn btn-b" type="submit">Отримати консультацію</button>
               </div>
           </form>
-      </div>
-      <div class="popup availability-popup" id="availability-popup">
+      </div>-->
+      <!--<div class="popup availability-popup" id="availability-popup">
           <div class="mfp-close">
               <svg width="8" height="9" viewBox="0 0 8 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -1355,7 +1401,7 @@
                   </button>
               </form>
           </div>
-      </div>
+      </div>-->
   </div>
 </body>
 

@@ -1649,7 +1649,7 @@
 .product-related{
   padding: 90px 0 50px;
   @include bp(xs) {
-    padding: 40px 0 35px;
+    padding: 41px 0 35px;
   }
   .bestsellers-slider__wrapper{
     border-bottom: none;
@@ -1659,7 +1659,7 @@
       }
     }
     +.bestsellers-slider__wrapper{
-      margin-top: 16px;
+      margin-top: 15px;
     }
   }
 }
