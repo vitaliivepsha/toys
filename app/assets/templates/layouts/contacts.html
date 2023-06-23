@@ -103,19 +103,32 @@ ${require('../parts/header.html')}
                             </div>
                             <div class="contacts-form__row">
                                 <div class="input-wrapper">
-                                    <input class="input" type="text" name="name">
-                                    <label>Your email</label>
+                                    <input class="input" type="text" name="name" data-title="Name"
+                                           data-validate-required="Fill out the name">
+                                    <label>First name*</label>
                                 </div>
                                 <div class="input-wrapper">
-                                    <input class="input" type="text" name="lastname">
-                                    <label>Your email</label>
+                                    <input class="input" type="text" name="lastname" data-title="Last Name"
+                                           data-validate-required="Fill out the last name">
+                                    <label>Last name*</label>
                                 </div>
                             </div>
-                            <button type="submit" class="btn btn-y">Subcribe</button>
-                            <div class="checkbox-wrapper">
-                                <input type="checkbox" id="checkbox">
-                                <label for="checkbox">I have read and agree with <a href="javascript:void(0)">Privacy
-                                    Policy</a> and <a href="javascript:void(0)">Terms & Conditions</a>.</label>
+                            <div class="input-wrapper">
+                                <input class="input" type="text" name="email" data-title="Email"
+                                       data-validate-required="Fill out the email">
+                                <label>Your email*</label>
+                            </div>
+                            <div class="input-wrapper">
+                                <textarea class="textarea" name="comment" data-title="Коментарий"></textarea>
+                                <label>Message</label>
+                            </div>
+                            <div class="contacts-form__bot">
+                                <div class="checkbox-wrapper">
+                                    <input type="checkbox" id="checkbox" data-title="Agreement" value="I agree">
+                                    <label for="checkbox">I have read and agree with <a href="javascript:void(0)">Privacy
+                                        Policy</a> and <a href="javascript:void(0)">Terms & Conditions</a>.</label>
+                                </div>
+                                <button type="submit" class="btn btn-y">Subcribe</button>
                             </div>
                         </form>
                     </div>
