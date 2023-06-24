@@ -161,7 +161,8 @@ $(function () {
     // validation
 
     $('.validate-form').each(function () {
-        $(this).validate({
+        var validate_form = $(this);
+        validate_form.validate({
             highlight: function (element) {
                 $(element).parent().addClass('error');
             },
@@ -190,8 +191,8 @@ $(function () {
                     required: 'Fill out the email',
                 },
             },
-            submitHandler: function () {
-                if ($('#reviews-form').length) {
+            submitHandler: function (form) {
+                if (validate_form.attr("id") == "reviews-form") {
                     $.ajax({
                         data: $('#reviews-form').serialize(),
                         success: function (data) {
@@ -212,7 +213,28 @@ $(function () {
                         }
                     });
                 }
-                if ($('#club-form').length) {
+                else if (validate_form.attr("id") == "customer-reviews-form") {
+                    $.ajax({
+                        data: $('#customer-reviews-form').serialize(),
+                        success: function (data) {
+                            $.magnificPopup.instance.close = function () {
+                                $('#customer-reviews-popup-success').removeClass('mfp-with-zoom');
+                                setTimeout(function () {
+                                    $.magnificPopup.proto.close.call(this);
+                                }, 300);
+                            };
+                            $.magnificPopup.open({
+                                items: {
+                                    src: '#customer-reviews-popup-success'
+                                }
+                            });
+                            setTimeout(function () {
+                                $('#customer-reviews-popup-success').addClass('mfp-with-zoom');
+                            }, 100);
+                        }
+                    });
+                }
+                else if (validate_form.attr("id") == "club-form") {
                     $.ajax({
                         data: $('#club-form').serialize(),
                         success: function (data) {
@@ -233,7 +255,7 @@ $(function () {
                         }
                     });
                 }
-                if ($('#oneclick-form').length) {
+                else if (validate_form.attr("id") == "oneclick-form") {
                     $.ajax({
                         data: $('#oneclick-form').serialize(),
                         success: function (data) {
@@ -834,6 +856,54 @@ $(function () {
             function() {
                 $item.remove();
             });
+    });
+
+    // upload filed
+
+    $("#files").on("change", function(e) {
+        var filesExt = ['jpeg', 'jpg', 'bmp', 'gif', 'png'];
+        var parts = $(this).val().split('.');
+        var files = e.target.files,
+            filesLength = files.length;
+        for (var i = 0; i < filesLength; i++) {
+            var f = files[i];
+            var fileReader = new FileReader();
+            fileReader.onload = (function(e) {
+                var file = e.target;
+
+                if(filesExt.join().search(parts[parts.length - 1]) != -1) {
+                    $('.uploaded-error').removeClass('active');
+                    $('.uploaded-files').append("<span class='file-preview'>" +
+                        "<img class='thumb' src='" + e.target.result + "' title='" + f.name + "'/>" +
+                        "<span class='file-name'>" + f.name + "</span>" +
+                        "<span class='remove-file'><svg width='15' height='15' viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg'>\n" +
+                        "                                <circle cx='7.5' cy='7.5' r='7' stroke='#1C3557'/>\n" +
+                        "                                <path\n" +
+                        "                                    d='M9.94207 5.93151L8.32332 7.55026L9.94207 9.16901C10.1535 9.38047 10.1535 9.73047 9.94207 9.94193C9.8327 10.0513 9.69416 10.1023 9.55562 10.1023C9.41707 10.1023 9.27853 10.0513 9.16916 9.94193L7.55041 8.32318L5.93166 9.94193C5.82228 10.0513 5.68374 10.1023 5.5452 10.1023C5.40666 10.1023 5.26812 10.0513 5.15874 9.94193C5.05704 9.83901 5 9.70016 5 9.55547C5 9.41078 5.05704 9.27192 5.15874 9.16901L6.77749 7.55026L5.15874 5.93151C4.94728 5.72005 4.94728 5.37005 5.15874 5.15859C5.3702 4.94714 5.7202 4.94714 5.93166 5.15859L7.55041 6.77734L9.16916 5.15859C9.38062 4.94714 9.73062 4.94714 9.94207 5.15859C10.1535 5.37005 10.1535 5.72005 9.94207 5.93151Z'\n" +
+                        "                                    fill='#1C3557'/>\n" +
+                        "                            </svg></span>" +
+                        "</span>");
+                }
+                else{
+                    $('.uploaded-error').addClass('active');
+                    setTimeout(function () {
+                        $('.uploaded-error').hide('300');
+                    }, 5000);
+                    setTimeout(function () {
+                        $('.uploaded-error').removeClass('active').removeAttr('style');
+                    }, 5300);
+                }
+                // $("<span class=\"pip\">" +
+                //     "<img class=\"imageThumb\" src=\"" + e.target.result + "\" title=\"" + file.name + "\"/>" +
+                //     "<br/><span class=\"remove\">Remove image</span>" +
+                //     "</span>").insertAfter("#files");
+                $(".remove-file").click(function(){
+                    $(this).parent(".file-preview").remove();
+                });
+            });
+            fileReader.readAsDataURL(f);
+        }
+        console.log(files);
     });
 
     // catalog range

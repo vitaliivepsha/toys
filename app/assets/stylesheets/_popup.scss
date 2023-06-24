@@ -226,6 +226,111 @@
   }
 }
 
+.reviews-form__upload{
+  border-bottom: 1px solid rgba($main, .1);
+  margin-top: -15px;
+  margin-bottom: 33px;
+  @include bp(xs) {
+    margin: 0 0 20px;
+  }
+  >input{
+    display: none;
+    +label{
+      font-weight: 400;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      @include bp(xs) {
+        margin-bottom: 15px;
+      }
+      >svg{
+        margin-right: 14px;
+        @include bp(xs) {
+          margin-right: 10px;
+        }
+      }
+      >div{
+        font-size: 14px;
+        line-height: 21px;
+        @include bp(xs) {
+          font-size: 12px;
+          line-height: 18px;
+        }
+        span{
+          color: rgba($main, .5);
+        }
+      }
+    }
+  }
+  .uploaded-files{
+    display: flex;
+    flex-wrap: wrap;
+    @include bp(xs) {
+      margin-bottom: 5px;
+    }
+  }
+  .file-preview{
+    display: flex;
+    align-items: center;
+    max-width: 178px;
+    padding-right: 15px;
+    margin-bottom: 10px;
+    @include bp(xs) {
+      width: 100%;
+      max-width: 100%;
+    }
+    img{
+      width: 34px;
+      height: 42px;
+      margin-right: 6px;
+      border-radius: 5px;
+      object-fit: cover;
+    }
+    .file-name{
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .remove-file{
+      position: relative;
+      cursor: pointer;
+      display: flex;
+      margin-left: 8px;
+      &:hover{
+        >svg{
+          opacity: 1;
+        }
+      }
+      >svg{
+        opacity: .5;
+      }
+      &:before{
+        position: absolute;
+        content: '';
+        width: calc(100% + 10px);
+        height: calc(100% + 10px);
+        left: -5px;
+        top: -5px;
+      }
+    }
+  }
+  .uploaded-error{
+    display: none;
+    font-size: 14px;
+    line-height: 21px;
+    color: $red;
+    margin-bottom: 10px;
+    @include bp(xs) {
+      font-size: 12px;
+      line-height: 18px;
+    }
+    &.active{
+      display: block;
+    }
+  }
+}
+
 .reviews-popup__success{
   width: 770px;
   padding: 64px 150px 80px;
