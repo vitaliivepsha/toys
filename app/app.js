@@ -21,9 +21,9 @@ if (process.env.NODE_ENV !== 'production') {
   require('./assets/templates/layouts/reviews.html');
   require('./assets/templates/layouts/contacts.html');
   require('./assets/templates/layouts/faq.html');
-  require('./assets/templates/layouts/warranty.html');
   require('./assets/templates/layouts/delivery-payment.html');
   require('./assets/templates/layouts/return.html');
+  require('./assets/templates/layouts/cart.html');
   require('./assets/templates/layouts/checkout.html');
 }
 
@@ -823,31 +823,31 @@ $(function() {
     $('.customer-reviews__wrapper').slideDown();
   });
 
-    // cart popup variations
+    // cart variations
 
-  $('.cart-popup__item-variation-current').on('click', function() {
+  $('.cart-variation-current').on('click', function() {
     $(this).toggleClass('active');
   });
 
   $(document).click(function() {
-    $('.cart-popup__item-variation-current').removeClass('active');
+    $('.cart-variation-current').removeClass('active');
   });
 
-  $(document).on('click', '.cart-popup__item-variations > div', function(e) {
+  $(document).on('click', '.cart-variations > div', function(e) {
     e.stopPropagation();
   });
 
-  $('.cart-popup__item-variations-list > li').on('click', function() {
+  $('.cart-variations-list > li').on('click', function() {
     var color = $(this).data('color');
-    $(this).closest('.cart-popup__item-variations')
-            .find('.cart-popup__item-variation-current').removeClass('active')
+    $(this).closest('.cart-variations')
+            .find('.cart-variation-current').removeClass('active')
             .find('span').html(color);
   });
 
     // remove from cart
 
   $('.cart-item-remove').on('click', function() {
-    var $item = $(this).closest('.cart-popup__item');
+    var $item = $(this).closest('.cart-item');
     swal({
       title: 'Would you like to remove this item from the shopping cart?',
       showCancelButton: true,
