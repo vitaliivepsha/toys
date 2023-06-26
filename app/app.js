@@ -179,6 +179,27 @@ $(function() {
         email: {
           required: true,
         },
+        country_region: {
+          required: true,
+        },
+        first_name: {
+          required: true,
+        },
+        last_name: {
+          required: true,
+        },
+        address: {
+          required: true,
+        },
+        city: {
+          required: true,
+        },
+        state: {
+          required: true,
+        },
+        zip: {
+          required: true,
+        },
       },
       messages: {
         name: {
@@ -189,6 +210,27 @@ $(function() {
         },
         email: {
           required: 'Fill out the email',
+        },
+        country_region: {
+          required: 'Choose your Country/Region',
+        },
+        first_name: {
+          required: 'Fill out First name',
+        },
+        last_name: {
+          required: 'Fill out Last name',
+        },
+        address: {
+          required: 'Fill out the address',
+        },
+        city: {
+          required: 'Fill out the city',
+        },
+        state: {
+          required: 'Fill out the state',
+        },
+        zip: {
+          required: 'Fill out Zip code',
         },
       },
       submitHandler: function(form) {
@@ -971,6 +1013,36 @@ $(function() {
 
   $('.select').SumoSelect({
     forceCustomRendering: true
+  });
+
+  $('.search-select').SumoSelect({
+    search: true,
+    searchText: '',
+    noMatch: 'Nothing found',
+    forceCustomRendering: true
+  });
+
+  /*$('.SumoSelect').each(function() {
+    if($(this).hasClass('open')){
+        $(this).closest('.input-wrapper').addClass('open');
+    }
+    else{
+        $(this).closest('.input-wrapper').removeClass('open');
+    }
+  });*/
+    $('.search-select').on('sumo:opening', function () {
+        $(this).closest('.input-wrapper').addClass('open');
+    });
+    $('.search-select').on('sumo:closing', function () {
+        $(this).closest('.input-wrapper').removeClass('open');
+    });
+
+  $('.select, .search-select').change(function() {
+      var val = $(this).val();
+      if (!$(this).val() == ''){
+          $(this).closest('.input-wrapper').removeClass('error').addClass('active').find('.input').val(val);
+          $(this).closest('.input-wrapper').find('label.error').remove();
+      }
   });
 
     // lazy load

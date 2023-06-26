@@ -509,6 +509,293 @@ main {
   }
 }
 
+.select-wrapper{
+  position: relative;
+  .input{
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    z-index: -1;
+  }
+  >svg{
+    position: absolute;
+    z-index: 1;
+    top: 24px;
+    right: 21px;
+    opacity: .5;
+    pointer-events: none;
+  }
+  &.active, &.open{
+    >svg{
+      opacity: 1;
+    }
+    .input{
+      + label{
+        position: absolute;
+        font-weight: 400;
+        color: rgba($main, .5);
+        margin-bottom: 0;
+        z-index: 2;
+        font-size: 10px;
+        line-height: 15px;
+        top: 8px;
+        left: 20px;
+        @include bp(xs) {
+          font-size: 10px;
+          line-height: 15px;
+          top: 4px;
+          left: 15px;
+        }
+        +label{
+          position: absolute;
+          font-weight: 400;
+          color: rgba($main, .5);
+          margin-bottom: 0;
+          z-index: 2;
+          font-size: 10px;
+          line-height: 15px;
+          top: 8px;
+          left: 20px;
+          @include bp(xs) {
+            font-size: 10px;
+            line-height: 15px;
+            top: 4px;
+            left: 15px;
+          }
+        }
+      }
+    }
+    .SumoSelect{
+      >.CaptionCont{
+        border-color: $main;
+      }
+    }
+  }
+  &.error{
+    >svg{
+      opacity: 1;
+      path{
+        fill: $red;
+      }
+    }
+    .input{
+      + label{
+        z-index: 2;
+        font-size: 10px;
+        line-height: 15px;
+        top: 8px;
+        @include bp(xs) {
+          font-size: 10px;
+          line-height: 15px;
+          top: 4px;
+        }
+      }
+    }
+    .SumoSelect{
+      >.CaptionCont{
+        border-color: $red;
+        >span{
+          &.placeholder{
+            color: transparent;
+          }
+        }
+      }
+    }
+  }
+  &__search{
+    >svg{
+      width: 19px;
+      height: 20px;
+      top: 16px;
+      right: 16px;
+    }
+  }
+  .SumoSelect{
+    display: flex;
+    width: 100%;
+    &.open, &:focus, &:hover{
+      >.CaptionCont{
+        box-shadow: none;
+      }
+    }
+    &.open{
+      >.optWrapper{
+        top: calc(100% + 5px);
+      }
+      .search-txt{
+        font-size: 14px;
+        line-height: 21px;
+        padding: 18px 20px 9px 20px;
+        @include bp(xs) {
+          font-size: 12px;
+          line-height: 18px;
+          padding: 14px 15px 3px 15px;
+        }
+      }
+    }
+    >.CaptionCont{
+      height: 50px;
+      border: 1px solid rgba($main, .2);
+      border-radius: 5px;
+      width: 100%;
+      cursor: pointer;
+      padding: 0;
+      @include bp(xs) {
+        height: 40px;
+      }
+      >span{
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 21px;
+        padding: 18px 20px 9px 20px;
+        cursor: pointer;
+        @include bp(xs) {
+          font-size: 12px;
+          line-height: 18px;
+          padding: 14px 15px 3px 15px;
+        }
+        &.placeholder{
+          padding: 14px 20px;
+          font-style: normal;
+          color: rgba($main, .5);
+          @include bp(xs) {
+            padding: 11px 15px;
+          }
+        }
+      }
+      >label{
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+    >.optWrapper{
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+      border-color: rgba($main, .2);
+      >.options{
+        border-radius: 4px;
+        &::-webkit-scrollbar {
+          overflow-y: scroll;
+          background: transparent;
+          width: 3px;
+          transition: linear .2s;
+          box-shadow: 1px 0 0 transparent;
+        }
+        &::-webkit-scrollbar-thumb {
+          background: $main;
+          border-radius: 0;
+          width: 1px;
+          transition: linear .2s;
+          cursor: grab;
+        }
+        li{
+          &.opt{
+            padding: 8px 19px;
+            border-color: rgba($main, .2);
+            @include bp(xs) {
+              padding: 6px 14px;
+            }
+            &:hover{
+              background-color: $bg-grey;
+            }
+            &.disabled{
+              display: none;
+            }
+            label{
+              font-weight: 400;
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+    .no-match{
+      padding: 8px 19px;
+      @include bp(xs) {
+        padding: 6px 14px;
+      }
+    }
+  }
+}
+
+.tooltip-wrapper{
+  position: relative;
+  .input{
+    padding-right: 50px
+  }
+  &.error{
+    .tooltip-item{
+      >svg{
+        opacity: 1;
+        circle{
+          stroke: $red;
+        }
+        path{
+          fill: $red;
+        }
+      }
+    }
+  }
+  .tooltip-item{
+    display: flex;
+    position: absolute;
+    z-index: 1;
+    top: 18px;
+    right: 21px;
+    cursor: pointer;
+    >svg{
+      opacity: .5;
+    }
+    &:after{
+      position: absolute;
+      content: '';
+      width: calc(100% + 20px);
+      height: calc(100% + 20px);
+      top: -10px;
+      left: -10px;
+    }
+    &:hover{
+      .tooltip-dialog{
+        bottom: calc(100% + 44px);
+        opacity: 1;
+        visibility: visible;
+      }
+      >svg{
+        opacity: 1;
+      }
+    }
+    .tooltip-dialog{
+      opacity: 0;
+      visibility: hidden;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      transition: linear .2s;
+      bottom: calc(100% + 29px);
+      width: 157px;
+      font-size: 12px;
+      line-height: 130%;
+      text-align: center;
+      color: #fff;
+      background-color: $main;
+      padding: 15px 15px 20px;
+      border-radius: 5px;
+      &:after{
+        position: absolute;
+        content: '';
+        width: 20px;
+        height: 20px;
+        border-radius: 1px;
+        left: 50%;
+        bottom: -7px;
+        transform: translateX(-50%) rotate(45deg);
+        background-color: $main;
+        transition: linear .2s;
+      }
+    }
+  }
+}
+
 .validate-form{
   .input-wrapper {
     &.error {
@@ -652,7 +939,7 @@ main {
   appearance: none;
   @include bp(xs) {
     height: 40px;
-    font-size: 14px;
+    font-size: 12px;
     padding: 15px 15px 4px 15px;
   }
   +label{

@@ -6,206 +6,198 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noindex">
-    <title>Vizion</title>
-    <link rel="shortcut icon" href="../../images/favicon.png" type="image/jpg">
-    <meta name="theme-color" content="#101B25">
-    <meta name="msapplication-navbutton-color" content="#101B25">
-    <meta name="apple-mobile-web-app-status-bar-style" content="#101B25">
+    <title>Exceptional Concepts</title>
+    <link rel="shortcut icon" href="../../images/favicon.png" type="image/png">
+    <meta name="theme-color" content="#1C3557">
+    <meta name="msapplication-navbutton-color" content="#1C3557">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#1C3557">
 </head>
 
 <body id="main">
-${require('../parts/header.html')}
+${require('../parts/header-checkout.html')}
 <main class="main">
-    <div class="container">
-        <div class="breadcrumbs">
-            <a href="javascript:void(0)">Главная</a>
-            <span>Оформлення замовлення</span>
-        </div>
-        <div class="page-title">Оформлення замовлення</div>
-    </div>
-    </div>
-    <div class="container">
-        <div class="checkout-page">
-            <div class="row">
-                <div class="col-lg-5 col-md-6 col-sm-12 col-xs-12">
-                    <div class="checkout-order checkout-order--form">
-                        <span class="checkout-order__title">Ваші данні</span>
-
-                        <form class="chechout-form ajax_form clear-styles">
-                            <div class="input-wrapper">
-                                <label>ПІБ</label>
-                                <input class="input" type="text" name="full-name" data-title="ФИО"
-                                       data-validate-required="Заповніть поле ПІБ">
-                            </div>
-                            <div class="input-wrapper">
-                                <label>Email</label>
-                                <input class="input" type="text" name="email" data-title="Email"
-                                       data-validate-required="Заповніть поле Email">
-                            </div>
-                            <div class="input-wrapper">
-                                <label>Телефон</label>
-                                <input class="input" type="text" name="phone" data-title="Телефон"
-                                       data-validate-uaphone="Заповніть поле Телефон">
-                            </div>
-
-                            <div class="input-wrapper">
-                                <label>Спосіб доставки</label>
-                                <select class="select delivery">
-                                    <option value="self">Самовивіз</option>
-                                    <option selected value="nova">Нова пошта</option>
-                                </select>
-                            </div>
-
-                            <div class="deliver deliver-nova">
-                                <div class="input-wrapper">
-                                    <label>Область</label>
-                                    <select class="select obl">
-                                        <option disabled selected>Вибрати</option>
-                                        <option>Область 1</option>
-                                        <option>Область 2</option>
-                                        <option>Область 3</option>
-                                        <option>Область 3</option>
-                                        <option>Область 4</option>
-                                        <option>Область 5</option>
-                                        <option>Область 6</option>
-                                    </select>
-                                </div>
-                                <div class="input-wrapper">
-                                    <label>Місто</label>
-                                    <select class="select obl">
-                                        <option disabled selected>Вибрати</option>
-                                        <option>Місто 1</option>
-                                        <option>Місто 2</option>
-                                        <option>Місто 3</option>
-                                        <option>Місто 4</option>
-                                        <option>Місто 5</option>
-                                        <option>Місто 6</option>
-                                        <option>Місто 7</option>
-                                        <option>Місто 8</option>
-                                        <option>Місто 9</option>
-                                    </select>
-                                </div>
-                                <div class="input-wrapper">
-                                    <label>Відділення</label>
-                                    <select class="select obl">
-                                        <option disabled selected>Вибрати</option>
-                                        <option>Відділення 1</option>
-                                        <option>Відділення 2</option>
-                                        <option>Відділення 3</option>
-                                        <option>Відділення 4</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="input-wrapper">
-                                <label>Способ оплати</label>
-                                <select class="select">
-                                    <option selected>Післяоплата</option>
-                                    <option>Оплата карткою</option>
-                                </select>
-                            </div>
-                            <div class="input-wrapper chechout-comments">
-                                <label>Коментарій</label>
-                                <textarea class="textarea" name="message" data-title="Коментарій"></textarea>
-                            </div>
-                            <div class="chechout-form__footer">
-                                <button class="btn" type="submit">Оформити замовлення</button>
-                            </div>
-                        </form>
-
+    <div class="checkout-page">
+        <div class="container">
+            <div class="row checkout-wrapper">
+                <div class="col-md-6 col-sm-12 col-xs-12 checkout-left">
+                    <div class="checkout-nav">
+                        <a href="javascript:void(0)">Cart</a>
+                        <span class="current">Information</span>
+                        <span>Shipping</span>
+                        <span>Payment</span>
                     </div>
+                    <span class="checkout-title">Checkout</span>
+                    <form class="checkout-form validate-form" id="checkout-form">
+                        <div class="checkout-contact">
+                            <span class="checkout-subtitle">Contact</span>
+                            <div class="input-wrapper">
+                                <input class="input" type="text" name="email">
+                                <label>Your email</label>
+                            </div>
+                            <div class="checkbox-wrapper">
+                                <input type="checkbox" id="offers">
+                                <label for="offers">Email me with news and offers</label>
+                            </div>
+                        </div>
+                        <div class="checkout-shipping-address">
+                            <span class="checkout-subtitle">Shipping address</span>
+                            <div class="input-wrapper select-wrapper">
+                                <input class="input" type="text" name="country_region">
+                                <label>Country/Region</label>
+                                <svg width="8" height="4" viewBox="0 0 8 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.84169 0.792625L4.29551 3.89861C4.2533 3.93548 4.20756 3.96165 4.15831 3.97714C4.10906 3.99262 4.05629 4.00024 4 3.99999C3.94371 3.99999 3.89094 3.99238 3.84169 3.97714C3.79244 3.9619 3.7467 3.93572 3.70449 3.89861L0.147757 0.792626C0.0492522 0.706604 -1.48659e-07 0.599078 -1.54299e-07 0.470046C-1.59939e-07 0.341013 0.0527703 0.230415 0.158311 0.138249C0.263852 0.0460832 0.386983 2.21503e-07 0.527704 2.15352e-07C0.668426 2.09201e-07 0.791557 0.0460832 0.897097 0.138249L4 2.84792L7.1029 0.138249C7.20141 0.0522272 7.32285 0.00921647 7.46723 0.00921646C7.61161 0.00921645 7.73643 0.0552992 7.84169 0.147465C7.94723 0.239631 8 0.347157 8 0.470045C8 0.592933 7.94723 0.70046 7.84169 0.792625Z" fill="#1C3557"/>
+                                </svg>
+                                <select class="select">
+                                    <option selected disabled>Country/Region</option>
+                                    <option>Option 1</option>
+                                    <option>Option 2</option>
+                                    <option>Option 3</option>
+                                    <option>Option 4</option>
+                                </select>
+                            </div>
+                            <div class="checkout-form__row two-fields">
+                                <div class="input-wrapper">
+                                    <input class="input" type="text" name="first_name">
+                                    <label>First name</label>
+                                </div>
+                                <div class="input-wrapper">
+                                    <input class="input" type="text" name="last_name">
+                                    <label>Last name</label>
+                                </div>
+                            </div>
+                            <div class="input-wrapper">
+                                <input class="input" type="text" name="company">
+                                <label>Company (optional)</label>
+                            </div>
+                            <div class="input-wrapper select-wrapper select-wrapper__search">
+                                <input class="input" type="text" name="address">
+                                <label>Address</label>
+                                <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11.9428 18.1481C9.69142 18.1481 7.5953 17.3184 6.01662 15.9185L1.12559 20.8184C0.996157 20.9481 0.840912 21 0.659864 21C0.478628 21 0.323389 20.9481 0.194143 20.8184C-0.0647163 20.5591 -0.0647163 20.1444 0.194143 19.9109L5.1106 15.011C3.73904 13.4295 2.88505 11.3554 2.88505 9.074C2.88505 4.07034 6.94806 0 11.9425 0C16.937 0 21 4.07043 21 9.074C21 14.0776 16.9374 18.1481 11.9428 18.1481ZM11.9428 1.29638C7.67294 1.29638 4.17925 4.79644 4.17925 9.07409C4.17925 13.3517 7.67294 16.8518 11.9428 16.8518C16.2127 16.8518 19.7064 13.3517 19.7064 9.07409C19.7064 4.79644 16.2128 1.29638 11.9428 1.29638Z" fill="#1C3557"/>
+                                </svg>
+                                <select class="search-select">
+                                    <option selected disabled>Address</option>
+                                    <option>Option 1</option>
+                                    <option>Option 2</option>
+                                    <option>Option 3</option>
+                                    <option>Option 4</option>
+                                </select>
+                            </div>
+                            <div class="input-wrapper">
+                                <input class="input" type="text" name="apartment">
+                                <label>Apartment, suite, etc. (optional)</label>
+                            </div>
+                            <div class="checkout-form__row three-fields">
+                                <div class="input-wrapper">
+                                    <input class="input" type="text" name="city">
+                                    <label>City</label>
+                                </div>
+                                <div class="input-wrapper select-wrapper">
+                                    <input class="input" type="text" name="state">
+                                    <label>State</label>
+                                    <svg width="8" height="4" viewBox="0 0 8 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7.84169 0.792625L4.29551 3.89861C4.2533 3.93548 4.20756 3.96165 4.15831 3.97714C4.10906 3.99262 4.05629 4.00024 4 3.99999C3.94371 3.99999 3.89094 3.99238 3.84169 3.97714C3.79244 3.9619 3.7467 3.93572 3.70449 3.89861L0.147757 0.792626C0.0492522 0.706604 -1.48659e-07 0.599078 -1.54299e-07 0.470046C-1.59939e-07 0.341013 0.0527703 0.230415 0.158311 0.138249C0.263852 0.0460832 0.386983 2.21503e-07 0.527704 2.15352e-07C0.668426 2.09201e-07 0.791557 0.0460832 0.897097 0.138249L4 2.84792L7.1029 0.138249C7.20141 0.0522272 7.32285 0.00921647 7.46723 0.00921646C7.61161 0.00921645 7.73643 0.0552992 7.84169 0.147465C7.94723 0.239631 8 0.347157 8 0.470045C8 0.592933 7.94723 0.70046 7.84169 0.792625Z" fill="#1C3557"/>
+                                    </svg>
+                                    <select class="select">
+                                        <option selected disabled>State</option>
+                                        <option>Option 1</option>
+                                        <option>Option 2</option>
+                                        <option>Option 3</option>
+                                        <option>Option 4</option>
+                                    </select>
+                                </div>
+                                <div class="input-wrapper">
+                                    <input class="input" type="text" name="zip">
+                                    <label>Zip code</label>
+                                </div>
+                            </div>
+                            <div class="input-wrapper tooltip-wrapper">
+                                <div class="tooltip-item">
+                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="7" cy="7" r="6.5" stroke="#1C3557"/>
+                                        <path d="M6.02122 8.33358C6.02122 7.87812 6.10708 7.49732 6.27882 7.19118C6.45055 6.88505 6.74175 6.59012 7.15242 6.30638C7.45108 6.09732 7.67508 5.93305 7.82442 5.81358C7.97375 5.68665 8.08948 5.54852 8.17162 5.39918C8.26122 5.24238 8.30602 5.05945 8.30602 4.85038C8.30602 4.51438 8.17162 4.24931 7.90282 4.05518C7.63402 3.86105 7.24575 3.76398 6.73802 3.76398C5.99135 3.76398 5.30068 3.91332 4.66602 4.21198V3.22638C4.96468 3.09945 5.28948 2.99865 5.64042 2.92398C5.99882 2.84185 6.36468 2.80078 6.73802 2.80078C7.55935 2.80078 8.21268 2.98371 8.69802 3.34958C9.18335 3.71545 9.42602 4.21571 9.42602 4.85038C9.42602 5.23865 9.32522 5.57091 9.12362 5.84718C8.92202 6.12345 8.60468 6.41838 8.17162 6.73198C7.85802 6.95598 7.63402 7.13518 7.49962 7.26958C7.36522 7.39652 7.26815 7.54212 7.20842 7.70638C7.14868 7.86318 7.11882 8.07598 7.11882 8.34478V8.56878H6.02122V8.33358ZM6.55882 10.9656C6.37215 10.9656 6.21535 10.9021 6.08842 10.7752C5.96148 10.6482 5.89802 10.4914 5.89802 10.3048C5.89802 10.1181 5.96148 9.96132 6.08842 9.83438C6.21535 9.70745 6.37215 9.64398 6.55882 9.64398C6.74548 9.64398 6.90228 9.70745 7.02922 9.83438C7.16362 9.96132 7.23082 10.1181 7.23082 10.3048C7.23082 10.4914 7.16362 10.6482 7.02922 10.7752C6.90228 10.9021 6.74548 10.9656 6.55882 10.9656Z" fill="#1C3557"/>
+                                    </svg>
+                                    <div class="tooltip-dialog">In case we need to contact you about your order</div>
+                                </div>
+                                <input class="input" type="text" name="phone">
+                                <label>Phone</label>
+                            </div>
+                        </div>
+                        <div class="checkout-form__footer">
+                            <a href="javascript:void(0)" class="checkout-form__return">
+                                Return to Cart
+                                <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.83698 1.27237L1.00199 1.27237C0.821736 1.27237 0.670537 1.21129 0.54839 1.08915C0.426243 0.967001 0.365381 0.816013 0.365806 0.636186C0.365806 0.455934 0.426879 0.304735 0.549026 0.182588C0.671173 0.0604406 0.822161 -0.000421024 1.00199 3.0752e-06L7.36382 2.28076e-06C7.54407 2.25826e-06 7.69527 0.0610758 7.81741 0.183223C7.93956 0.30537 8.00042 0.456357 8 0.636185L8 6.99801C8 7.17826 7.93892 7.32946 7.81678 7.45161C7.69463 7.57376 7.54364 7.63462 7.36381 7.63419C7.18356 7.63419 7.03236 7.57312 6.91022 7.45097C6.78807 7.32883 6.72721 7.17784 6.72763 6.99801L6.72763 2.16302L1.06561 7.82505C0.948973 7.94168 0.80053 8 0.620278 8C0.440026 8 0.291585 7.94168 0.174951 7.82505C0.0583173 7.70842 -3.30457e-07 7.55997 -3.22578e-07 7.37972C-3.14699e-07 7.19947 0.0583174 7.05103 0.174951 6.93439L5.83698 1.27237Z" fill="#1C3557"/>
+                                </svg>
+                            </a>
+                            <button type="submit" class="btn">Continue to shipping</button>
+                        </div>
+                    </form>
                 </div>
-                <div class="col-lg-7 col-md-6 col-sm-12 col-xs-12">
-                    <div class="checkout-order checkout-order--goods">
-                        <span class="checkout-order__title">Ваше замовлення</span>
-                        <div class="checkout-goods">
-                            <div class="checkout-goods__item">
-                                <span class="checkout-goods__item-close">
-                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
-                                         xmlns="http://www.w3.org/2000/svg">
-<circle cx="7.5" cy="7.5" r="7" stroke="#6C6C6C"/>
-<path
-    d="M9.94207 5.93151L8.32332 7.55026L9.94207 9.16901C10.1535 9.38047 10.1535 9.73047 9.94207 9.94193C9.8327 10.0513 9.69416 10.1023 9.55562 10.1023C9.41707 10.1023 9.27853 10.0513 9.16916 9.94193L7.55041 8.32318L5.93166 9.94193C5.82228 10.0513 5.68374 10.1023 5.5452 10.1023C5.40666 10.1023 5.26812 10.0513 5.15874 9.94193C5.05704 9.83901 5 9.70016 5 9.55547C5 9.41078 5.05704 9.27192 5.15874 9.16901L6.77749 7.55026L5.15874 5.93151C4.94728 5.72005 4.94728 5.37005 5.15874 5.15859C5.3702 4.94714 5.7202 4.94714 5.93166 5.15859L7.55041 6.77734L9.16916 5.15859C9.38062 4.94714 9.73062 4.94714 9.94207 5.15859C10.1535 5.37005 10.1535 5.72005 9.94207 5.93151Z"
-    fill="#6C6C6C"/>
-</svg>
-                                </span>
-                                <div class="checkout-goods__item-wrapper">
-                                    <div class="checkout-goods__item-pic">
-                                        <picture>
-                                            <source srcset="../../images/pixel.webp"
-                                                    data-original="../../images/pic-01.webp" class="lazy-web"
-                                                    type="image/webp">
-                                            <source srcset="../../images/pixel.png"
-                                                    data-original="../../images/pic-01.png"
-                                                    class="lazy-web" type="image/png">
-                                            <img src="../../images/pixel.png" data-original="../../images/pic-01.png"
-                                                 class="lazy" alt="">
-                                        </picture>
-                                    </div>
-                                    <div class="checkout-goods__item-about">
-                                        <a href="javascript:void(0)">Апарат штучної вентиляції легенів Inspiration 3e
-                                            eVent
-                                            Medical </a>
-                                        <span>71264015</span>
-                                    </div>
-                                </div>
-                                <div class="checkout-goods__item-counter">
-                                    <div class="checkout-goods__item-price">3446748 <span>грн</span></div>
-                                    <div class="checkout-goods__item-quantity">
-                                        <span class="minus">-</span>
-                                        <input class="value" value="1" type="text"
-                                               oninput="this.value=this.value.replace(/[^0-9\.]/g,'');">
-                                        <span class="plus">+</span>
-                                    </div>
-                                </div>
+                <div class="col-md-6 col-sm-12 col-xs-12 checkout-right">
+                    <span class="checkout-items__head">2 Item in Cart</span>
+                    <div class="checkout-items__wrapper">
+                        <div class="checkout-item">
+                            <div class="checkout-item__pic">
+                                <img src="../../images/item1-sm.jpg" alt="">
+                                <span class="checkout-item__count">2</span>
                             </div>
-                            <div class="checkout-goods__item">
-                                <span class="checkout-goods__item-close">
-                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
-                                         xmlns="http://www.w3.org/2000/svg">
-<circle cx="7.5" cy="7.5" r="7" stroke="#6C6C6C"/>
-<path
-    d="M9.94207 5.93151L8.32332 7.55026L9.94207 9.16901C10.1535 9.38047 10.1535 9.73047 9.94207 9.94193C9.8327 10.0513 9.69416 10.1023 9.55562 10.1023C9.41707 10.1023 9.27853 10.0513 9.16916 9.94193L7.55041 8.32318L5.93166 9.94193C5.82228 10.0513 5.68374 10.1023 5.5452 10.1023C5.40666 10.1023 5.26812 10.0513 5.15874 9.94193C5.05704 9.83901 5 9.70016 5 9.55547C5 9.41078 5.05704 9.27192 5.15874 9.16901L6.77749 7.55026L5.15874 5.93151C4.94728 5.72005 4.94728 5.37005 5.15874 5.15859C5.3702 4.94714 5.7202 4.94714 5.93166 5.15859L7.55041 6.77734L9.16916 5.15859C9.38062 4.94714 9.73062 4.94714 9.94207 5.15859C10.1535 5.37005 10.1535 5.72005 9.94207 5.93151Z"
-    fill="#6C6C6C"/>
-</svg>
-                                </span>
-                                <div class="checkout-goods__item-wrapper">
-                                    <div class="checkout-goods__item-pic">
-                                        <picture>
-                                            <source srcset="../../images/pixel.webp"
-                                                    data-original="../../images/pic-01.webp" class="lazy-web"
-                                                    type="image/webp">
-                                            <source srcset="../../images/pixel.png"
-                                                    data-original="../../images/pic-01.png"
-                                                    class="lazy-web" type="image/png">
-                                            <img src="../../images/pixel.png" data-original="../../images/pic-01.png"
-                                                 class="lazy" alt="">
-                                        </picture>
-                                    </div>
-                                    <div class="checkout-goods__item-about">
-                                        <a href="javascript:void(0)">Апарат штучної вентиляції легенів Inspiration 3e
-                                            eVent
-                                            Medical </a>
-                                        <span>71264015</span>
+                            <div class="checkout-item__info">
+                                <div>
+                                    <span class="checkout-item__name">Round Saucer Snow Sled</span>
+                                    <span class="checkout-item__id">Eco122538</span>
+                                    <div class="checkout-variations">
+                                        <span>Color:</span>
+                                        <span>Dark Blue</span>
+                                        <!--<svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5.3614 4.97384L5.36129 4.97393C5.30956 5.01911 5.25184 5.05256 5.1883 5.07253C5.12836 5.09138 5.06524 5.10028 4.99956 5.09999M5.3614 4.97384L4.63871 4.97393L4.63858 4.97382C4.69038 5.01933 4.74829 5.05292 4.81213 5.07267C4.87166 5.09109 4.93433 5.09995 4.99956 5.09999M5.3614 4.97384L8.90747 1.86795C9.03136 1.75975 9.1 1.62602 9.1 1.47004C9.1 1.31407 9.03136 1.18034 8.90747 1.07214L8.84169 1.14746L8.90757 1.07223C8.78344 0.963549 8.63499 0.909216 8.46723 0.909216C8.30137 0.909216 8.15579 0.9593 8.03713 1.06293L5 3.71516L1.96287 1.06293C1.83903 0.954775 1.6925 0.9 1.5277 0.9C1.36291 0.9 1.21638 0.954775 1.09253 1.06293C0.967355 1.17224 0.9 1.30946 0.9 1.47005C0.9 1.62839 0.962068 1.76323 1.08198 1.86795L4.63846 4.97372L5.3614 4.97384ZM4.99956 5.09999L5 5.00002V5.09999C4.99985 5.09999 4.99971 5.09999 4.99956 5.09999Z" fill="#1C3557" stroke="#1C3557" stroke-width="0.2"></path>
+                                        </svg>-->
                                     </div>
                                 </div>
-                                <div class="checkout-goods__item-counter">
-                                    <div class="checkout-goods__item-price">3446748 <span>грн</span></div>
-                                    <div class="checkout-goods__item-quantity">
-                                        <span class="minus">-</span>
-                                        <input class="value" value="1" type="text"
-                                               oninput="this.value=this.value.replace(/[^0-9\.]/g,'');">
-                                        <span class="plus">+</span>
-                                    </div>
-                                </div>
+                                <span class="checkout-item__price">$65</span>
                             </div>
                         </div>
-                        <div class="checkout-order__footer">
-                            <div class="checkout-order__total">
-                                <span>Загальна сумма:</span>
-                                <strong>3446748 <span>грн</span></strong>
+                        <div class="checkout-item">
+                            <div class="checkout-item__pic">
+                                <img src="../../images/instagram-01.jpg" alt="">
+                                <span class="checkout-item__count">1</span>
                             </div>
-                            <div class="checkout-order__footnote">Без урахування суми за доставку</div>
+                            <div class="checkout-item__info">
+                                <div>
+                                    <span class="checkout-item__name">Round Saucer Snow Sled Dark Blue Spince</span>
+                                    <span class="checkout-item__id">Eco122538</span>
+                                </div>
+                                <span class="checkout-item__price">$23.99</span>
+                            </div>
                         </div>
+                    </div>
+                    <div class="checkout-discount">
+                        <div class="input-wrapper">
+                            <input class="input" type="text" name="discount_code">
+                            <label>Discount code</label>
+                        </div>
+                        <button class="btn">Apply</button>
+                    </div>
+                    <div class="checkout-subtotal">
+                        <span>Subtotal</span>
+                        <span>$172.99 USD</span>
+                    </div>
+                    <div class="checkout-subtotal__shipping">
+                        <div class="tooltip-wrapper">
+                            Shipping
+                            <div class="tooltip-item">
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="7" cy="7" r="6.5" stroke="#1C3557"/>
+                                    <path d="M6.02122 8.33358C6.02122 7.87812 6.10708 7.49732 6.27882 7.19118C6.45055 6.88505 6.74175 6.59012 7.15242 6.30638C7.45108 6.09732 7.67508 5.93305 7.82442 5.81358C7.97375 5.68665 8.08948 5.54852 8.17162 5.39918C8.26122 5.24238 8.30602 5.05945 8.30602 4.85038C8.30602 4.51438 8.17162 4.24931 7.90282 4.05518C7.63402 3.86105 7.24575 3.76398 6.73802 3.76398C5.99135 3.76398 5.30068 3.91332 4.66602 4.21198V3.22638C4.96468 3.09945 5.28948 2.99865 5.64042 2.92398C5.99882 2.84185 6.36468 2.80078 6.73802 2.80078C7.55935 2.80078 8.21268 2.98371 8.69802 3.34958C9.18335 3.71545 9.42602 4.21571 9.42602 4.85038C9.42602 5.23865 9.32522 5.57091 9.12362 5.84718C8.92202 6.12345 8.60468 6.41838 8.17162 6.73198C7.85802 6.95598 7.63402 7.13518 7.49962 7.26958C7.36522 7.39652 7.26815 7.54212 7.20842 7.70638C7.14868 7.86318 7.11882 8.07598 7.11882 8.34478V8.56878H6.02122V8.33358ZM6.55882 10.9656C6.37215 10.9656 6.21535 10.9021 6.08842 10.7752C5.96148 10.6482 5.89802 10.4914 5.89802 10.3048C5.89802 10.1181 5.96148 9.96132 6.08842 9.83438C6.21535 9.70745 6.37215 9.64398 6.55882 9.64398C6.74548 9.64398 6.90228 9.70745 7.02922 9.83438C7.16362 9.96132 7.23082 10.1181 7.23082 10.3048C7.23082 10.4914 7.16362 10.6482 7.02922 10.7752C6.90228 10.9021 6.74548 10.9656 6.55882 10.9656Z" fill="#1C3557"/>
+                                </svg>
+                                <div class="tooltip-dialog">In case we need to contact you about your order</div>
+                            </div>
+                        </div>
+                        <span>Calculated at next step</span>
+                    </div>
+                    <div class="checkout-total">
+                        <span>Total:</span>
+                        <span>$172.99 USD</span>
                     </div>
                 </div>
             </div>
