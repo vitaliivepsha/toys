@@ -1,9 +1,15 @@
 .page-cart{
   padding: 50px 0;
+  @include bp(xs) {
+    padding: 12px 0 25px;
+  }
 }
 
 .cart-table{
   margin-bottom: 147px;
+  @include bp(xs) {
+    margin-bottom: 50px;
+  }
 }
 
 .cart-table__head{
@@ -13,15 +19,47 @@
   color: rgba($main, .5);
   padding-bottom: 10px;
   border-bottom: 1px solid $main;
+  @include bp(xs) {
+    font-size: 11px;
+    line-height: 17px;
+    padding-bottom: 12px;
+  }
   .prod{
     width: 750px;
+    @include bp(md) {
+      width: 52%;
+    }
+    @include bp(sm) {
+      width: 150px;
+    }
+    @include bp(xs) {
+      width: 90px;
+    }
   }
   .qty{
     width: 220px;
+    @include bp(md) {
+      width: 30%;
+    }
+    @include bp(sm) {
+      width: calc(65% - 75px);
+    }
+    @include bp(xs) {
+      width: calc(65% - 45px);
+    }
   }
   .total{
     width: 200px;
     text-align: right;
+    @include bp(md) {
+      width: 18%;
+    }
+    @include bp(sm) {
+      width: calc(35% - 75px);
+    }
+    @include bp(xs) {
+      width: calc(35% - 45px);
+    }
   }
 }
 
@@ -29,23 +67,53 @@
   padding: 30px 0;
   border-bottom: 1px solid $main;
   margin-bottom: 20px;
+  @include bp(xs) {
+    padding-top: 15px;
+    margin-bottom: 15px;
+  }
 }
 
 .cart-table__item{
   display: flex;
   align-items: flex-start;
   min-height: 110px;
+  @include bp(sm) {
+    position: relative;
+    padding-bottom: 40px;
+  }
+  @include bp(xs) {
+    min-height: 92px;
+    padding-bottom: 30px;
+  }
   +.cart-table__item{
     margin-top: 25px;
+    @include bp(xs) {
+      margin-top: 38px;
+    }
   }
   .prod{
     width: 750px;
     display: flex;
     align-items: center;
     padding-right: 30px;
+    @include bp(md) {
+      width: 52%;
+      padding-right: 20px;
+    }
+    @include bp(sm) {
+      width: 80%;
+    }
+    @include bp(xs) {
+      align-items: flex-start;
+      padding-right: 10px;
+    }
     .cart-item__pic{
       width: 130px;
       height: 110px;
+      @include bp(xs) {
+        width: 80px;
+        height: 80px;
+      }
       img{
         width: 100%;
         height: 100%;
@@ -55,12 +123,24 @@
     .cart-item__info{
       width: calc(100% - 130px);
       padding-left: 53px;
+      @include bp(md) {
+        padding-left: 20px;
+      }
+      @include bp(xs) {
+        width: calc(100% - 90px);
+        padding-left: 10px;
+        padding-top: 7px;
+      }
       .cart-item__name{
         display: block;
         font-size: 18px;
         line-height: 27px;
         color: $main;
         text-decoration: none;
+        @include bp(xs) {
+          font-size: 12px;
+          line-height: 130%;
+        }
         &:hover{
           color: $red;
           text-decoration: underline;
@@ -72,12 +152,21 @@
         font-size: 12px;
         line-height: 18px;
         color: rgba($main, .5);
+        @include bp(xs) {
+          font-size: 11px;
+          line-height: 17px;
+        }
       }
       .cart-variations{
         display: flex;
         font-size: 12px;
         line-height: 18px;
         margin-top: 5px;
+        @include bp(xs) {
+          font-size: 11px;
+          line-height: 17px;
+          margin-top: 2px;
+        }
         >span{
           color: rgba($main, .5);
           margin-right: 5px;
@@ -131,6 +220,56 @@
     align-items: center;
     justify-content: space-between;
     padding-top: 20px;
+    @include bp(md) {
+      width: 30%;
+    }
+    @include bp(sm) {
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      padding-left: 150px;
+      padding-top: 0;
+    }
+    @include bp(xs) {
+      padding-left: 90px;
+    }
+    .product-counter{
+      @include bp(xs) {
+        width: 130px;
+        margin-bottom: 0;
+      }
+      > span{
+        @include bp(xs) {
+          height: 23px;
+          width: 25px;
+        }
+        &.minus{
+          svg{
+            @include bp(xs) {
+              height: 2px;
+              width: 9px;
+            }
+          }
+        }
+        &.plus{
+          svg{
+            @include bp(xs) {
+              height: 9px;
+              width: 9px;
+            }
+          }
+        }
+      }
+      > input{
+        @include bp(xs) {
+          font-size: 12px;
+          line-height: 18px;
+          height: 23px;
+          width: calc(100% - 60px);
+        }
+      }
+    }
     .cart-item__remove{
       display: flex;
       position: relative;
@@ -158,11 +297,24 @@
     display: flex;
     justify-content: flex-end;
     padding-top: 20px;
+    @include bp(md) {
+      width: 18%;
+    }
+    @include bp(sm) {
+      width: 20%;
+    }
+    @include bp(xs) {
+      padding-top: 7px;
+    }
     .cart-item__price{
       display: block;
       font-size: 18px;
       line-height: 27px;
       text-align: right;
+      @include bp(xs) {
+        font-size: 12px;
+        line-height: 18px;
+      }
     }
   }
 }
@@ -181,6 +333,10 @@
   color: $main;
   text-decoration: underline;
   text-transform: capitalize;
+  @include bp(xs) {
+    font-size: 12px;
+    line-height: 18px;
+  }
   &:hover{
     text-decoration: none;
     color: $red;
@@ -194,6 +350,10 @@
     width: 10px;
     height: 10px;
     margin-left: 10px;
+    @include bp(xs) {
+      width: 8px;
+      height: 8px;
+    }
   }
 }
 
@@ -201,19 +361,36 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  @include bp(xs) {
+    width: 50%;
+  }
 }
 
 .cart-table__subtotal{
   display: flex;
   align-items: baseline;
+  @include bp(xs) {
+    flex-direction: column;
+    align-items: flex-end;
+  }
   >span{
     font-size: 16px;
     line-height: 24px;
+    @include bp(xs) {
+      font-size: 11px;
+      line-height: 17px;
+    }
   }
   >div{
     font-size: 21px;
     line-height: 32px;
     margin-left: 32px;
+    @include bp(xs) {
+      margin-left: 0;
+      font-size: 16px;
+      line-height: 24px;
+      margin-top: 2px;
+    }
   }
 }
 
@@ -222,6 +399,10 @@
   line-height: 18px;
   color: rgba($main, .5);
   margin-top: 10px;
+  @include bp(xs) {
+    margin-top: 6px;
+    text-align: right;
+  }
   a{
     color: rgba($main, .5);
     text-decoration: underline;
@@ -236,12 +417,19 @@
   width: 220px;
   margin-left: auto;
   margin-top: 20px;
+  @include bp(xs) {
+    width: 100%;
+    margin-top: 14px;
+  }
 }
 
 .cart-set{
   width: 700px;
   max-width: 100%;
   border-top: 1px solid $main;
+  @include bp(md) {
+    width: 100%;
+  }
 }
 
 .cart-set__title{
@@ -249,6 +437,11 @@
   font-size: 21px;
   line-height: 32px;
   padding: 20px 0;
+  @include bp(xs) {
+    font-size: 18px;
+    line-height: 27px;
+    padding: 15px 0 18px;
+  }
 }
 
 .cart-set__main{
@@ -257,11 +450,25 @@
   align-items: flex-start;
   border-radius: 5px;
   padding: 27px 56px 23px;
+  @include bp(sm) {
+    padding: 27px 20px 23px;
+  }
+  @include bp(xs) {
+    flex-direction: column;
+    padding: 20px 10px 35px;
+  }
 }
 
 .cart-set__left{
   width: 314px;
   margin-right: 50px;
+  @include bp(sm) {
+    margin-right: 20px;
+  }
+  @include bp(xs) {
+    width: 100%;
+    margin-right: 0;
+  }
 }
 
 .cart-set__items{
@@ -271,9 +478,16 @@
   padding-left: 10px;
   padding-right: 25px;
   padding-bottom: 25px;
+  @include bp(xs) {
+    padding: 0 25px 20px;
+  }
   >a{
     width: 75px;
     height: 75px;
+    @include bp(xs) {
+      width: 60px;
+      height: 60px;
+    }
     img{
       width: 100%;
       height: 100%;
@@ -291,39 +505,71 @@
   padding-top: 13px;
   font-size: 12px;
   line-height: 18px;
+  @include bp(xs) {
+    padding-top: 19px;
+  }
   >li{
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
     margin-bottom: 1px;
+    @include bp(xs) {
+      margin-bottom: 12px;
+      align-items: flex-end;
+    }
     &:last-child{
       margin-bottom: 0;
+      @include bp(xs) {
+        align-items: flex-start;
+      }
     }
     >div{
       width: calc(100% - 60px);
+      @include bp(xs) {
+        width: 65%;
+      }
       >span{
         font-weight: 500;
+        @include bp(xs) {
+          display: block;
+        }
       }
     }
     >span{
       text-align: right;
       width: 60px;
       color: #FF5C1B;
+      @include bp(xs) {
+        width: 35%;
+      }
     }
   }
 }
 
 .cart-set__right{
   padding-top: 16px;
+  @include bp(xs) {
+    width: 100%;
+    border-top: 1px solid $main;
+    padding-top: 6px;
+    margin-top: 17px;
+  }
   .btn{
     width: 188px;
     margin-top: 10px;
+    @include bp(xs) {
+      width: 100%;
+      margin-top: 21px;
+    }
   }
 }
 
 .cart-set__totals{
   display: flex;
   align-items: baseline;
+  @include bp(xs) {
+    justify-content: flex-end;
+  }
   >div{
     font-size: 16px;
     line-height: 24px;
@@ -336,9 +582,11 @@
   }
 }
 
-
 .cart-related{
   padding: 40px 0 55px;
+  @include bp(xs) {
+    padding: 25px 0 50px;
+  }
   .bestsellers-slider__wrapper{
     border-bottom: none;
   }
