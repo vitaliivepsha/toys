@@ -54,7 +54,7 @@
       position: relative;
       color: rgba($grey, 0.6);
       @include bp(xs) {
-        margin: 0 8px 0 7px;
+        margin: 0 4px 0 0;
       }
     }
     &:first-child {
