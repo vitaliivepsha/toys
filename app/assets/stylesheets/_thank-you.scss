@@ -1,0 +1,139 @@
+.tnx {
+  padding-top: 21px;
+  padding-bottom: 189px;
+  @include bp(xs) {
+    padding-top: 10px;
+    padding-bottom: 50px;
+  }
+
+  .breadcrumbs {
+    margin-bottom: 33px;
+    color: rgba($main, 0.5);
+    @include bp(xs) {
+      margin-bottom: 23px;
+    }
+
+    a {
+      color: rgba($main, 0.5);
+
+      &:hover {
+        color: $main;
+      }
+    }
+
+    span {
+      &:before {
+        color: rgba($main, 0.5);
+      }
+    }
+  }
+
+  .btn {
+    width: 280px;
+    height: 60px;
+    margin-bottom: 60px;
+    font-size: 21px;
+    @include bp(xs) {
+      width: fit-content;
+      min-width: 190px;
+      height: 45px;
+      margin-bottom: 39px;
+      font-size: 14px;
+    }
+  }
+}
+
+.tnx__wrapper {
+  max-width: 700px;
+}
+
+.tnx__title {
+  margin-bottom: 54px;
+  font-size: 42px;
+  font-family: $title;
+  font-weight: 700;
+  line-height: 150%;
+  @include bp(xs) {
+    margin-bottom: 27px;
+    font-size: 28px;
+    line-height: 1;
+  }
+}
+
+.tnx__text {
+  margin-bottom: 6px;
+  font-size: 16px;
+  @include bp(xs) {
+    margin-bottom: 4px;
+    font-size: 14px;
+  }
+}
+
+.tnx__order {
+  margin-bottom: 48px;
+  font-size: 16px;
+  @include bp(xs) {
+    margin-bottom: 30px;
+    font-size: 14px;
+  }
+
+  span {
+    color: $red;
+  }
+}
+
+.tnx__bot {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid $main;
+  padding-top: 26px;
+  @include bp(xs) {
+    gap: 20px;
+    padding-top: 21px;
+  }
+
+  > span {
+    font-size: 16px;
+    @include bp(xs) {
+      font-size: 14px;
+    }
+  }
+
+  > div {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 25px;
+
+    span {
+      font-size: 16px;
+      opacity: 0.5;
+      @include bp(xs) {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+.social {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 15px;
+
+  a {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  a {
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}

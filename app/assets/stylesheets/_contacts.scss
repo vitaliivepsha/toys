@@ -1,29 +1,56 @@
 .contacts-page {
   padding-top: 110px;
+  @include bp(md) {
+    padding-top: 30px;
+  }
 
   .row {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+
+    > div {
+      @include bp(md) {
+        width: 100%;
+      }
+    }
   }
 }
 
 .contacts-page__content {
   max-width: 570px;
+  @include bp(md) {
+    max-width: 100%;
+  }
+  @include bp(xs) {
+    padding-bottom: 51px;
+  }
 }
 
 .contacts-page__content-text {
   margin-bottom: 28px;
   padding-bottom: 26px;
   border-bottom: 1px solid $main;
+  @include bp(xs) {
+    margin-bottom: 25px;
+    padding-bottom: 24px;
+  }
 
   span {
     display: block;
-    margin-bottom: 40px;
+    margin-bottom: 28px;
     font-family: $title;
     font-weight: 700;
     font-size: 30px;
     line-height: 150%;
+    @include bp(md) {
+      margin-bottom: 10px;
+    }
+    @include bp(xs) {
+      margin-bottom: 6px;
+      font-size: 24px;
+      line-height: 150%;
+    }
   }
 
   p {
@@ -33,7 +60,10 @@
     line-height: 130%;
 
     + p {
-      margin-top: 12px;
+      margin-top: 15px;
+      @include bp(xs) {
+        margin-top: 19px;
+      }
     }
 
     strong {
@@ -49,13 +79,42 @@
 .contacts-page__content-bot {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
+  @include bp(md) {
+    justify-content: start;
+  }
 
   > div {
-    width: 50%;
+    padding-right: 10px;
+    width: 300px;
+    @include bp(md) {
+      width: auto;
+      max-width: 500px;
+      padding-right: 50px;
+    }
+
+    &:nth-of-type(2) {
+      width: 222px;
+      @include bp(lg) {
+        width: auto;
+        padding-right: 50px;
+      }
+      @include bp(md) {
+        padding-right: 0;
+      }
+    }
   }
+
 }
 
 .contacts-page__content-bot-left {
+  @include bp(md) {
+    padding-bottom: 30px;
+  }
+  @include bp(xs) {
+    padding-bottom: 7px;
+  }
+
   a {
     display: block;
     font-weight: 400;
@@ -68,12 +127,12 @@
     }
 
     + a {
-      margin-top: 4px;
+      margin-top: 6px;
     }
   }
 
   ul {
-    margin-top: 22px;
+    margin-top: 24px;
 
     li {
 
@@ -83,11 +142,15 @@
 
 .contacts-page__content-bot-right {
   span {
+    display: block;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
     color: $main;
+    @media (max-width: 414px) {
+      display: inline-block;
+    }
   }
 }
 
@@ -108,13 +171,23 @@
 
 .contacts-form__title {
   margin-bottom: 27px;
+  font-family: $title;
   font-weight: 700;
   font-size: 30px;
   line-height: 150%;
+  @include bp(md) {
+    margin-bottom: 17px;
+  }
+  @include bp(xs) {
+    margin-bottom: 9px;
+    font-size: 24px;
+    line-height: 150%;
+  }
 }
 
 .contacts-form {
-  padding-bottom: 56px;
+  padding-bottom: 55px;
+
   .input,
   .textarea {
     border-color: #1C3557;
@@ -122,12 +195,31 @@
 
   .input-wrapper {
     margin-bottom: 15px;
+    @include bp(xs) {
+      margin-bottom: 10px;
+    }
+
+    .textarea {
+      @include bp(xs) {
+        height: 120px;
+      }
+    }
   }
 }
 
 .contacts-form__row {
   display: flex;
   gap: 15px;
+  @include bp(xs) {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  > .input-wrapper {
+    @include bp(md) {
+      flex-grow: 1;
+    }
+  }
 }
 
 .contacts-form__bot {
@@ -135,16 +227,46 @@
   flex-wrap: wrap;
   justify-content: space-between;
   margin-top: 25px;
+  @media (max-width: 1250px) {
+    gap: 20px;
+    margin-top: 15px;
+  }
+  @include bp(md) {
+    gap: 0;
+    margin-top: 25px;
+  }
+  @include bp(xs) {
+    gap: 21px;
+    margin-top: 21px;
+  }
 
   .checkbox-wrapper {
     width: 100%;
     max-width: 242px;
+    @media (max-width: 1250px) {
+      max-width: 100%;
+    }
+    @include bp(md) {
+      max-width: 500px;
+    }
+    @include bp(sm) {
+      max-width: 280px;
+    }
+    @include bp(xs) {
+      max-width: 100%;
+    }
+
     label {
       color: $main;
     }
   }
+
   .btn {
     width: 210px;
+    margin-left: auto;
+    @include bp(xs) {
+      width: 100%;
+    }
   }
 }
 
