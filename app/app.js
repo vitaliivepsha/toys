@@ -24,7 +24,8 @@ if (process.env.NODE_ENV !== 'production') {
   require('./assets/templates/layouts/delivery-payment.html');
   require('./assets/templates/layouts/return.html');
   require('./assets/templates/layouts/cart.html');
-  require('./assets/templates/layouts/checkout.html');
+  require('_templates/layouts/checkout-step1.html');
+  require('_templates/layouts/checkout-step2.html');
 }
 
 // Depends
@@ -200,6 +201,9 @@ $(function() {
         zip: {
           required: true,
         },
+        shipping_method: {
+          required: true,
+        },
       },
       messages: {
         name: {
@@ -231,6 +235,9 @@ $(function() {
         },
         zip: {
           required: 'Fill out Zip code',
+        },
+        shipping_method: {
+          required: 'Choose your shipping method',
         },
       },
       submitHandler: function(form) {
