@@ -173,6 +173,18 @@
     line-height: 21px;
     margin-bottom: 15px;
   }
+  >span{
+    display: block;
+    font-size: 14px;
+    line-height: 21px;
+    color: rgba($main, .5);
+    @include bp(xs) {
+      font-size: 12px;
+      line-height: 18px;
+      margin-top: 1px;
+      margin-bottom: -5px;
+    }
+  }
 }
 
 .checkout-form{
@@ -567,6 +579,11 @@
     font-size: 12px;
     line-height: 18px;
     color: rgba($main, .5);
+    &.shipping-price{
+      font-size: 16px;
+      line-height: 24px;
+      color: $main;
+    }
   }
 }
 
@@ -679,7 +696,7 @@
     margin-top: -12px;
     margin-bottom: 30px;
   }
-  li{
+  >li{
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
@@ -716,12 +733,33 @@
       @include bp(xs) {
         flex-direction: column;
       }
-      span{
+      >span{
         min-width: 68px;
         color: rgba($main, .5);
         @include bp(xs) {
           font-size: 11px;
           line-height: 17px;
+        }
+      }
+      >ul{
+        display: flex;
+        flex-wrap: wrap;
+        li{
+          display: flex;
+          align-items: center;
+          &:after{
+            content: '';
+            width: 2px;
+            height: 2px;
+            border-radius: 2px;
+            margin: 0 8px;
+            background-color: rgba($main, .5);
+          }
+          &:last-child{
+            &:after{
+              display: none;
+            }
+          }
         }
       }
     }
@@ -754,5 +792,151 @@
         }
       }
     }
+  }
+}
+
+.checkout-payment{
+  margin-bottom: 50px;
+  @include bp(xs) {
+    margin-bottom: 42px;
+  }
+}
+
+.checkout-tabs{
+  border: 1px solid rgba($main, .2);
+  border-radius: 5px;
+  overflow: hidden;
+  >li{
+    position: relative;
+    &.active{
+      .checkout-tabs__content{
+        display: block;
+      }
+      input[type='radio']{
+        +label{
+          background: #FFF8EB;
+        }
+      }
+      .checkout-radio{
+        color: $main;
+        >svg{
+          circle{
+            opacity: 1;
+            +circle{
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+    &:last-child{
+      &:after{
+        display: none;
+      }
+    }
+    &:after{
+      position: absolute;
+      content: '';
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 1px;
+      background-color: rgba($main, .2);
+    }
+    .checkout-tabs__content{
+      display: none;
+      border-top: 1px solid rgba($main, .2);
+    }
+    input[type='radio']{
+      display: none;
+      +label{
+        width: 100%;
+        height: 60px;
+        padding: 7px 30px 7px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 0;
+        font-weight: 400;
+        cursor: pointer;
+        @include bp(xs) {
+          height: 45px;
+          padding: 7px 15px;
+        }
+      }
+    }
+    .checkout-radio{
+      font-size: 14px;
+      line-height: 21px;
+      color: rgba($main, .5);
+      position: relative;
+      padding-left: 29px;
+      @include bp(xs) {
+        font-size: 12px;
+        line-height: 18px;
+        padding-left: 27px;
+      }
+      >svg{
+        position: absolute;
+        left: 0;
+        top: 4px;
+        width: 14px;
+        height: 14px;
+        @include bp(xs) {
+          top: 2px;
+        }
+        circle{
+          opacity: .5;
+          +circle{
+            opacity: 0;
+          }
+        }
+      }
+    }
+    .checkout-cards{
+      display: flex;
+      align-items: center;
+      >img{
+        margin-right: 12px;
+        max-height: 15px;
+        max-width: fit-content;
+        object-fit: contain;
+        @include bp(xs) {
+          max-height: 11px;
+          margin-right: 6px;
+        }
+        &:last-of-type{
+          @include bp(xs) {
+            margin-right: 12px;
+          }
+        }
+      }
+      >span{
+        font-size: 11px;
+        line-height: 17px;
+        text-decoration: underline;
+        color: rgba($main, .5);
+        @include bp(xs) {
+          font-size: 10px;
+          line-height: 15px;
+        }
+      }
+    }
+    .paypal-pic{
+      width: 80px;
+      height: 43px;
+      object-fit: contain;
+      @include bp(xs) {
+        width: 58px;
+        height: 31px;
+      }
+    }
+  }
+}
+
+.checkout-billing{
+  margin-bottom: 26px;
+  @include bp(xs) {
+    margin-bottom: 30px;
   }
 }

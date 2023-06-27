@@ -26,6 +26,7 @@ if (process.env.NODE_ENV !== 'production') {
   require('./assets/templates/layouts/cart.html');
   require('_templates/layouts/checkout-step1.html');
   require('_templates/layouts/checkout-step2.html');
+  require('_templates/layouts/checkout-step3.html');
 }
 
 // Depends
