@@ -1,17 +1,27 @@
 .checkout-header{
   background-color: $main;
   height: 140px;
+  @include bp(xs) {
+    height: 80px;
+  }
   >.container{
     height: 140px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @include bp(xs) {
+      height: 80px;
+    }
   }
 }
 
 .checkout-logo{
   width: 70px;
   height: 70px;
+  @include bp(xs) {
+    width: 55px;
+    height: 55px;
+  }
   img{
     width: 100%;
     height: 100%;
@@ -26,6 +36,10 @@
   font-size: 16px;
   line-height: 24px;
   color: #fff;
+  @include bp(xs) {
+    font-size: 14px;
+    line-height: 21px;
+  }
   &:hover{
     color: $yellow;
     text-decoration: none;
@@ -50,6 +64,12 @@
     right: 0;
     width: calc(50% - 50px);
     background-color: $bg-grey;
+    @include bp(lg) {
+      width: calc(50% - 20px);
+    }
+    @include bp(md) {
+      display: none;
+    }
   }
 }
 
@@ -58,10 +78,19 @@
   flex-wrap: wrap;
   position: relative;
   z-index: 1;
+  @include bp(md) {
+    flex-direction: column-reverse;
+  }
 }
 
 .checkout-left{
   padding: 25px 15px 90px;
+  @include bp(md) {
+    padding: 50px 15px;
+  }
+  @include bp(xs) {
+    padding: 20px 15px 45px;
+  }
 }
 
 .checkout-nav{
@@ -69,12 +98,19 @@
   line-height: 130%;
   display: flex;
   margin-bottom: 40px;
+  @include bp(xs) {
+    font-size: 11px;
+    margin-bottom: 44px;
+  }
   *{
     &:after{
       content: '/';
       margin: 0 5px;
       text-decoration: none;
       color: rgba($main, .5);
+      @include bp(xs) {
+        margin: 0 4px;
+      }
     }
     &:last-child{
       &:after{
@@ -118,6 +154,12 @@
   line-height: 100%;
   padding-bottom: 12px;
   border-bottom: 1px solid $main;
+  @include bp(xs) {
+    padding-bottom: 9px;
+    font-size: 24px;
+    line-height: 100%;
+    margin-bottom: 32px;
+  }
 }
 
 .checkout-subtitle{
@@ -126,28 +168,82 @@
   line-height: 24px;
   display: block;
   margin-bottom: 13px;
+  @include bp(xs) {
+    font-size: 14px;
+    line-height: 21px;
+    margin-bottom: 15px;
+  }
 }
 
 .checkout-form{
   .input-wrapper{
     margin-bottom: 15px;
+    @include bp(xs) {
+      margin-bottom: 10px;
+    }
+  }
+  .tooltip-wrapper{
+    z-index: 2;
+    .tooltip-dialog{
+      @include bp(md) {
+        left: auto;
+        right: -21px;
+        transform: none;
+      }
+      &:after{
+        @include bp(md) {
+          left: auto;
+          right: 17px;
+          bottom: -7px;
+          transform: rotate(45deg);
+        }
+      }
+    }
   }
   .checkout-form__row{
     display: flex;
     gap: 15px;
+    @include bp(xs) {
+      flex-direction: column;
+      gap: 0;
+    }
     &.two-fields{
       .input-wrapper{
         width: 280px;
+        @include bp(md) {
+          width: 50%;
+        }
+        @include bp(xs) {
+          width: 100%;
+        }
         &:last-child{
           width: 275px;
+          @include bp(md) {
+            width: 49%;
+          }
+          @include bp(xs) {
+            width: 100%;
+          }
         }
       }
     }
     &.three-fields{
       .input-wrapper{
         width: 200px;
+        @include bp(md) {
+          width: 38%;
+        }
+        @include bp(xs) {
+          width: 100%;
+        }
         &:last-child{
           width: 140px;
+          @include bp(md) {
+            width: 22%;
+          }
+          @include bp(xs) {
+            width: 100%;
+          }
         }
       }
     }
@@ -156,11 +252,21 @@
 
 .checkout-contact{
   margin-bottom: 37px;
+  @include bp(xs) {
+    margin-bottom: 30px;
+  }
   .checkbox-wrapper{
     margin-top: -5px;
+    @include bp(xs) {
+      margin-top: 0;
+    }
     input{
       + label{
         padding-left: 25px;
+        padding-top: 1px;
+        @include bp(xs) {
+          padding-left: 21px;
+        }
       }
     }
   }
@@ -168,15 +274,25 @@
 
 .checkout-shipping-address{
   margin-bottom: 50px;
+  @include bp(xs) {
+    margin-bottom: 20px;
+  }
 }
 
 .checkout-form__footer{
   display: flex;
   align-items: center;
   justify-content: space-between;
+  @include bp(xs) {
+    flex-direction: column;
+  }
   .btn{
     width: 210px;
     border-radius: 5px;
+    @include bp(xs) {
+      width: 100%;
+      height: 50px;
+    }
   }
 }
 
@@ -187,6 +303,11 @@
   line-height: 21px;
   text-decoration: underline;
   color: $main;
+  @include bp(xs) {
+    font-size: 12px;
+    line-height: 18px;
+    margin-bottom: 20px;
+  }
   &:hover{
     color: $red;
     svg{
@@ -199,11 +320,29 @@
     width: 10px;
     height: 10px;
     margin-left: 10px;
+    @include bp(xs) {
+      width: 8px;
+      height: 8px;
+      margin-left: 16px;
+    }
   }
 }
 
 .checkout-right{
   padding: 98px 15px 50px 115px;
+  @include bp(lg) {
+    padding-left: 55px;
+  }
+  @include bp(md) {
+    display: none;
+    width: auto;
+    margin: 0 -15px;
+    padding: 30px 30px 50px;
+    background-color: $bg-grey;
+  }
+  @include bp(xs) {
+    padding: 0 30px 25px;
+  }
 }
 
 .checkout-items__head{
@@ -213,11 +352,20 @@
   line-height: 24px;
   border-bottom: 1px solid $main;
   padding-bottom: 15px;
+  @include bp(md) {
+    display: none;
+  }
 }
 
 .checkout-items__wrapper{
   padding: 33px 0 25px;
   border-bottom: 1px solid rgba($main, .2);
+  @include bp(md) {
+    padding-top: 15px;
+  }
+  @include bp(xs) {
+    padding: 18px 0;
+  }
 }
 
 .checkout-item{
@@ -232,6 +380,10 @@
   position: relative;
   width: 100px;
   height: 75px;
+  @include bp(xs) {
+    width: 80px;
+    height: 80px;
+  }
   img{
     width: 100%;
     height: 100%;
@@ -254,6 +406,12 @@
   font-size: 11px;
   line-height: 17px;
   text-align: center;
+  @include bp(xs) {
+    width: 15px;
+    height: 15px;
+    font-size: 10px;
+    line-height: 15px;
+  }
 }
 
 .checkout-item__info{
@@ -262,9 +420,17 @@
   padding-top: 4px;
   padding-left: 43px;
   width: calc(100% - 100px);
+  @include bp(xs) {
+    width: calc(100% - 80px);
+    padding-left: 10px;
+    padding-top: 7px;
+  }
   >div{
     width: calc(100% - 85px);
     padding-right: 10px;
+    @include bp(xs) {
+      width: calc(100% - 60px);
+    }
   }
 }
 
@@ -273,6 +439,9 @@
   font-weight: 400;
   font-size: 12px;
   line-height: 18px;
+  @include bp(xs) {
+    line-height: 130%;
+  }
 }
 
 .checkout-item__id{
@@ -281,6 +450,9 @@
   line-height: 17px;
   margin-top: 5px;
   color: rgba($main, .5);
+  @include bp(xs) {
+    margin-top: 2px;
+  }
 }
 
 .checkout-variations{
@@ -299,12 +471,18 @@
   font-size: 12px;
   line-height: 18px;
   text-align: right;
+  @include bp(xs) {
+    width: 60px;
+  }
 }
 
 .checkout-discount{
   display: flex;
   justify-content: space-between;
   margin-top: 22px;
+  @include bp(xs) {
+    margin-top: 16px;
+  }
   .input-wrapper{
     width: calc(100% - 117px);
   }
@@ -316,6 +494,10 @@
     border-radius: 5px;
     background: $grey;
     color: rgba($main, .5);
+    @include bp(xs) {
+      font-size: 12px;
+      height: 40px;
+    }
   }
 }
 
@@ -326,6 +508,12 @@
   margin-top: 19px;
   font-size: 14px;
   line-height: 21px;
+  @include bp(xs) {
+    align-items: baseline;
+    font-size: 11px;
+    line-height: 17px;
+    margin-top: 20px;
+  }
   span{
     &:last-child{
       font-size: 16px;
@@ -339,11 +527,19 @@
   align-items: flex-start;
   justify-content: space-between;
   margin-top: 8px;
+  @include bp(xs) {
+    align-items: baseline;
+    margin-top: 12px;
+  }
   .tooltip-wrapper{
     display: flex;
     align-items: center;
     font-size: 14px;
     line-height: 21px;
+    @include bp(xs) {
+      font-size: 11px;
+      line-height: 17px;
+    }
     .tooltip-item{
       position: relative;
       z-index: 1;
@@ -383,4 +579,93 @@
   border-top: 1px solid $main;
   font-size: 21px;
   line-height: 32px;
+  @include bp(xs) {
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 16px;
+  }
+}
+
+.checkout-head__mob{
+  position: relative;
+  height: 50px;
+  background-color: $bg-grey;
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  @include bp(md) {
+    display: flex;
+  }
+  &.active{
+    &:after{
+      display: block;
+    }
+    .checkout-head__left{
+      >svg{
+        transform: scale(1, -1);
+      }
+    }
+  }
+  &:before{
+    position: absolute;
+    z-index: -1;
+    content: '';
+    height: 100%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    background-color: $bg-grey;
+  }
+  &:after{
+    display: none;
+    position: absolute;
+    content: '';
+    width: 100vw;
+    height: 1px;
+    background-color: $main;
+    bottom: -1px;
+    z-index: 2;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.checkout-head__left{
+  display: flex;
+  align-items: center;
+  font-size: 11px;
+  line-height: 130%;
+  >i{
+    display: flex;
+    position: relative;
+    margin-right: 13px;
+    font-style: normal;
+    svg{
+      width: 18px;
+      height: 17px;
+    }
+    .checkout-head__counter{
+      position: absolute;
+      min-width: 15px;
+      height: 15px;
+      line-height: 1;
+      padding: 3px 0 0;
+      border-radius: 15px;
+      text-align: center;
+      background-color: $yellow;
+      font-size: 10px;
+      color: $main;
+      right: -10px;
+      top: -6px;
+    }
+  }
+  >span{
+    margin-right: 8px;
+  }
+}
+
+.checkout-head__price{
+  font-size: 12px;
+  line-height: 18px;
 }

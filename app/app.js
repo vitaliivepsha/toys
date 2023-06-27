@@ -935,10 +935,6 @@ $(function() {
             $('.uploaded-error').removeClass('active').removeAttr('style');
           }, 5300);
         }
-                // $("<span class=\"pip\">" +
-                //     "<img class=\"imageThumb\" src=\"" + e.target.result + "\" title=\"" + file.name + "\"/>" +
-                //     "<br/><span class=\"remove\">Remove image</span>" +
-                //     "</span>").insertAfter("#files");
         $('.remove-file').click(function() {
           $(this).parent('.file-preview').remove();
         });
@@ -947,67 +943,6 @@ $(function() {
     }
     console.log(files);
   });
-
-    // catalog range
-
-    /*var $range = $('.js-range-slider'),
-      $inputFrom = $('.js-input-from'),
-      $inputTo = $('.js-input-to'),
-      instance,
-      min = 5489,
-      max = 4535767,
-      from = 5489,
-      to = 4535767;
-
-    $range.ionRangeSlider({
-      skin: 'round',
-      type: 'double',
-      min: min,
-      max: max,
-      from: 5489,
-      to: 4535767,
-      onStart: updateInputs,
-      onChange: updateInputs
-    });
-    instance = $range.data('ionRangeSlider');
-
-    function updateInputs(data) {
-      from = data.from;
-      to = data.to;
-
-      $inputFrom.prop('value', Math.floor(from));
-      $inputTo.prop('value', Math.floor(to));
-    }
-
-    $inputFrom.on('input', function() {
-      var val = $(this).prop('value');
-
-          // validate
-      if (val < min) {
-        val = min;
-      } else if (val > to) {
-        val = to;
-      }
-
-      instance.update({
-        from: val
-      });
-    });
-
-    $inputTo.on('input', function() {
-      var val = $(this).prop('value');
-
-          // validate
-      if (val < from) {
-        val = from;
-      } else if (val > max) {
-        val = max;
-      }
-
-      instance.update({
-        to: val
-      });
-    });*/
 
     // select
 
@@ -1022,14 +957,6 @@ $(function() {
     forceCustomRendering: true
   });
 
-  /*$('.SumoSelect').each(function() {
-    if($(this).hasClass('open')){
-        $(this).closest('.input-wrapper').addClass('open');
-    }
-    else{
-        $(this).closest('.input-wrapper').removeClass('open');
-    }
-  });*/
     $('.search-select').on('sumo:opening', function () {
         $(this).closest('.input-wrapper').addClass('open');
     });
@@ -1044,6 +971,13 @@ $(function() {
           $(this).closest('.input-wrapper').find('label.error').remove();
       }
   });
+
+  // checkout mobile view
+
+    $('.checkout-head__mob').on('click', function() {
+        $(this).toggleClass('active');
+        $('.checkout-right').slideToggle();
+    });
 
     // lazy load
   var lazyload = function() {

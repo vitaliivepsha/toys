@@ -524,6 +524,10 @@ main {
     right: 21px;
     opacity: .5;
     pointer-events: none;
+    @include bp(xs) {
+      top: 19px;
+      right: 17px;
+    }
   }
   &.active, &.open{
     >svg{
@@ -608,6 +612,12 @@ main {
       height: 20px;
       top: 16px;
       right: 16px;
+      @include bp(xs) {
+        width: 16px;
+        height: 16px;
+        top: 12px;
+        right: 14px;
+      }
     }
   }
   .SumoSelect{
@@ -672,6 +682,12 @@ main {
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
       border-radius: 5px;
       border-color: rgba($main, .2);
+      &.isFloating{
+        position: absolute;
+        width: 100%;
+        bottom: auto;
+        max-height: unset;
+      }
       >.options{
         border-radius: 4px;
         &::-webkit-scrollbar {
@@ -694,6 +710,7 @@ main {
             border-color: rgba($main, .2);
             @include bp(xs) {
               padding: 6px 14px;
+              font-size: 12px;
             }
             &:hover{
               background-color: $bg-grey;
@@ -743,6 +760,10 @@ main {
     top: 18px;
     right: 21px;
     cursor: pointer;
+    @include bp(xs) {
+      top: 13px;
+      right: 13px;
+    }
     >svg{
       opacity: .5;
     }
@@ -759,6 +780,9 @@ main {
         bottom: calc(100% + 44px);
         opacity: 1;
         visibility: visible;
+        @include bp(xs) {
+          bottom: calc(100% + 23px);
+        }
       }
       >svg{
         opacity: 1;
@@ -780,9 +804,16 @@ main {
       background-color: $main;
       padding: 15px 15px 20px;
       border-radius: 5px;
+      @include bp(xs) {
+        font-size: 10px;
+        padding: 10px 10px 15px;
+        width: 140px;
+        bottom: calc(100% + 12px);
+      }
       &:after{
         position: absolute;
         content: '';
+        z-index: -1;
         width: 20px;
         height: 20px;
         border-radius: 1px;
@@ -791,6 +822,9 @@ main {
         transform: translateX(-50%) rotate(45deg);
         background-color: $main;
         transition: linear .2s;
+        @include bp(xs) {
+          bottom: -4px;
+        }
       }
     }
   }
