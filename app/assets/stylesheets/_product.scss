@@ -640,6 +640,16 @@
           }
         }
       }
+      &.not-available {
+        border-color: rgba($main, .5);
+        color: rgba($main, .5);
+        pointer-events: none;
+        svg {
+          path{
+            fill: rgba($main, .5);
+          }
+        }
+      }
     }
     &.btn-buy {
       width: 220px;
@@ -677,22 +687,15 @@
           }
         }
       }
-      &.in-cart {
-        background-color: $red;
-        &:hover {
-          background-color: $main;
-        }
-      }
+      //&.in-cart {
+      //  background-color: $red;
+      //  &:hover {
+      //    background-color: $main;
+      //  }
+      //}
       &.not-available {
-        background: #F7F7F7;
-        &:hover {
-          background-color: $main;
-          svg {
-            path {
-              fill: #fff;
-            }
-          }
-        }
+        background: rgba($main, .5);
+        pointer-events: none;
       }
     }
   }
