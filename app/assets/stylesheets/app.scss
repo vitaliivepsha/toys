@@ -37,28 +37,28 @@ body {
     }
   }
 
-  &.show-tel {
-    overflow: hidden;
-
-    .header-mob__phone.show-phone {
-      svg path {
-        fill: $red;
-      }
-    }
-
-    .header-mob__phones {
-      ul {
-        opacity: 1;
-        visibility: visible;
-      }
-    }
-
-    .overlay {
-      visibility: visible;
-      opacity: 1;
-      z-index: 997;
-    }
-  }
+  //&.show-tel {
+  //  overflow: hidden;
+  //
+  //  .header-mob__phone.show-phone {
+  //    svg path {
+  //      fill: $red;
+  //    }
+  //  }
+  //
+  //  .header-mob__phones {
+  //    ul {
+  //      opacity: 1;
+  //      visibility: visible;
+  //    }
+  //  }
+  //
+  //  .overlay {
+  //    visibility: visible;
+  //    opacity: 1;
+  //    z-index: 997;
+  //  }
+  //}
 
   &.open-mobile-menu {
     overflow: hidden;
@@ -181,24 +181,24 @@ body {
     }
   }
 
-  &.sumoStopScroll {
-    overflow: unset;
-  }
-
-  &.open-search-results {
-    .overlay {
-      visibility: visible;
-      opacity: 1;
-      z-index: 997;
-    }
-
-    .mobile-menu {
-      &:before {
-        opacity: 1;
-        visibility: visible;
-      }
-    }
-  }
+  //&.sumoStopScroll {
+  //  overflow: unset;
+  //}
+  //
+  //&.open-search-results {
+  //  .overlay {
+  //    visibility: visible;
+  //    opacity: 1;
+  //    z-index: 997;
+  //  }
+  //
+  //  .mobile-menu {
+  //    &:before {
+  //      opacity: 1;
+  //      visibility: visible;
+  //    }
+  //  }
+  //}
 
   &.filters-opened {
     @media (max-width: 390px) {
@@ -220,6 +220,34 @@ body {
     padding: 0 !important;
     .mfp-ready{
       display: none;
+    }
+  }
+
+  &.search-shown{
+    height: 100vh;
+    overflow: hidden;
+    .header-search__main{
+      opacity: 1;
+      visibility: visible;
+      z-index: 1002;
+    }
+    .overlay {
+      z-index: 1001;
+      opacity: 1;
+      visibility: visible;
+      @include bp(xs) {
+        background-color: #fff;
+      }
+    }
+    &.open-search-results{
+      .overlay {
+        -webkit-backdrop-filter: blur(5px);
+        backdrop-filter: blur(5px);
+        @include bp(xs) {
+          -webkit-backdrop-filter: none;
+          backdrop-filter: none;
+        }
+      }
     }
   }
 
@@ -327,6 +355,9 @@ main {
   background: rgba($main, 0.7);
   @include bp(md) {
     top: 60px;
+  }
+  @include bp(xs) {
+    transition: unset;
   }
 }
 

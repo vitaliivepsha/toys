@@ -662,40 +662,48 @@ $(function() {
 
 
     // chechout comment
-  $('.chechout-comment').hide();
-  $('.chechout-comment__btn').click(function() {
-    $('.chechout-comment').slideToggle();
-  });
+  // $('.chechout-comment').hide();
+  // $('.chechout-comment__btn').click(function() {
+  //   $('.chechout-comment').slideToggle();
+  // });
 
     // chechout form
-  $('.deliver-self').hide();
-  $('.select.delivery').change(function() {
-    var value = $(this).val(),
-
-      $nova = $(this).closest('.chechout-form').find('.deliver.deliver-nova'),
-      $self = $(this).closest('.chechout-form').find('.deliver.deliver-self');
-
-    if (value == 'nova') {
-      $nova.show();
-    } else {
-      $nova.hide();
-    }
-
-    if (value == 'self') {
-      $self.show();
-    } else {
-      $self.hide();
-    }
-  });
-
-  $('.obl.select').SumoSelect({
-    search: true,
-    searchText: '',
-    noMatch: 'Не знайдено',
-    forceCustomRendering: true
-  });
+  // $('.deliver-self').hide();
+  // $('.select.delivery').change(function() {
+  //   var value = $(this).val(),
+  //
+  //     $nova = $(this).closest('.chechout-form').find('.deliver.deliver-nova'),
+  //     $self = $(this).closest('.chechout-form').find('.deliver.deliver-self');
+  //
+  //   if (value == 'nova') {
+  //     $nova.show();
+  //   } else {
+  //     $nova.hide();
+  //   }
+  //
+  //   if (value == 'self') {
+  //     $self.show();
+  //   } else {
+  //     $self.hide();
+  //   }
+  // });
+  //
+  // $('.obl.select').SumoSelect({
+  //   search: true,
+  //   searchText: '',
+  //   noMatch: 'Не знайдено',
+  //   forceCustomRendering: true
+  // });
 
     // header-search
+
+    $('.header-search__btn').on('click', function() {
+        $('body').addClass('search-shown');
+    });
+
+    $('.header-search__close').on('click', function() {
+        $('body').removeClass('search-shown');
+    });
 
   $('.header-search input[type="search"]').each(function() {
     if ($(this).val().length) {
@@ -768,13 +776,13 @@ $(function() {
 
     // the input field
   var $input = $('.header-search input'),
-    $content = $('.header-search .search-results'),
+    $content = $('.header-search .search-results > ul'),
     $results,
     currentIndex = 0;
 
   $input.on('input', function() {
     var searchVal = this.value;
-    $('.header-search .search-results li a').each(function() {
+    $('.header-search .search-results > ul li a').each(function() {
       $(this).find('span').bind('DOMSubtreeModified', function() {
         if ($(this).find('mark').length) {
           $(this).closest('li').addClass('show').closest('ul').addClass('highlighting-results');
@@ -797,10 +805,12 @@ $(function() {
     });
     if ($('.search-results > ul li.show').length) {
       $('.search-results > div > a').css('display', 'flex');
-      $('.search-results > div > span').css('display', 'none');
+      $('.search-results > div > div').css('display', 'none');
+        $('.search-results > div > .line').addClass('active');
     } else {
       $('.search-results > div > a').css('display', 'none');
-      $('.search-results > div > span').css('display', 'flex');
+      $('.search-results > div > div').css('display', 'block');
+        $('.search-results > div > .line').removeClass('active');
     }
   });
 
