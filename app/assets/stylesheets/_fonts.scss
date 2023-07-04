@@ -32,3 +32,14 @@
   font-style: normal;
   font-display: swap;
 }
+
+@font-face {
+  font-family: 'Unbounded';
+  src: url('../fonts/Unbounded-ExtraBold.eot');
+  src: url('../fonts/Unbounded-ExtraBold.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Unbounded-ExtraBold.woff') format('woff');
+  src: url('../fonts/Unbounded-ExtraBold.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
