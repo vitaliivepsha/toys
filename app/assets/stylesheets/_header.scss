@@ -248,102 +248,40 @@
       }
     }
     &.fixed {
-      .header-top{
-        background: #fff;
-        -webkit-backdrop-filter: none;
-        backdrop-filter: none;
+      .mobile-btn{
+        svg{
+          rect{
+            fill: $main;
+          }
+        }
       }
-      &:after{
-        background-color: $main;
-      }
-      .header-menu {
-        > li {
-          &.has-children {
-            &:hover {
-              > a {
-                color: $red;
-                svg {
-                  path{
-                    fill: $red;
-                  }
-                  &:last-child{
-                    path{
-                      stroke: $red;
-                    }
-                  }
-                }
-              }
+      @include bp(md) {
+        .header-search__btn{
+          svg {
+            path{
+              fill: $main;
             }
-            &.current {
-              svg{
-                path{
-                  fill: $red;
-                }
-                &:last-child{
-                  path{
-                    stroke: $red;
-                  }
-                }
+          }
+          &:hover{
+            svg{
+              path{
+                fill: $red;
               }
             }
           }
-          &.current {
-            > a {
-              color: $red;
-              svg {
-                path{
-                  fill: $red;
-                }
-              }
-            }
-          }
-          > a {
-            color: $main;
+        }
+        .header-cart {
+          a {
             svg {
               path{
                 fill: $main;
               }
             }
             &:hover {
-              color: $red;
-              svg {
+              svg{
                 path{
                   fill: $red;
                 }
-              }
-            }
-          }
-        }
-      }
-      .header-search__btn{
-        color: $main;
-        svg {
-          path{
-            fill: $main;
-          }
-        }
-        &:hover{
-          color: $red;
-          svg{
-            path{
-              fill: $red;
-            }
-          }
-        }
-      }
-      .header-cart {
-        a {
-          color: $main;
-          svg {
-            path{
-              fill: $main;
-            }
-          }
-          &:hover {
-            color: $red;
-            svg{
-              path{
-                fill: $red;
               }
             }
           }
