@@ -696,6 +696,12 @@
       &.not-available {
         background: rgba($main, .5);
         pointer-events: none;
+        color: #fff;
+        svg{
+          path{
+            fill: #fff;
+          }
+        }
       }
     }
   }
