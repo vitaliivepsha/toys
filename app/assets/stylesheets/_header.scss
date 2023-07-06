@@ -247,10 +247,12 @@
         }
       }
     }
-    /*&.fixed {
-      background: #fff;
-      -webkit-backdrop-filter: none;
-      backdrop-filter: none;
+    &.fixed {
+      .header-top{
+        background: #fff;
+        -webkit-backdrop-filter: none;
+        backdrop-filter: none;
+      }
       &:after{
         background-color: $main;
       }
@@ -347,7 +349,7 @@
           }
         }
       }
-    }*/
+    }
   }
 }
 

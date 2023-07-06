@@ -64,9 +64,11 @@ body {
     overflow: hidden;
     .header{
       &-home{
-        background: #fff;
-        -webkit-backdrop-filter: none;
-        backdrop-filter: none;
+        .header-top{
+          background: #fff;
+          -webkit-backdrop-filter: none;
+          backdrop-filter: none;
+        }
         &:after{
           background-color: $main;
         }
