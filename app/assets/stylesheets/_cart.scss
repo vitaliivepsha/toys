@@ -354,10 +354,32 @@
 }
 
 .cart-variations {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  > span {
+    font-size: 12px;
+    line-height: 18px;
+    color: rgba(28, 53, 87, 0.5);
+  }
+
   > div {
     position: relative;
 
+    > span {
+      font-size: 12px;
+      line-height: 18px;
+    }
+
     .cart-variation-current {
+      margin-top: -3px;
+      cursor: pointer;
+      > span {
+        margin-right: 9px;
+        font-size: 12px;
+        line-height: 18px;
+        color: $main;
+      }
       svg {
         transition: ease 0.4s;
       }
@@ -390,6 +412,10 @@
       visibility: hidden;
       opacity: 0;
       transition: linear .2s;
+      font-size: 12px;
+      line-height: 18px;
+      color: $main;
+
 
       li {
         cursor: pointer;
