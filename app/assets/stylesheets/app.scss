@@ -62,68 +62,81 @@ body {
 
   &.open-mobile-menu {
     overflow: hidden;
-    .header{
-      &-home{
-        .header-top{
+
+    .header {
+      &-home {
+        .header-top {
           background: #fff;
           -webkit-backdrop-filter: none;
           backdrop-filter: none;
         }
-        &:after{
+
+        &:after {
           background-color: $main;
         }
+
         .header-menu {
           > li {
             &.has-children {
               &:hover {
                 > a {
                   color: $red;
+
                   svg {
-                    path{
+                    path {
                       fill: $red;
                     }
-                    &:last-child{
-                      path{
+
+                    &:last-child {
+                      path {
                         stroke: $red;
                       }
                     }
                   }
                 }
               }
+
               &.current {
-                svg{
-                  path{
+                svg {
+                  path {
                     fill: $red;
                   }
-                  &:last-child{
-                    path{
+
+                  &:last-child {
+                    path {
                       stroke: $red;
                     }
                   }
                 }
               }
             }
+
             &.current {
               > a {
                 color: $red;
+
                 svg {
-                  path{
+                  path {
                     fill: $red;
                   }
                 }
               }
             }
+
             > a {
               color: $main;
+
               svg {
-                path{
+                path {
                   fill: $main;
                 }
               }
+
               &:hover {
                 color: $red;
+
                 svg {
-                  path{
+                  path {
                     fill: $red;
                   }
                 }
@@ -131,34 +144,42 @@ body {
             }
           }
         }
-        .header-search__btn{
+
+        .header-search__btn {
           color: $main;
+
           svg {
-            path{
+            path {
               fill: $main;
             }
           }
-          &:hover{
+
+          &:hover {
             color: $red;
-            svg{
-              path{
+
+            svg {
+              path {
                 fill: $red;
               }
             }
           }
         }
+
         .header-cart {
           a {
             color: $main;
+
             svg {
-              path{
+              path {
                 fill: $main;
               }
             }
+
             &:hover {
               color: $red;
-              svg{
-                path{
+
+              svg {
+                path {
                   fill: $red;
                 }
               }
@@ -218,21 +239,24 @@ body {
     }
   }
 
-  &.swal2-shown{
+  &.swal2-shown {
     padding: 0 !important;
-    .mfp-ready{
+
+    .mfp-ready {
       display: none;
     }
   }
 
-  &.search-shown{
+  &.search-shown {
     height: 100vh;
     overflow: hidden;
-    .header-search__main{
+
+    .header-search__main {
       opacity: 1;
       visibility: visible;
       z-index: 1002;
     }
+
     .overlay {
       z-index: 1001;
       opacity: 1;
@@ -241,7 +265,8 @@ body {
         background-color: #fff;
       }
     }
-    &.open-search-results{
+
+    &.open-search-results {
       .overlay {
         -webkit-backdrop-filter: blur(5px);
         backdrop-filter: blur(5px);
@@ -313,6 +338,7 @@ ol, ul {
 *, a, .slick-slide {
   outline: none;
   box-shadow: none;
+
   &:focus {
     outline: none;
   }
@@ -320,12 +346,15 @@ ol, ul {
 
 a {
   transition: 0.2s linear;
+
   &:hover {
     text-decoration: none;
   }
+
   &:not([class]) {
     color: $main;
     text-decoration: none;
+
     &:hover {
       color: $red;
     }
@@ -409,15 +438,18 @@ main {
     height: 45px;
     font-size: 14px;
   }
+
   &:focus,
   &:hover {
     outline: none !important;
     box-shadow: none;
   }
+
   &:hover {
     background: $red;
     color: #fff;
   }
+
   &.btn-lg {
     height: 60px;
     font-size: 21px;
@@ -426,26 +458,32 @@ main {
       font-size: 14px;
     }
   }
+
   &.btn-y {
     background-color: $yellow;
     color: $main;
+
     &:hover {
       background-color: $red;
       color: #fff;
     }
   }
+
   &.btn-w {
     background-color: #fff;
     color: $main;
+
     &:hover {
       background-color: $main;
       color: #fff;
     }
   }
+
   &.btn-tr {
     border: 1px solid $main;
     background-color: transparent;
     color: $main;
+
     &:hover {
       background-color: $main;
       color: #fff;
@@ -476,10 +514,12 @@ main {
 
 .input-wrapper {
   position: relative;
-  &.focus{
-    .input, .textarea{
+
+  &.focus {
+    .input, .textarea {
       border-color: $main;
-      +label{
+
+      + label {
         font-size: 10px;
         line-height: 15px;
         top: 8px;
@@ -491,10 +531,12 @@ main {
       }
     }
   }
-  &.filled{
-    .input, .textarea{
+
+  &.filled {
+    .input, .textarea {
       border-color: $main;
-      +label{
+
+      + label {
         font-size: 10px;
         line-height: 15px;
         top: 8px;
@@ -506,20 +548,24 @@ main {
       }
     }
   }
+
   &.err {
     .input, .textarea {
       border-color: $red;
       background-color: #fff;
       color: transparent;
+
       &::placeholder {
         color: transparent !important;
       }
     }
-    >label{
+
+    > label {
       display: none;
       opacity: 0;
     }
   }
+
   .validate-error {
     color: $red;
     font-size: 10px;
@@ -542,15 +588,17 @@ main {
   }
 }
 
-.select-wrapper{
+.select-wrapper {
   position: relative;
-  .input{
+
+  .input {
     opacity: 0;
     visibility: hidden;
     position: absolute;
     z-index: -1;
   }
-  >svg{
+
+  > svg {
     position: absolute;
     z-index: 1;
     top: 24px;
@@ -562,12 +610,14 @@ main {
       right: 17px;
     }
   }
-  &.active, &.open{
-    >svg{
+
+  &.active, &.open {
+    > svg {
       opacity: 1;
     }
-    .input{
-      + label{
+
+    .input {
+      + label {
         position: absolute;
         font-weight: 400;
         color: rgba($main, .5);
@@ -583,7 +633,8 @@ main {
           top: 4px;
           left: 15px;
         }
-        +label{
+
+        + label {
           position: absolute;
           font-weight: 400;
           color: rgba($main, .5);
@@ -602,21 +653,25 @@ main {
         }
       }
     }
-    .SumoSelect{
-      >.CaptionCont{
+
+    .SumoSelect {
+      > .CaptionCont {
         border-color: $main;
       }
     }
   }
-  &.error{
-    >svg{
+
+  &.error {
+    > svg {
       opacity: 1;
-      path{
+
+      path {
         fill: $red;
       }
     }
-    .input{
-      + label{
+
+    .input {
+      + label {
         z-index: 2;
         font-size: 10px;
         line-height: 15px;
@@ -628,19 +683,22 @@ main {
         }
       }
     }
-    .SumoSelect{
-      >.CaptionCont{
+
+    .SumoSelect {
+      > .CaptionCont {
         border-color: $red;
-        >span{
-          &.placeholder{
+
+        > span {
+          &.placeholder {
             color: transparent;
           }
         }
       }
     }
   }
-  &__search{
-    >svg{
+
+  &__search {
+    > svg {
       width: 19px;
       height: 20px;
       top: 16px;
@@ -653,19 +711,23 @@ main {
       }
     }
   }
-  .SumoSelect{
+
+  .SumoSelect {
     display: flex;
     width: 100%;
-    &.open, &:focus, &:hover{
-      >.CaptionCont{
+
+    &.open, &:focus, &:hover {
+      > .CaptionCont {
         box-shadow: none;
       }
     }
-    &.open{
-      >.optWrapper{
+
+    &.open {
+      > .optWrapper {
         top: calc(100% + 5px);
       }
-      .search-txt{
+
+      .search-txt {
         font-size: 14px;
         line-height: 21px;
         padding: 18px 20px 9px 20px;
@@ -676,7 +738,8 @@ main {
         }
       }
     }
-    >.CaptionCont{
+
+    > .CaptionCont {
       height: 50px;
       border: 1px solid rgba($main, .2);
       border-radius: 5px;
@@ -686,7 +749,8 @@ main {
       @include bp(xs) {
         height: 40px;
       }
-      >span{
+
+      > span {
         font-weight: 400;
         font-size: 14px;
         line-height: 21px;
@@ -697,7 +761,8 @@ main {
           line-height: 18px;
           padding: 14px 15px 3px 15px;
         }
-        &.placeholder{
+
+        &.placeholder {
           padding: 14px 20px;
           font-style: normal;
           color: rgba($main, .5);
@@ -706,23 +771,28 @@ main {
           }
         }
       }
-      >label{
+
+      > label {
         opacity: 0;
         visibility: hidden;
       }
     }
-    >.optWrapper{
+
+    > .optWrapper {
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
       border-radius: 5px;
       border-color: rgba($main, .2);
-      &.isFloating{
+
+      &.isFloating {
         position: absolute;
         width: 100%;
         bottom: auto;
         max-height: unset;
       }
-      >.options{
+
+      > .options {
         border-radius: 4px;
+
         &::-webkit-scrollbar {
           overflow-y: scroll;
           background: transparent;
@@ -730,6 +800,7 @@ main {
           transition: linear .2s;
           box-shadow: 1px 0 0 transparent;
         }
+
         &::-webkit-scrollbar-thumb {
           background: $main;
           border-radius: 0;
@@ -737,21 +808,25 @@ main {
           transition: linear .2s;
           cursor: grab;
         }
-        li{
-          &.opt{
+
+        li {
+          &.opt {
             padding: 8px 19px;
             border-color: rgba($main, .2);
             @include bp(xs) {
               padding: 6px 14px;
               font-size: 12px;
             }
-            &:hover{
+
+            &:hover {
               background-color: $bg-grey;
             }
-            &.disabled{
+
+            &.disabled {
               display: none;
             }
-            label{
+
+            label {
               font-weight: 400;
               margin-bottom: 0;
             }
@@ -759,7 +834,8 @@ main {
         }
       }
     }
-    .no-match{
+
+    .no-match {
       padding: 8px 19px;
       @include bp(xs) {
         padding: 6px 14px;
@@ -768,25 +844,30 @@ main {
   }
 }
 
-.tooltip-wrapper{
+.tooltip-wrapper {
   position: relative;
-  .input{
+
+  .input {
     padding-right: 50px
   }
-  &.error{
-    .tooltip-item{
-      >svg{
+
+  &.error {
+    .tooltip-item {
+      > svg {
         opacity: 1;
-        circle{
+
+        circle {
           stroke: $red;
         }
-        path{
+
+        path {
           fill: $red;
         }
       }
     }
   }
-  .tooltip-item{
+
+  .tooltip-item {
     display: flex;
     position: absolute;
     z-index: 1;
@@ -797,10 +878,12 @@ main {
       top: 13px;
       right: 13px;
     }
-    >svg{
+
+    > svg {
       opacity: .5;
     }
-    &:after{
+
+    &:after {
       position: absolute;
       content: '';
       width: calc(100% + 20px);
@@ -808,8 +891,9 @@ main {
       top: -10px;
       left: -10px;
     }
-    &:hover{
-      .tooltip-dialog{
+
+    &:hover {
+      .tooltip-dialog {
         bottom: calc(100% + 44px);
         opacity: 1;
         visibility: visible;
@@ -817,11 +901,13 @@ main {
           bottom: calc(100% + 23px);
         }
       }
-      >svg{
+
+      > svg {
         opacity: 1;
       }
     }
-    .tooltip-dialog{
+
+    .tooltip-dialog {
       opacity: 0;
       visibility: hidden;
       position: absolute;
@@ -843,7 +929,8 @@ main {
         width: 140px;
         bottom: calc(100% + 12px);
       }
-      &:after{
+
+      &:after {
         position: absolute;
         content: '';
         z-index: -1;
@@ -863,12 +950,13 @@ main {
   }
 }
 
-.validate-form{
+.validate-form {
   .input-wrapper {
     &.error {
       .input {
         border-color: $red;
-        +label{
+
+        + label {
           margin-bottom: 0;
           font-weight: 400;
           color: $red;
@@ -885,18 +973,21 @@ main {
             top: 4px;
             left: 15px;
           }
-          +label{
+
+          + label {
             opacity: 0;
             display: none;
           }
         }
       }
     }
-    &.filled{
-      .input{
-        +label{
+
+    &.filled {
+      .input {
+        + label {
           opacity: 0;
-          +label{
+
+          + label {
             margin-bottom: 0;
             font-weight: 400;
             color: rgba($main, .5);
@@ -916,8 +1007,9 @@ main {
           }
         }
       }
-      >label{
-        &:last-child{
+
+      > label {
+        &:last-child {
           opacity: 1;
         }
       }
@@ -925,21 +1017,25 @@ main {
   }
 }
 
-.checkbox-wrapper{
+.checkbox-wrapper {
   display: flex;
-  input{
+
+  input {
     display: none;
-    &:checked{
-      +label{
-        &:before{
+
+    &:checked {
+      + label {
+        &:before {
           background: $main;
         }
-        &:after{
+
+        &:after {
           display: block;
         }
       }
     }
-    +label{
+
+    + label {
       margin-bottom: 0;
       font-weight: 400;
       font-size: 12px;
@@ -948,7 +1044,8 @@ main {
       position: relative;
       cursor: pointer;
       color: rgba($main, .5);
-      &:before{
+
+      &:before {
         position: absolute;
         content: '';
         width: 13px;
@@ -959,7 +1056,8 @@ main {
         left: 0;
         top: 3px;
       }
-      &:after{
+
+      &:after {
         display: none;
         content: '';
         width: 7px;
@@ -977,10 +1075,12 @@ main {
         top: 7.5px;
         position: absolute;
       }
-      a{
+
+      a {
         color: $main;
         text-decoration: underline;
-        &:hover{
+
+        &:hover {
           color: $red;
           text-decoration: none;
         }
@@ -1009,7 +1109,8 @@ main {
     font-size: 12px;
     padding: 15px 15px 4px 15px;
   }
-  +label{
+
+  + label {
     margin-bottom: 0;
     font-weight: 400;
     color: rgba($main, .5);
@@ -1027,9 +1128,11 @@ main {
       top: 11px;
     }
   }
+
   @supports (-webkit-touch-callout: none) {
     font-size: 16px;
   }
+
   &:focus {
     @supports (-webkit-touch-callout: none) {
       font-size: 16px;
@@ -1059,7 +1162,8 @@ main {
   @include bp(xs) {
     padding: 15px;
   }
-  +label{
+
+  + label {
     margin-bottom: 0;
     font-weight: 400;
     color: rgba($main, .5);
@@ -1077,6 +1181,7 @@ main {
       top: 11px;
     }
   }
+
   @supports (-webkit-touch-callout: none) {
     font-size: 16px;
   }
